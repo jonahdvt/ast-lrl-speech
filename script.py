@@ -5,8 +5,7 @@
 #!pip install tf-keras
 #!pip install pydub
 
-import matplotlib.pyplot as plt
-import numpy as np
+
 from transformers import pipeline
 import torch
 import sacrebleu
@@ -15,15 +14,19 @@ import sacrebleu
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import time
 import json
-from tqdm import tqdm
 import tarfile
 import os
 import json
 
+
+
+
 base_url = "https://huggingface.co/datasets/google/fleurs-r/resolve/main/"
 LANG_CODE = "fr_fr"  
+
+
+
 
 def get_folder_names(language_code=LANG_CODE):
     return [
@@ -98,8 +101,28 @@ def get_transcription(whisper, audio_file):
     return transcription['text']
 
 
+def transcribe_dataset(ds, whisper_model):
+    output_dir = f"fleurs_{LANG_CODE}_audio/{ds}"  # Path to directory
+    output_file = f"{LANG_CODE}_aggregate.json"
 
-def get_translation(text, source_language, target_language, whisper_model):
+    results = []  # Store results as a list of dictionaries
+
+    for file_name in os.listdir(output_dir):  # List files in the directory
+        if file_name.endswith(".wav"):  # Assuming audio files are .wav (adjust if needed)
+            file_path = os.path.join(output_dir, file_name)  # Full path to the file
+            transcript = get_transcription(audio_file=file_path, whisper=whisper_model)  # Pass the full path
+            results.append({
+                "file_name": file_name,
+                "transcript": transcript,
+            })
+    with open(output_file, "w", encoding="utf-8") as json_file:
+        json.dump(results, json_file, ensure_ascii=False, indent=4)
+
+
+
+
+
+def get_translation(text, source_language, target_language):
     # Get the translation from the sample text
     
     url = f"https://translate.google.com/m?tl={target_language}&sl={source_language}&q={text}"
@@ -116,27 +139,7 @@ def get_translation(text, source_language, target_language, whisper_model):
 
     return translation
 
-
-def transcribe_dataset(ds, whisper_model):
-    output_dir = f"fleurs_{LANG_CODE}_audio/{ds}"  # Path to directory
-    output_file = f"{LANG_CODE}_whisper_out_large.json"
-
-    results = []  # Store results as a list of dictionaries
-
-    for file_name in os.listdir(output_dir):  # List files in the directory
-        if file_name.endswith(".wav"):  # Assuming audio files are .wav (adjust if needed)
-            file_path = os.path.join(output_dir, file_name)  # Full path to the file
-            transcript = get_transcription(audio_file=file_path, whisper=whisper_model)  # Pass the full path
-            print(transcript)
-            results.append({
-                "file_name": file_name,
-                "transcript": transcript,
-            })
-    with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(results, json_file, ensure_ascii=False, indent=4)
-
-
-def translate_dataset(source_language="fr", target_language="en", ds=None):
+def translate_dataset(source_language, target_language="en", ds=None):
     with open(ds, 'r', encoding="utf-8") as f:
         data = json.load(f)
 
@@ -149,43 +152,6 @@ def translate_dataset(source_language="fr", target_language="en", ds=None):
 
 
 
-
-    
-
-
-def parser_txt(source_language="fr", target_language="en", ds=None):                    # easier to follow the output but not best format
-    output_dir = f"fleurs_{LANG_CODE}_audio/{ds}"                                       # path to directory
-    with open(f"{source_language}_whisper_out.txt", "a") as output_file:
-        for file_name in os.listdir(output_dir):  # List files in the directory
-            if file_name.endswith(".wav"):  # Assuming audio files are .wav (adjust if needed)
-                file_path = os.path.join(output_dir, file_name)  # Full path to the file
-                transcript = get_transcription(audio_file=file_path)  # Pass the full path
-                translation = get_translation(transcript, source_language, target_language)
-                output_file.write(file_name + ": Transcript = " + transcript + "    Translation = " + translation + "\n")
-
-
-def parser_json(source_language="fr", target_language="en", ds=None):
-    output_dir = f"fleurs_{LANG_CODE}_audio/{ds}"  # Path to directory
-    output_file = f"{source_language}_whisper_out.json"
-
-    results = []  # Store results as a list of dictionaries
-
-    for file_name in os.listdir(output_dir):  # List files in the directory
-        if file_name.endswith(".wav"):  # Adjust if needed for different file types
-            file_path = os.path.join(output_dir, file_name)  # Full path to the file
-            transcript = get_transcription(audio_file=file_path)  # Get transcript
-            translation = get_translation(transcript, source_language, target_language)  # Get translation
-            
-            # Store result in a dictionary
-            results.append({
-                "file_name": file_name,
-                "transcript": transcript,
-                "translation": translation
-            })
-
-    # Write results to a JSON file
-    with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(results, json_file, ensure_ascii=False, indent=4)
 
 
 def get_gold_translation():
@@ -215,6 +181,9 @@ def get_gold_translation():
         combined_df.to_csv(output_combined_csv, index=False, encoding="utf-8")  # Save as a single CSV
         return combined_df
     
+
+
+
 
 
 # MATCHING 
@@ -267,55 +236,71 @@ def gold_translation_matching(json_path, csv_path, output_path):  # match the au
 
 
 
-# BLEU TRANSLATION
 
+
+# BLEU TRANSLATION
 
 def compute_bleu_score(file):
     with open(file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # Extract the gold (reference) translations and the candidate (whisper) translations
-    gold_translations = [sample['gold_translation'] for sample in data]
-    whisper_translations = [sample['whisper_translation'] for sample in data]
+    # Initialize lists for gold and whisper translations
+    gold_translations = []
+    whisper_translations = []
 
-    #   - a list of reference lists as the second argument (even if you have a single reference per candidate).
+    for sample in data:
+        # Check if 'gold_translation' and 'whisper_translation' exist in the sample
+        if 'gold_translation' in sample and 'whisper_translation' in sample:
+            gold_translations.append(sample['gold_translation'])
+            whisper_translations.append(sample['whisper_translation'])
+        else:
+            print(f"Warning: Missing translations in file {sample.get('file_name', 'Unknown file')}")
+            continue
+
+    # If there are no valid translations, we can't compute BLEU
+    if not gold_translations or not whisper_translations:
+        print("Error: No valid translations found.")
+        return
+
     bleu = sacrebleu.corpus_bleu(whisper_translations, [gold_translations])
 
-
     print(f"BLEU score: {bleu.score:.2f}")
+
+
 
 
 
 def main():
     # SETUP
 
-    # get_fleurs_file_codes()
-    # get_gold_translation()
-    whisper_model = get_whisper("openai/whisper-large-v3")  # Load Whisper model
+    get_fleurs_file_codes(language_code=LANG_CODE)                            # get matching audio codes between languages 
+    get_gold_translation()                                                    # get english transcripts from Fleurs
+    whisper_model = get_whisper("openai/whisper-large-v3")                    # Load Whisper model
 
 
     # GET LANG DATA
-    # french_file_names = get_folder_names(LANG_CODE)
-    # for file_path in french_file_names:
-    #     get_fleurs_data(file_path, LANG_CODE)
+    sc_language_file_names = get_folder_names(LANG_CODE)                      # get all set names from fleurs for source language
+    for file_path in sc_language_file_names:
+        get_fleurs_data(file_path, LANG_CODE)                                 # fetch data and download audio tar files 
 
 
     # TRANSCRIPTION AND TRANSLATION TASK
-    # datasets = ["dev", "test", "train"]
-    # for dataset in datasets:
-    #     transcribe_dataset(ds=dataset, whisper_model = whisper_model)  
-    transcribe_dataset(ds="train", whisper_model = whisper_model)  
-    output_json = "fr_fr_whisper_out_large.json"
-    if os.path.exists(output_json):
-        translate_dataset(source_language="fr", target_language="en", ds=output_json)
+    datasets = ["dev", "test", "train"]                     
+    for dataset in datasets:
+        transcribe_dataset(ds=dataset, whisper_model = whisper_model)         # transcribe all audio files to text in source language
+    
+    aggregate_json = f"{LANG_CODE}_aggregate.json"                    # json file for all operations - translate, append gold translation, compute BLEU
+    if os.path.exists(aggregate_json):
+        translate_dataset(source_language="fr", target_language="en", ds=aggregate_json)
 
-    gold_codes_matching('fr_fr_whisper_out_large.json', 'fr_fr_codes_file.csv', 'fr_fr_whisper_out_large.json')
-    gold_translation_matching('fr_fr_whisper_out_large.json', 'en_translations_file.csv', 'out.json')
+    gold_codes_matching(aggregate_json, f'{LANG_CODE}_codes_file.csv', aggregate_json)
+    gold_translation_matching(aggregate_json, 'en_translations_file.csv', aggregate_json)
 
 
     # BLEU
-    compute_bleu_score("fr_fr_whisper_out_large.json")
+    compute_bleu_score(aggregate_json)
     
 
     
-main()
+if __name__ == "__main__":
+    main()
