@@ -30,17 +30,17 @@ base_url = "https://huggingface.co/datasets/google/fleurs-r/resolve/main/"
 
 
 language_codes = [
-    "hi_in",  # Hindi     
+    "hi_in",  # Hindi   
     "pa_in",  # Punjabi   
     "ta_in",  # Tamil      
     "te_in",  # Telugu
     "ml_in",  # Malayalam
     "sw_ke",  # Swahili
-    # "ha_ng",  # Hausa NOT IN SEAMLESS
+    "ha_ng",  # Hausa NOT IN SEAMLESS
     "yo_ng",  # Yoruba
     "ig_ng",  # Igbo
     "lg_ug",  # Luganda
-    "fr_fr"   # French --  Control
+    # "fr_fr"   # French --  Control
 ]
 
 
@@ -247,9 +247,16 @@ def seamless(mode=None, input_dir=None, output_file=None, src_lang=None, tgt_lan
             audio_inputs = processor(audios=audio_sample["array"], return_tensors="pt")
             output_tokens = model.generate(**audio_inputs, tgt_lang=smls_language_code_mapping[tgt_lang], generate_speech=False)        # takes in target language to tranlate to other  
             translated_text_from_audio = processor.decode(output_tokens[0].tolist()[0], skip_special_tokens=True)
+            print(os.path.basename(audio_file))
             for sample in output_data:
-                if sample["file_name"] == os.path.basename(audio_file): 
-                    sample["seamless_translation"] = translated_text_from_audio
+                if sample["file_name"] == os.path.basename(audio_file):
+                    print("check 1 - found the file")
+                    if "seamless_translation" not in sample:  # Check if translation is missing
+                        sample["seamless_translation"] = translated_text_from_audio
+                        print(f"Added seamless_translation for {os.path.basename(audio_file)}")
+                    else:
+                        print(f"seamless_translation already exists for {os.path.basename(audio_file)}")
+
 
     
     with open(output_file, "w", encoding="utf-8") as json_file:
@@ -257,6 +264,59 @@ def seamless(mode=None, input_dir=None, output_file=None, src_lang=None, tgt_lan
 
 
 # Translations
+
+
+def translate_dataset_nllb(source_language=None, target_language="en", json_ds=None):
+
+    nllb_language_code_mapping = {
+        "hi_in": "hin_Deva",
+        "pa_in": "pan_Guru",
+        "ta_in": "tam_Taml",
+        "te_in": "tel_Telu",
+        "ml_in": "mal_Mlym",
+        "sw_ke": "swh_Latn",
+        "ha_ng": "hau_Latn",
+        "ig_ng": "ibo_Latn",
+        "yo_ng": "yor_Latn",
+        "lg_ug": "lug_Latn",
+        "fr": "fra_Latn",
+        "en": "eng_Latn"
+    }
+
+    if source_language not in nllb_language_code_mapping:
+        raise ValueError(f"Source language {source_language} not supported for NLLB.")
+    if target_language not in nllb_language_code_mapping:
+        raise ValueError(f"Target language {target_language} not supported for NLLB.")
+
+    # Create the translation pipeline using the NLLB distilled model.
+    translator = pipeline(
+        "translation",
+        model="facebook/nllb-200-distilled-1.3B",
+        src_lang=nllb_language_code_mapping[source_language],
+        tgt_lang=nllb_language_code_mapping[target_language]
+    )
+
+    with open(json_ds, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    num_entries = len(data)
+    counter = 0
+
+    for sample in data:
+
+        if (("seamless_transcript" in sample or "whisper_transcription" in sample) and "nllb_translation" not in sample):
+            
+            source_text = sample.get("seamless_transcript", sample.get("whisper_transcription"))
+            translation = translator(source_text)
+            sample["nllb_translation"] = translation[0]['translation_text']
+
+            counter += 1
+            print(f"NLLB translated {counter}/{num_entries} samples.")
+        
+
+    # Save the updated dataset back to the JSON file.
+    with open(json_ds, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
 
 
 
@@ -352,7 +412,8 @@ def gold_codes_matching(json_path, csv_path, output_path):   # function to get t
         json_data = json.load(f)
 
     # Load CSV data
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, on_bad_lines="skip")
+
 
     # Create a mapping from wav_codes to codes
     name_mapping = dict(zip(df['wav_codes'], df['codes']))
@@ -397,33 +458,52 @@ def gold_translation_matching(json_path, csv_path, output_path):  # match the au
 
 # BLEU TRANSLATION
 
+import json
+import sacrebleu
+
 def compute_bleu_score(file, language_code):
     with open(file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # Initialize lists for gold and whisper translations
+    # Initialize lists for gold translations and hypothesis translations
     gold_translations = []
-    whisper_translations = []
+    seamless_hypothesis_translations = []
+    nllb_hypothesis_translations = []
 
     for sample in data:
-        # Check if 'gold_translation' and 'whisper_translation' exist in the sample
-        if 'gold_translation' in sample and 'gt_translation' in sample:
+        # Check if 'gold_translation' exists in the sample
+        if 'gold_translation' in sample:
             gold_translations.append(sample['gold_translation'])
-            whisper_translations.append(sample['gt_translation'])
         else:
-            print(f"Warning: Missing translations in file {sample.get('file_name', 'Unknown file')}")
+            print(f"Warning: Missing gold translation in file {sample.get('file_name', 'Unknown file')}")
             continue
 
-    # If there are no valid translations, we can't compute BLEU
-    if not gold_translations or not whisper_translations:
-        print("Error: No valid translations found.")
-        return
+        # Check if 'seamless_translation' exists and append
+        if 'seamless_translation' in sample:
+            seamless_hypothesis_translations.append(sample['seamless_translation'])
 
-    bleu = sacrebleu.corpus_bleu(whisper_translations, [gold_translations])
-    print(f"{language_code}, whisper/google_translate, bleu = {bleu.score:.2f}\n")
+        # Check if 'nllb_translation' exists and append
+        if 'nllb_translation' in sample:
+            nllb_hypothesis_translations.append(sample['nllb_translation'])
 
-    with open("bleu_score.txt", "a", encoding="utf-8") as f:
-        f.write(f"{language_code}, whisper/google_translate, bleu = {bleu.score:.2f}\n")
+    # Calculate BLEU score for seamless translations (if available)
+    if seamless_hypothesis_translations:
+        bleu_seamless = sacrebleu.corpus_bleu(seamless_hypothesis_translations, [gold_translations])
+        print(f"{language_code}, seamless, bleu = {bleu_seamless.score:.2f}")
+        with open("bleu_score.txt", "a", encoding="utf-8") as f:
+            f.write(f"{language_code}, seamless, bleu = {bleu_seamless.score:.2f}\n")
+    
+    # Calculate BLEU score for nllb translations (if available)
+    if nllb_hypothesis_translations:
+        bleu_nllb = sacrebleu.corpus_bleu(nllb_hypothesis_translations, [gold_translations])
+        print(f"{language_code}, nllb, bleu = {bleu_nllb.score:.2f}")
+        with open("bleu_score.txt", "a", encoding="utf-8") as f:
+            f.write(f"{language_code}, nllb, bleu = {bleu_nllb.score:.2f}\n")
+
+    # In case both seamless and nllb translations are available, handle both
+    if seamless_hypothesis_translations and nllb_hypothesis_translations:
+        print(f"{language_code}, both seamless and nllb available.")
+
 
 
 
@@ -432,22 +512,29 @@ def compute_bleu_score(file, language_code):
 def main():
     for sc_lang_code in language_codes:
     
-        sc_language_file_names = get_folder_names(sc_lang_code)                      # get all set names from fleurs for source language
-        for file_path in sc_language_file_names:
-            get_fleurs_data(file_path, sc_lang_code)       
+        # sc_language_file_names = get_folder_names(sc_lang_code)                      # get all set names from fleurs for source language
+        # for file_path in sc_language_file_names:
+        #     get_fleurs_data(file_path, sc_lang_code)       
 
         aggregate_json = f"lang_aggregate_data/{sc_lang_code}_aggregate.json"
+        
 
-        datasets = ["dev", "test", "train"]                     
-        for dataset in datasets:
-            seamless(mode="translate",input_dir=dataset, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang="en")  
+        # datasets = ["train"]                     
+        # for ds in datasets:
+        #     seamless(mode="transcribe",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang=sc_lang_code)  
+        #     seamless(mode="translate",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang="en")  
+        # translate_dataset_nllb(sc_lang_code, "en", aggregate_json)
+        # print(f"finished translation of {sc_lang_code}")
 
         # gold_codes_matching(aggregate_json, f'lang_file_codes/{sc_lang_code}_codes_file.csv', aggregate_json)
         # gold_translation_matching(aggregate_json, 'en_translations_file.csv', aggregate_json)
 
-        shutil.rmtree(f"fleurs_{sc_lang_code}_audio")
-        print(f"Deleted folder: fleurs_{sc_lang_code}_audio")
-    
+        compute_bleu_score(aggregate_json, sc_lang_code)
+
+        # shutil.rmtree(f"fleurs_{sc_lang_code}_audio")
+        # print(f"Deleted folder: fleurs_{sc_lang_code}_audio")
+
+
 
 
     

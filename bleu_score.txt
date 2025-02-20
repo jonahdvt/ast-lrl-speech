@@ -1,0 +1,39 @@
+fr_fr, whisper/google_translate, bleu = 27.33
+
+hi_in, seamless, bleu = 24.62
+hi_in, nllb, bleu = 27.79
+
+
+pa_in, seamless, bleu = 28.71
+pa_in, nllb, bleu = 13.87
+
+
+ta_in, seamless, bleu = 19.93
+ta_in, nllb, bleu = 19.53
+
+
+te_in, seamless, bleu = 23.27
+te_in, nllb, bleu = 17.51
+
+
+ml_in, seamless, bleu = 21.20
+ml_in, nllb, bleu = 1.32
+
+
+sw_ke, seamless, bleu = 14.81
+sw_ke, nllb, bleu = 25.01
+
+
+ha_ng, nllb, bleu = 3.36
+
+
+yo_ng, seamless, bleu = 12.64
+yo_ng, nllb, bleu = 2.62
+
+
+ig_ng, seamless, bleu = 0.19
+ig_ng, nllb, bleu = 1.40
+
+
+lg_ug, seamless, bleu = 5.95
+lg_ug, nllb, bleu = 6.08
