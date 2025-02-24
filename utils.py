@@ -24,6 +24,5 @@ def rename_json_property(file=None, old_name=None, new_name=None):
         json.dump(data, f, indent=4, ensure_ascii=False)
         print(f"Renamed for file : {file}")
 
-# Rename the property in the specified file
-for l in LANGUAGE_CODES:
-    rename_json_property(f"lang_aggregate_data/{l}_aggregate.json", "whisper_transcription", "whisper_transcript")
+
+rename_json_property("lang_aggregate_data/fr_fr_aggregate.json", "whisper_transcription", "whisper_transcript")

@@ -37,3 +37,4 @@ ig_ng, nllb, bleu = 1.40
 
 lg_ug, seamless, bleu = 5.95
 lg_ug, nllb, bleu = 6.08
+fr_fr, nllb, bleu = 31.06

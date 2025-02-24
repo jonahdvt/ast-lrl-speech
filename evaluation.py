@@ -26,22 +26,19 @@ def compute_wer(sc_lang):
                          Returns None if no matching files are found.
     """
     json_file = f"lang_aggregate_data/{sc_lang}_aggregate.json"
-    csv_file = f"gold_transcripts/{sc_lang}_fleurs_transcript_file.csv"
+    csv_file = f"fleurs_lang_info/{sc_lang}_fleurs_info.csv"
     
-    # Load the JSON file
     with open(json_file, "r", encoding="utf-8") as f:
         json_data = json.load(f)
     
-    # Load the CSV file into a DataFrame
     df = pd.read_csv(csv_file, encoding="utf-8")
     
-    # Build a mapping from wav_codes to their reference transcript
     transcript_mapping = dict(zip(df["wav_codes"], df["transcript"]))
     
     total_wer = 0.0
     count = 0
     
-    # Create transformation pipeline for standardizing inputs
+    # transformation pipeline for standardizing inputs
     transforms = Compose([
         RemoveEmptyStrings(),
         ToLowerCase(),
@@ -51,15 +48,12 @@ def compute_wer(sc_lang):
         ReduceToListOfListOfWords()
     ])
     
-    # Iterate over each record in the JSON file
     for record in json_data:
         file_name = record.get("file_name")
-        whisper_transcription = record.get("seamless_transcript")
+        whisper_transcription = record.get("whisper_transcript")
         
-        # Ensure both transcription and reference exist
         if file_name in transcript_mapping and whisper_transcription is not None:
             reference_transcript = transcript_mapping[file_name]
-            # Compute the WER score using the standardized inputs
             score = wer(
                 reference_transcript,
                 whisper_transcription,

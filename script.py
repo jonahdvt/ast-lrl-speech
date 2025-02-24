@@ -186,7 +186,7 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
         "ig_ng": "ibo_Latn",
         "yo_ng": "yor_Latn",
         "lg_ug": "lug_Latn",
-        "fr": "fra_Latn",
+        "fr_fr": "fra_Latn",
         "en": "eng_Latn"
     }
 
@@ -211,7 +211,7 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
     for sample in data:
 
-        if (("seamless_transcript" in sample or "whisper_transcription" in sample) and "nllb_translation" not in sample):
+        if (("seamless_transcript" in sample or "whisper_transcript" in sample) and "nllb_translation" not in sample):
             
             source_text = sample.get("seamless_transcript", sample.get("whisper_transcription"))
             translation = translator(source_text)
@@ -277,30 +277,36 @@ def translate_dataset_gt(source_language, target_language="en", ds=None):
 
 
 def main():
-    for sc_lang_code in LANGUAGE_CODES:
-        evaluation.compute_wer(sc_lang_code)
+    # for sc_lang_code in LANGUAGE_CODES:
+    #     evaluation.compute_wer(sc_lang_code)
     
-        sc_language_file_names = data.get_folder_names(sc_lang_code)                      # get all set names from fleurs for source language
-        for file_path in sc_language_file_names:
-            data.get_fleurs_data(file_path, sc_lang_code)       
+    #     sc_language_file_names = data.get_folder_names(sc_lang_code)                      # get all set names from fleurs for source language
+    #     for file_path in sc_language_file_names:
+    #         data.get_fleurs_data(file_path, sc_lang_code)       
 
-        aggregate_json = f"lang_aggregate_data/{sc_lang_code}_aggregate.json"
+    #     aggregate_json = f"lang_aggregate_data/{sc_lang_code}_aggregate.json"
         
 
-        datasets = ["train"]                     
-        for ds in datasets:
-            seamless(mode="transcribe",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang=sc_lang_code)  
-            seamless(mode="translate",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang="en")  
-        translate_dataset_nllb(sc_lang_code, "en", aggregate_json)
-        print(f"finished translation of {sc_lang_code}")
+    #     datasets = ["train"]                     
+    #     for ds in datasets:
+    #         seamless(mode="transcribe",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang=sc_lang_code)  
+    #         seamless(mode="translate",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang="en")  
+    #     translate_dataset_nllb(sc_lang_code, "en", aggregate_json)
+    #     print(f"finished translation of {sc_lang_code}")
 
-        matching.gold_codes_matching(aggregate_json, f'lang_file_codes/{sc_lang_code}_codes_file.csv', aggregate_json)
-        matching.gold_translation_matching(aggregate_json, 'en_translations_file.csv', aggregate_json)
+    #     matching.gold_codes_matching(aggregate_json, f'lang_file_codes/{sc_lang_code}_codes_file.csv', aggregate_json)
+    #     matching.gold_translation_matching(aggregate_json, 'en_translations_file.csv', aggregate_json)
 
-        evaluation.compute_bleu_score(aggregate_json, sc_lang_code)
+    #     evaluation.compute_bleu_score(aggregate_json, sc_lang_code)
 
-        shutil.rmtree(f"fleurs_{sc_lang_code}_audio")
-        print(f"Deleted folder: fleurs_{sc_lang_code}_audio")
+    #     shutil.rmtree(f"fleurs_{sc_lang_code}_audio")
+    #     print(f"Deleted folder: fleurs_{sc_lang_code}_audio")
+    sc_lang_code = "fr_fr"
+    evaluation.compute_wer(sc_lang_code)
+    # aggregate_json = f"lang_aggregate_data/{sc_lang_code}_aggregate.json"
+    # translate_dataset_nllb(sc_lang_code, "en", aggregate_json)
+    # evaluation.compute_bleu_score(aggregate_json, sc_lang_code)
+    
 
 
 
