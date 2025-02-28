@@ -1,4 +1,4 @@
-from config import LANGUAGE_CODES
+from config import FLEURS_LANGUAGE_CODES
 import json
 
 def rename_json_property(file=None, old_name=None, new_name=None):

@@ -9,7 +9,7 @@
 
 
 
-from config import LANGUAGE_CODES, FLEURS_BASE_URL
+from config import *
 import evaluation
 import data
 import matching
@@ -30,20 +30,7 @@ import soundfile as sf
 
 def get_whisper(model='openai/whisper-large-v3', sc_language=None):
     
-    whisper_language_code_mapping = {
-        "hi_in": "Hindi",  
-        "pa_in": "Punjabi",  
-        "ta_in": "Tamil",  
-        "te_in": "Telugu", 
-        "ml_in": "Malayalam",  
-        "sw_ke": "Swahili",  
-        "ha_ng": "Hausa",   
-        "ig_ng": "Igbo",  
-        "yo_ng": "Yoruba",  
-        "lg_ug": "Luganda" 
-    }
-
-    if sc_language not in whisper_language_code_mapping:
+    if sc_language not in WHISPER_LANGUAGE_CODE_MAPPING:
         raise ValueError(f"Invalid language code: {sc_language}")
 
     whisper = pipeline(
@@ -55,7 +42,7 @@ def get_whisper(model='openai/whisper-large-v3', sc_language=None):
 
     # Return a function that correctly handles `return_timestamps`
     def transcribe(audio_path, return_timestamps=False):
-        return whisper(audio_path, return_timestamps=return_timestamps, generate_kwargs={"language": whisper_language_code_mapping[sc_language]})
+        return whisper(audio_path, return_timestamps=return_timestamps, generate_kwargs={"language": WHISPER_LANGUAGE_CODE_MAPPING[sc_language]})
 
     return transcribe
 
@@ -175,7 +162,7 @@ def seamless(mode=None, input_dir=None, output_file=None, src_lang=None, tgt_lan
 
 def translate_dataset_nllb(source_language=None, target_language="en", json_ds=None):
 
-    nllb_language_code_mapping = {
+    NLLB_LANGUAGE_CODE_MAPPING = {
         "hi_in": "hin_Deva",
         "pa_in": "pan_Guru",
         "ta_in": "tam_Taml",
@@ -190,17 +177,17 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
         "en": "eng_Latn"
     }
 
-    if source_language not in nllb_language_code_mapping:
+    if source_language not in NLLB_LANGUAGE_CODE_MAPPING:
         raise ValueError(f"Source language {source_language} not supported for NLLB.")
-    if target_language not in nllb_language_code_mapping:
+    if target_language not in NLLB_LANGUAGE_CODE_MAPPING:
         raise ValueError(f"Target language {target_language} not supported for NLLB.")
 
     # Create the translation pipeline using the NLLB distilled model.
     translator = pipeline(
         "translation",
         model="facebook/nllb-200-distilled-1.3B",
-        src_lang=nllb_language_code_mapping[source_language],
-        tgt_lang=nllb_language_code_mapping[target_language]
+        src_lang=NLLB_LANGUAGE_CODE_MAPPING[source_language],
+        tgt_lang=NLLB_LANGUAGE_CODE_MAPPING[target_language]
     )
 
     with open(json_ds, 'r', encoding='utf-8') as f:
@@ -277,7 +264,7 @@ def translate_dataset_gt(source_language, target_language="en", ds=None):
 
 
 def main():
-    # for sc_lang_code in LANGUAGE_CODES:
+    # for sc_lang_code in FLEURS_LANGUAGE_CODES:
     #     evaluation.compute_wer(sc_lang_code)
     
     #     sc_language_file_names = data.get_folder_names(sc_lang_code)                      # get all set names from fleurs for source language
