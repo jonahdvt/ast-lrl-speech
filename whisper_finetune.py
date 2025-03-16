@@ -1,5 +1,5 @@
 from datasets import load_dataset, Audio
-from config import FLEURS_LANGUAGE_CODES, WHISPER_LANGUAGE_CODE_MAPPING
+from config import FLEURS_LANGUAGE_CODES, WHISPER_LANGUAGE_CODE_MAPPING, HF_CODE_MAPPING
 from transformers import WhisperFeatureExtractor, WhisperTokenizer, WhisperProcessor, WhisperForConditionalGeneration, Seq2SeqTrainingArguments, Seq2SeqTrainer
 import evaluate
 import torch
@@ -11,8 +11,8 @@ from typing import Any, Dict, List, Union
 
 # 1. Setup
 # Specify the target language code for FLEURS
-language_code = "yo_ng"  
-whisper_model = 'openai/whisper-large-v3'
+language_code = "ta_in"  
+whisper_model = 'openai/whisper-small'
 
 # Load the FLEURS dataset for the specified language
 # Combine train + validation splits for training
@@ -29,7 +29,7 @@ fleurs_test  = fleurs_test.cast_column("audio", Audio(sampling_rate=16000))
 # 2. Preparing the Feature Extractor and Tokenizer
 # Load feature extractor and tokenizer for Whisper
 feature_extractor = WhisperFeatureExtractor.from_pretrained(whisper_model)
-tokenizer = WhisperTokenizer.from_pretrained(whisper_model, language=WHISPER_LANGUAGE_CODE_MAPPING(language_code), task="transcribe")
+tokenizer = WhisperTokenizer.from_pretrained(whisper_model, language=WHISPER_LANGUAGE_CODE_MAPPING[language_code], task="transcribe")
 processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
 
 
@@ -41,9 +41,15 @@ def prepare_dataset(batch):
     return batch
 
 # Apply the preprocessing to the training and test data. Each has input features(audio) and labels (transcript)
-fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=fleurs_train.column_names, num_proc=4)
-fleurs_val = fleurs_val.map(prepare_dataset, remove_columns=fleurs_val.column_names, num_proc=4)
-fleurs_test = fleurs_test.map(prepare_dataset, remove_columns=fleurs_test.column_names, num_proc=4)
+fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=fleurs_train.column_names)
+fleurs_val = fleurs_val.map(prepare_dataset, remove_columns=fleurs_val.column_names)
+fleurs_test = fleurs_test.map(prepare_dataset, remove_columns=fleurs_test.column_names)
+# Removed setting num_proc=4 
+
+
+fleurs_train.cleanup_cache_files()
+fleurs_val.cleanup_cache_files()
+fleurs_test.cleanup_cache_files()
 
 
 # 4. Training config 
@@ -67,15 +73,16 @@ model = WhisperForConditionalGeneration.from_pretrained(whisper_model)
         Also, load_best_model_at_end=True with metric_for_best_model="wer" ensures we keep the best checkpoint (lowest WER)
 """
 training_args = Seq2SeqTrainingArguments(
-    output_dir="./whisper-fleurs-{}".format(language_code),  # save directory (can be changed)
+    output_dir="./whisper-fleurs-small-{}".format(language_code),  # save directory (can be changed)
     per_device_train_batch_size=16,
-    per_device_eval_batch_size=8,
+    per_device_eval_batch_size=4,
     gradient_accumulation_steps=1,  # increase this if reducing batch_size
-    evaluation_strategy="steps",    # evaluate every few steps (set eval_steps)
+    eval_strategy="steps",    # evaluate every few steps (set eval_steps)
     learning_rate=1e-5,
     warmup_steps=100,
     num_train_epochs=10,
     gradient_checkpointing=True,
+    eval_accumulation_steps=4,
     fp16=True,
     logging_steps=50,
     eval_steps=500,                # evaluate every 500 steps (adjust as needed)
@@ -85,6 +92,7 @@ training_args = Seq2SeqTrainingArguments(
     metric_for_best_model="wer",
     greater_is_better=False,       # lower WER is better
     push_to_hub=True,
+    overwrite_output_dir=True,
 )
 
 
@@ -95,11 +103,13 @@ training_args = Seq2SeqTrainingArguments(
 class DataCollatorSpeechSeq2SeqWithPadding:
     processor: WhisperProcessor
     decoder_start_token_id: int
+    max_length: int = 448  # Add a field for maximum label length
 
     def __call__(self, features: List[Dict[str, Union[List[int], torch.Tensor]]]) -> Dict[str, torch.Tensor]:
         # Separate the inputs and labels since we need to pad them differently
         input_features = [{"input_features": f["input_features"]} for f in features]
-        label_features = [{"input_ids": f["labels"]} for f in features]
+        label_features = [{"input_ids": f["labels"][:self.max_length]} for f in features]
+
         # Pad the audio inputs (returns dict with 'input_features')
         batch = self.processor.feature_extractor.pad(input_features, return_tensors="pt")
         # Pad the labels
@@ -113,7 +123,10 @@ class DataCollatorSpeechSeq2SeqWithPadding:
         return batch
 
 # Initialize our data collator
-data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor, decoder_start_token_id=model.config.decoder_start_token_id)
+data_collator = DataCollatorSpeechSeq2SeqWithPadding(
+        processor=processor, 
+        decoder_start_token_id=model.config.decoder_start_token_id,
+        max_length=448)
 
 wer_metric = evaluate.load("wer")
 
@@ -136,7 +149,7 @@ trainer = Seq2SeqTrainer(
     eval_dataset=fleurs_val,            # using test set for evaluation (could also use validation)
     data_collator=data_collator,
     compute_metrics=compute_metrics,
-    tokenizer=processor.feature_extractor,  # this ensures the Trainer pads the features correctly
+    processing_class=processor.feature_extractor,  # this ensures the Trainer pads the features correctly
 )
 # After training, the best model (lowest WER on eval) will be loaded 
 trainer.train()
@@ -144,17 +157,20 @@ trainer.train()
 kwargs = {
     "dataset_tags": "google/fleurs",
     "dataset": "FLEURS",  
-    "dataset_args": f"config: {language_code}, split: test",
-    "language": language_code,
-    "model_name": "Whisper Large FLEURS - Jonah Dauvet",
-    "finetuned_from": "openai/whisper-large-v3",
+    "dataset_args": f"config: {HF_CODE_MAPPING[language_code]}, split: test",
+    "language": HF_CODE_MAPPING[language_code],
+    "model_name": "Whisper Small FLEURS - Jonah Dauvet",
+    "finetuned_from": "openai/whisper-small",
     "tasks": "automatic-speech-recognition",
 }
 
 # This call will push model, its configuration, and training arguments to the HF Hub. load it using the model identifier.
+model.save_pretrained(training_args.output_dir)
+processor.save_pretrained(training_args.output_dir)
+trainer.save_model(training_args.output_dir)
 trainer.push_to_hub(**kwargs)
 
-processor.save_pretrained(training_args.output_dir)
+
 # Can use to load with       processor = WhisperProcessor.from_pretrained("your-username/your-model-name")
 # Retrieve by 
 # from transformers import pipeline
@@ -163,9 +179,6 @@ processor.save_pretrained(training_args.output_dir)
 #     model="your-username/your-model-name",
 #     tokenizer="your-username/your-model-name",
 #     feature_extractor="your-username/your-model-name",
-# )
 
 
 
-metrics = trainer.evaluate(fleurs_test)
-print("Final WER on FLEURS test set:", metrics["eval_wer"])

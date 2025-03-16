@@ -1,16 +1,16 @@
 FLEURS_LANGUAGE_CODES = [
-    "hi_in",  # Hindi     Whisper Transcription
-    # "pa_in",  # Punjabi   Whisper Transcription
-    # "ta_in",  # Tamil     Whisper Transcription
-    # "te_in",  # Telugu    Whisper Transcription
-    # "ml_in",  # Malayalam Whisper Transcription
+#    "hi_in",  # Hindi     Whisper Transcription
+#    "pa_in",  # Punjabi   Whisper Transcription
+    "ta_in",  # Tamil     Whisper Transcription
+    "te_in",  # Telugu    Whisper Transcription
+    "ml_in",  # Malayalam Whisper Transcription
 
-    # "sw_ke",  # Swahili   Whisper Transcription
-    # "ha_ng",  # Hausa     Whisper Transcription                            NOT IN SEAMLESS
-    # "yo_ng",  # Yoruba    Whisper Transcription
-    # "ig_ng",  # Igbo      Seamless Transcription
-    # "lg_ug",  # Luganda   Seamless Transcription
-    # "fr_fr"   # French --  Control
+#    "sw_ke",  # Swahili   Whisper Transcription
+#    "ha_ng",  # Hausa     Whisper Transcription                            NOT IN SEAMLESS
+#    "yo_ng",  # Yoruba    Whisper Transcription
+#    "ig_ng",  # Igbo      Seamless Transcription
+#    "lg_ug",  # Luganda   Seamless Transcription
+#    "fr_fr"   # French --  Control
 ]
 
 
@@ -26,6 +26,21 @@ WHISPER_LANGUAGE_CODE_MAPPING = {
         "yo_ng": "Yoruba",  
         "lg_ug": "Luganda" 
     }
+
+HF_CODE_MAPPING = {
+    "hi_in": "hi",  # Hindi
+    "pa_in": "pa",  # Punjabi
+    "ta_in": "ta",  # Tamil
+    "te_in": "te",  # Telugu
+    "ml_in": "ml",  # Malayalam
+    "sw_ke": "sw",  # Swahili
+    "ha_ng": "ha",  # Hausa (Not in Seamless)
+    "yo_ng": "yo",  # Yoruba
+    "ig_ng": "ig",  # Igbo (Seamless)
+    "lg_ug": "lg",  # Luganda (Seamless)
+    "fr_fr": "fr",  # French (Control)
+}
+
 
 
 NLLB_LANGUAGE_CODE_MAPPING = {

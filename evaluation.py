@@ -78,7 +78,7 @@ def compute_wer(sc_lang):
 
 
 
-def compute_bleu_score(file, language_code):
+def compute_bleu_score(file, language_code, mode):
     with open(file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -86,6 +86,7 @@ def compute_bleu_score(file, language_code):
     gold_translations = []
     seamless_hypothesis_translations = []
     nllb_hypothesis_translations = []
+    seamless_indic_hypothesis_translations = []
 
     for sample in data:
         # Check if 'gold_translation' exists in the sample
@@ -96,11 +97,14 @@ def compute_bleu_score(file, language_code):
             continue
 
         # Check if 'seamless_translation' exists and append
-        if 'seamless_translation' in sample:
+        if mode.lower() == "seamless" and 'seamless_translation' in sample:
             seamless_hypothesis_translations.append(sample['seamless_translation'])
-
+        
+        elif mode.lower() == "seamless_indic" and 'translation' in sample:
+            seamless_indic_hypothesis_translations.append(sample['translation'])
+        
         # Check if 'nllb_translation' exists and append
-        if 'nllb_translation' in sample:
+        elif 'nllb_translation' in sample:
             nllb_hypothesis_translations.append(sample['nllb_translation'])
 
     # Calculate BLEU score for seamless translations (if available)
@@ -110,6 +114,15 @@ def compute_bleu_score(file, language_code):
         with open("bleu_score.txt", "a", encoding="utf-8") as f:
             f.write(f"{language_code}, seamless, bleu = {bleu_seamless.score:.2f}\n")
     
+
+    if seamless_indic_hypothesis_translations:
+        bleu_seamless = sacrebleu.corpus_bleu(seamless_indic_hypothesis_translations, [gold_translations])
+        print(f"{language_code}, indic seamless, bleu = {bleu_seamless.score:.2f}")
+        with open("bleu_score.txt", "a", encoding="utf-8") as f:
+            f.write(f"{language_code}, indic seamless, bleu = {bleu_seamless.score:.2f}\n")
+
+
+
     # Calculate BLEU score for nllb translations (if available)
     if nllb_hypothesis_translations:
         bleu_nllb = sacrebleu.corpus_bleu(nllb_hypothesis_translations, [gold_translations])
