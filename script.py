@@ -13,9 +13,9 @@ from config import *
 import evaluation
 import data
 import matching
+from indic_seamless import *
 
-
-from transformers import pipeline, AutoProcessor, SeamlessM4Tv2Model
+from transformers import pipeline, AutoProcessor, SeamlessM4Tv2Model, SeamlessM4Tv2ForSpeechToText, SeamlessM4TTokenizer, SeamlessM4TFeatureExtractor
 import torch
 import requests
 from bs4 import BeautifulSoup
@@ -75,37 +75,40 @@ def transcribe_dataset_whisper(source_language, ds, whisper_model):
         json.dump(results, json_file, ensure_ascii=False, indent=4)
 
 
-def seamless(mode=None, input_dir=None, output_file=None, src_lang=None, tgt_lang="eng"):
-    
+
+def seamless(mode=None, input_dir=None, output_file=None, src_lang=None, tgt_lang="eng", indic=False):
+
     if mode is None or mode.lower() not in ["transcribe", "translate"]:
         raise ValueError("Invalid mode. Mode must be 'transcribe' or 'translate'.")
-    
-    processor = AutoProcessor.from_pretrained("facebook/seamless-m4t-v2-large")      # import models
-    model = SeamlessM4Tv2Model.from_pretrained("facebook/seamless-m4t-v2-large")
 
-    smls_language_code_mapping = {                                                  # mapping from Fleurs codes to seamless desired inputs 
-            "hi_in": "hin",  
-            "pa_in": "pan",  
-            "ta_in": "tam",  
-            "te_in": "tel", 
-            "ml_in": "mal",  
-            "sw_ke": "swh",  
-            "ig_ng": "ibo",  
-            "yo_ng": "yor",  
-            "lg_ug": "lug",
-            "fr": "fra",
-            "en": "eng"
-        }
+    if not indic:
+        processor = AutoProcessor.from_pretrained("facebook/seamless-m4t-v2-large")
+        model = SeamlessM4Tv2Model.from_pretrained("facebook/seamless-m4t-v2-large")
+    else:
+        model = SeamlessM4Tv2ForSpeechToText.from_pretrained("ai4bharat/indic-seamless").to("cuda")
+        processor = AutoProcessor.from_pretrained("ai4bharat/indic-seamless")
 
+    smls_language_code_mapping = {  # mapping from Fleurs codes to seamless desired inputs
+        "hi_in": "hin",
+        "pa_in": "pan",
+        "ta_in": "tam",
+        "te_in": "tel",
+        "ml_in": "mal",
+        "sw_ke": "swh",
+        "ig_ng": "ibo",
+        "yo_ng": "yor",
+        "lg_ug": "lug",
+        "fr": "fra",
+        "en": "eng"
+    }
 
+    dataset_dir = f"fleurs_{src_lang}_audio/{input_dir}"  # formatting of dataset path
 
-    dataset_dir = f"fleurs_{src_lang}_audio/{input_dir}"                            # formatting of dataset path after getting loaded by prev function
-
-    num_of_files = (len(os.listdir(dataset_dir)))                                   # used to track progress 
+    num_of_files = len(os.listdir(dataset_dir))  # used to track progress
     counter = 0
 
-    audio_files = [                                                                 # all audiofiles (done this way to parse better into Seamless)
-        os.path.join(dataset_dir, filename) 
+    audio_files = [  # all audio files (only .wav files)
+        os.path.join(dataset_dir, filename)
         for filename in os.listdir(dataset_dir)
         if filename.lower().endswith(('.wav'))
     ]
@@ -114,49 +117,87 @@ def seamless(mode=None, input_dir=None, output_file=None, src_lang=None, tgt_lan
         with open(output_file, "r", encoding="utf-8") as json_file:
             output_data = json.load(json_file)
     else:
-        output_data = [] 
+        output_data = []
 
-    for audio_file in audio_files:                                                  # iterate over all audios in the dataset 
-        if mode.lower() == "transcribe":                            
-
-            counter+=1
-            print(f"Transcribed {counter}/{num_of_files} files ({round((counter/num_of_files)*100, 2)}%)")          # Tracking of progress 
-
+    for audio_file in audio_files:  # iterate over all audio files
+        
+        if mode.lower() == "transcribe":
+            counter += 1
+            print(f"Transcribed {counter}/{num_of_files} files ({round((counter/num_of_files)*100, 2)}%)")
             audio_array, sample_rate = sf.read(audio_file)
             audio_sample = {"array": audio_array, "sampling_rate": sample_rate}
 
-            audio_inputs = processor(audios=audio_sample["array"], return_tensors="pt")
-            output_tokens = model.generate(**audio_inputs, tgt_lang=smls_language_code_mapping[src_lang], generate_speech=False)  # takes in the source language to simply transcribe
+            audio_inputs = processor(audios=audio_sample["array"], sampling_rate=16000, return_tensors="pt")
+            if indic:
+                audio_inputs = {k: v.to("cuda") for k, v in audio_inputs.items()}
+            output_tokens = model.generate(
+                **audio_inputs,
+                tgt_lang=smls_language_code_mapping[src_lang],
+            )
             transcribed_text_from_audio = processor.decode(output_tokens[0].tolist()[0], skip_special_tokens=True)
-            
-            output_data.append({
+
+            if not indic:
+                output_data.append({
                     "file_name": os.path.basename(audio_file),
                     "seamless_transcript": transcribed_text_from_audio,
                 })
-            
-        else:                                                                       # if not in transcribe mode, in translate mode 
-            counter+=1
-            print(f"Translated {counter}/{num_of_files} files ({round((counter/num_of_files)*100, 2)}%)")          # Tracking of progress 
+            else:
+                output_data.append({
+                    "file_name": os.path.basename(audio_file),
+                    "seamless_indic_transcript": transcribed_text_from_audio,
+                })
+
+        else:  # translate mode
+            counter += 1
+            print(f"Translated {counter}/{num_of_files} files ({round((counter/num_of_files)*100, 2)}%)")
             
             audio_array, sample_rate = sf.read(audio_file)
             audio_sample = {"array": audio_array, "sampling_rate": sample_rate}
-            audio_inputs = processor(audios=audio_sample["array"], return_tensors="pt")
-            output_tokens = model.generate(**audio_inputs, tgt_lang=smls_language_code_mapping[tgt_lang], generate_speech=False)        # takes in target language to tranlate to other  
-            translated_text_from_audio = processor.decode(output_tokens[0].tolist()[0], skip_special_tokens=True)
-            print(os.path.basename(audio_file))
+            audio_inputs = processor(audios=audio_sample["array"], sampling_rate=16000, return_tensors="pt")
+            if indic:
+                audio_inputs = {k: v.to("cuda") for k, v in audio_inputs.items()}
+            output_tokens = model.generate(
+                **audio_inputs,
+                tgt_lang=smls_language_code_mapping[tgt_lang],
+            )
+
+            translated_text_from_audio = processor.decode(output_tokens[0], skip_special_tokens=True)
+            print(translated_text_from_audio)
+            print("Output tokens:", output_tokens)
+   
             for sample in output_data:
                 if sample["file_name"] == os.path.basename(audio_file):
                     print("check 1 - found the file")
-                    if "seamless_translation" not in sample:  # Check if translation is missing
-                        sample["seamless_translation"] = translated_text_from_audio
-                        print(f"Added seamless_translation for {os.path.basename(audio_file)}")
+                    if not indic:
+                        if "seamless_translation" not in sample:
+                            sample["seamless_translation"] = translated_text_from_audio
+                            print(f"Added seamless_translation for {os.path.basename(audio_file)}")
+                        else:
+                            print(f"seamless_translation already exists for {os.path.basename(audio_file)}")
                     else:
-                        print(f"seamless_translation already exists for {os.path.basename(audio_file)}")
-
-
+                        if "seamless_indic_translation" not in sample:
+                            sample["seamless_indic_translation"] = translated_text_from_audio
+                            print(f"Added seamless_indic_translation for {os.path.basename(audio_file)}")
+                        else:
+                            print(f"seamless_indic_translation already exists for {os.path.basename(audio_file)}")
+                else:
+                    if not indic:
+                        output_data.append({
+                            "file_name": os.path.basename(audio_file),
+                            "seamless_translation": translated_text_from_audio,
+                        })
+                        print(f"Appended seamless_translation for {os.path.basename(audio_file)}")
+                    else:
+                        output_data.append({
+                            "file_name": os.path.basename(audio_file),
+                            "seamless_indic_translation": translated_text_from_audio,
+                        })
+                    print(f"Appended seamless_indic_translation for {os.path.basename(audio_file)}")
     
     with open(output_file, "w", encoding="utf-8") as json_file:
         json.dump(output_data, json_file, ensure_ascii=False, indent=4)
+
+
 
 # Translations
 
@@ -264,32 +305,31 @@ def translate_dataset_gt(source_language, target_language="en", ds=None):
 
 
 def main():
-    # for sc_lang_code in FLEURS_LANGUAGE_CODES:
+    for sc_lang_code in FLEURS_LANGUAGE_CODES:
     #     evaluation.compute_wer(sc_lang_code)
-    
     #     sc_language_file_names = data.get_folder_names(sc_lang_code)                      # get all set names from fleurs for source language
     #     for file_path in sc_language_file_names:
     #         data.get_fleurs_data(file_path, sc_lang_code)       
 
-    #     aggregate_json = f"lang_aggregate_data/{sc_lang_code}_aggregate.json"
-        
+         aggregate_json = f"lang_aggregate_data/test/{sc_lang_code}_aggregate.json"
+         indic_seamless(sc_lang_code, aggregate_json)  
 
-    #     datasets = ["train"]                     
+    #     datasets = ["test"]                     
     #     for ds in datasets:
     #         seamless(mode="transcribe",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang=sc_lang_code)  
-    #         seamless(mode="translate",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang="en")  
+    #         seamless(mode="translate",input_dir=ds, output_file=aggregate_json, src_lang=sc_lang_code, tgt_lang="en", indic=True)  
     #     translate_dataset_nllb(sc_lang_code, "en", aggregate_json)
-    #     print(f"finished translation of {sc_lang_code}")
+         print(f"finished translation of {sc_lang_code}")
 
-    #     matching.gold_codes_matching(aggregate_json, f'lang_file_codes/{sc_lang_code}_codes_file.csv', aggregate_json)
-    #     matching.gold_translation_matching(aggregate_json, 'en_translations_file.csv', aggregate_json)
+         matching.gold_codes_matching(aggregate_json, f'fleurs_lang_info/{sc_lang_code}_fleurs_info.csv', aggregate_json)
+         matching.gold_translation_matching(aggregate_json, 'fleurs_lang_info/en_translations.csv', aggregate_json)
 
-    #     evaluation.compute_bleu_score(aggregate_json, sc_lang_code)
+         evaluation.compute_bleu_score(aggregate_json, sc_lang_code, mode="seamless_indic")
 
     #     shutil.rmtree(f"fleurs_{sc_lang_code}_audio")
     #     print(f"Deleted folder: fleurs_{sc_lang_code}_audio")
-    sc_lang_code = "fr_fr"
-    evaluation.compute_wer(sc_lang_code)
+    # sc_lang_code = "fr_fr"
+    # evaluation.compute_wer(sc_lang_code)
     # aggregate_json = f"lang_aggregate_data/{sc_lang_code}_aggregate.json"
     # translate_dataset_nllb(sc_lang_code, "en", aggregate_json)
     # evaluation.compute_bleu_score(aggregate_json, sc_lang_code)

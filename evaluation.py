@@ -104,7 +104,7 @@ def compute_bleu_score(file, language_code, mode):
             seamless_indic_hypothesis_translations.append(sample['translation'])
         
         # Check if 'nllb_translation' exists and append
-        elif 'nllb_translation' in sample:
+        elif mode.lower() == "nllb" and 'nllb_translation' in sample:
             nllb_hypothesis_translations.append(sample['nllb_translation'])
 
     # Calculate BLEU score for seamless translations (if available)
