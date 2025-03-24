@@ -5,29 +5,16 @@ from config import *
 import json
 import os 
 
-language_codes = [ 
-        "ha_ng",
-        "yo_ng",
-        "sw_ke",
-        ]
+language_codes = [
+    "hi_in",
+    "pa_in", 
+    "ta_in", 
+    "te_in", 
+    "ml_in"
+    ]
 
 
 def translate_dataset_nllb(source_language=None, target_language="en", json_ds=None):
-
-    NLLB_LANGUAGE_CODE_MAPPING = {
-        "hi_in": "hin_Deva",
-        "pa_in": "pan_Guru",
-        "ta_in": "tam_Taml",
-        "te_in": "tel_Telu",
-        "ml_in": "mal_Mlym",
-        "sw_ke": "swh_Latn",
-        "ha_ng": "hau_Latn",
-        "ig_ng": "ibo_Latn",
-        "yo_ng": "yor_Latn",
-        "lg_ug": "lug_Latn",
-        "fr_fr": "fra_Latn",
-        "en": "eng_Latn"
-    }
 
     if source_language not in NLLB_LANGUAGE_CODE_MAPPING:
         raise ValueError(f"Source language {source_language} not supported for NLLB.")
@@ -70,7 +57,7 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
 for language_code in language_codes:
 # Path to the directory where the model & processor were saved (or the Hub identifier)
-    model_dir = f"jonahdvt/whisper-fleurs-small-afri"
+    model_dir = f"jonahdvt/whisper-fleurs-small-indic"
     # model_dir = f"jonahdvt/whisper-fleurs-small-{language_code}"
 
 # 2. Load the FLEURS test dataset
@@ -116,7 +103,7 @@ for language_code in language_codes:
         os.makedirs(results_dir)
 
 # Set JSON filename based on the language code
-    json_filename = f"{results_dir}/{language_code}_afri.json"
+    json_filename = f"{results_dir}/{language_code}_indic.json"
 
     if os.path.exists(json_filename):
         with open(json_filename, "w") as f:
@@ -132,7 +119,7 @@ for language_code in language_codes:
 
         predictions.append(result["text"])
         references.append(sample["transcription"])
-        print(result["text"])
+
 
     
     # Use the audio file's path as its unique code (fallback to sample index if not available)
@@ -141,9 +128,8 @@ for language_code in language_codes:
             "wav_code": wav_code,
             "whisper_s_ft": result["text"]
         })
-        print(count/len(fleurs_test))
         wer = wer_metric.compute(predictions=predictions, references=references)
-    print("Final WER on FLEURS test set:", wer)
+    print(f"Final WER of {language_code} on FLEURS test set:", wer)
 
     with open(json_filename, "w", encoding="utf-8") as f:
         json.dump(result_list, f, indent=2, ensure_ascii=False)
@@ -155,28 +141,3 @@ for language_code in language_codes:
     translate_dataset_nllb(source_language=language_code, target_language="en", json_ds=json_filename)
 
 
-# Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
-# Error message in the weird ones at Actual.
-
-
-# SMALL
-# Final WER on Yoruba FLEURS test set:              0.6766211180124223
-# UNTRAINED Final WER on Yoruba FLEURS test set:    1.778583850931677
-
-# Final WER on Malayalam FLEURS test set:           0.511
-# UNTRAINED Final WER on Malayalam FLEURS test set: 4.271
-
-
-# Final WER on Telugu FLEURS test set:           0.531
-# UNTRAINED Final WER on Telugu FLEURS test set: 1.0527930461459798
-
-
-# Final WER on Punjabi FLEURS test set:           0.460
-# UNTRAINED Final WER on Punjabi FLEURS test set: 
-
-# Final WER on Tamil FLEURS test set: 0.487
-
-
-
-#MED 
-# Final WER on Yoruba FLEURS test set: 0.6451180124223602
