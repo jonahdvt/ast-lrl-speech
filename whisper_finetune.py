@@ -11,21 +11,23 @@ from typing import Any, Dict, List, Union
 
 # 1. Setup
 # Specify the target language code for FLEURS
+languages = ["yo_ng", "ha_ng", "sw_ke"]
+
 language_code = "yo_ng"  
 # whisper_model = 'openai/whisper-small'
-whisper_model = "jonahdvt/whisper-fleurs-small-afri"
+whisper_model = "jonahdvt/whisper-fleurs-ha_ng"
 
 
 # Load the FLEURS dataset for the specified language
 # Combine train + validation splits for training
 fleurs_train = load_dataset("google/fleurs", language_code, split="train")
 fleurs_val = load_dataset("google/fleurs", language_code, split="validation")
-# fleurs_test  = load_dataset("google/fleurs", language_code, split="test")
+fleurs_test  = load_dataset("google/fleurs", language_code, split="test")
 
 # Ensure audio is 16kHz
 fleurs_train = fleurs_train.cast_column("audio", Audio(sampling_rate=16000))
 fleurs_val = fleurs_val.cast_column("audio", Audio(sampling_rate=16000))
-# fleurs_test  = fleurs_test.cast_column("audio", Audio(sampling_rate=16000))
+fleurs_test  = fleurs_test.cast_column("audio", Audio(sampling_rate=16000))
 
 
 # 2. Preparing the Feature Extractor and Tokenizer
@@ -45,13 +47,13 @@ def prepare_dataset(batch):
 # Apply the preprocessing to the training and test data. Each has input features(audio) and labels (transcript)
 fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=fleurs_train.column_names)
 fleurs_val = fleurs_val.map(prepare_dataset, remove_columns=fleurs_val.column_names)
-# fleurs_test = fleurs_test.map(prepare_dataset, remove_columns=fleurs_test.column_names)
+fleurs_test = fleurs_test.map(prepare_dataset, remove_columns=fleurs_test.column_names)
 # Removed setting num_proc=4 
 
 
 fleurs_train.cleanup_cache_files()
 fleurs_val.cleanup_cache_files()
-# fleurs_test.cleanup_cache_files()
+fleurs_test.cleanup_cache_files()
 
 
 # 4. Training config 
@@ -75,7 +77,8 @@ model = WhisperForConditionalGeneration.from_pretrained(whisper_model)
         Also, load_best_model_at_end=True with metric_for_best_model="wer" ensures we keep the best checkpoint (lowest WER)
 """
 training_args = Seq2SeqTrainingArguments(
-    output_dir="./whisper-fleurs-small-M-{}".format(language_code),  # save directory (can be changed)
+    #output_dir="./whisper-fleurs-small-{}".format(language_code),  # save directory (can be changed)
+    output_dir="./whisper-fleurs-small-afri", # combined dir
     per_device_train_batch_size=16,
     per_device_eval_batch_size=4,
     gradient_accumulation_steps=1,  # increase this if reducing batch_size
@@ -87,8 +90,8 @@ training_args = Seq2SeqTrainingArguments(
     eval_accumulation_steps=4,
     fp16=True,
     logging_steps=50,
-    eval_steps=1000,                # evaluate every 500 steps (adjust as needed)
-    save_steps=1000,                # save checkpoint every 500 steps
+    eval_steps=1000,                
+    save_steps=1000,                
     save_total_limit=2,            # only keep last 2 checkpoints
     load_best_model_at_end=True,
     metric_for_best_model="wer",
@@ -156,14 +159,23 @@ trainer = Seq2SeqTrainer(
 # After training, the best model (lowest WER on eval) will be loaded 
 trainer.train()
 
+# kwargs = {
+#     "dataset_tags": "google/fleurs",
+#     "dataset": "FLEURS",  
+#     "dataset_args": f"config: {HF_CODE_MAPPING[language_code]}, split: test",
+#     "language": HF_CODE_MAPPING[language_code],
+#     "model_name": "Whisper Small FLEURS - Jonah Dauvet",
+#     "finetuned_from": "openai/whisper-small",
+#     "tasks": "automatic-speech-recognition",
+# }
 kwargs = {
     "dataset_tags": "google/fleurs",
-    "dataset": "FLEURS",  
-    "dataset_args": f"config: {HF_CODE_MAPPING[language_code]}, split: test",
-    "language": HF_CODE_MAPPING[language_code],
-    "model_name": "Whisper Small FLEURS - Jonah Dauvet",
-    # "finetuned_from": "openai/whisper-small",
-    "finetuned_from": "jonahdvt/whisper-fleurs-small-afri",
+    "dataset": "FLEURS",
+    "dataset_args": f"config: {','.join([HF_CODE_MAPPING[l] for l in languages])}, split: test",
+    "language": "multilingual",                     # <— indicates multiple languages
+    "tags": ",".join([HF_CODE_MAPPING[l] for l in languages]),  # <— use tags to list individual codes
+    "model_name": "Whisper Small FLEURS – African Fine‑tuning",
+    "finetuned_from": "openai/whisper-small",
     "tasks": "automatic-speech-recognition",
 }
 

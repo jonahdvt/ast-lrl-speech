@@ -22,9 +22,10 @@ WHISPER_LANGUAGE_CODE_MAPPING = {
         "ml_in": "Malayalam",  
         "sw_ke": "Swahili",  
         "ha_ng": "Hausa",   
-        "ig_ng": "Igbo",  
-        "yo_ng": "Yoruba",  
-        "lg_ug": "Luganda" 
+        "yo_ng": "Yoruba", 
+
+        "ig_ng": "Lingala",   # fake mapping 
+        "lg_ug": "Shona", 
     }
 
 HF_CODE_MAPPING = {

@@ -1,7 +1,8 @@
-from datasets import load_dataset, Audio, concatenate_datasets
+from datasets import load_dataset, Audio, concatenate_datasets, interleave_datasets
 from config import FLEURS_LANGUAGE_CODES, WHISPER_LANGUAGE_CODE_MAPPING, HF_CODE_MAPPING
 from transformers import WhisperFeatureExtractor, WhisperTokenizer, WhisperProcessor, WhisperForConditionalGeneration, Seq2SeqTrainingArguments, Seq2SeqTrainer
 import evaluate
+from transformers.trainer_utils import get_last_checkpoint
 import torch
 from dataclasses import dataclass
 from typing import Any, Dict, List, Union
@@ -13,6 +14,17 @@ FULL_TO_FLEURS_CODE_MAPPING = {
     "Tamil": "ta_in",
     "Telugu": "te_in",
     "Malayalam": "ml_in",
+
+    "Swahili": "sw_ke",
+    "Yoruba": "yo_ng",
+    "Hausa": "ha_ng",
+
+    "Lingala": "ig_ng",
+    "Shona": "lg_ug",
+
+    "Igbo": "ig_ng",
+    "Luganda": "lg_ug",
+    "Ganda": "lg_ug",
 }
 
 
@@ -21,58 +33,92 @@ FULL_TO_FLEURS_CODE_MAPPING = {
 # 1. Setup
 # Specify the target language code for FLEURS
 languages = ["hi_in", "pa_in", "ta_in", "te_in", "ml_in"]
-
-whisper_model = 'openai/whisper-small'
-
-
-# Load & cast all languages
-datasets = []
-for lang in languages:
-    for split in ["train","validation","test"]:
-        ds = load_dataset("google/fleurs", lang, split=split).cast_column("audio", Audio(sampling_rate=16000))
-        datasets.append(ds)
-
-# Concatenate into train/val/test
-fleurs_train = concatenate_datasets([d for d in datasets if d.split=="train"])
-fleurs_train = fleurs_train.train_test_split(test_size=0.2, shuffle=True, seed=42)["train"]
-fleurs_val   = concatenate_datasets([d for d in datasets if d.split=="validation"])
+# languages= ["ig_ng","lg_ug","sw_ke", "yo_ng", "ha_ng"]
+whisper_model = 'openai/whisper-medium'
 
 
-# Ensure audio is 16kHz
-fleurs_train = fleurs_train.cast_column("audio", Audio(sampling_rate=16000))
-fleurs_val = fleurs_val.cast_column("audio", Audio(sampling_rate=16000))
 
+def load_streaming_dataset(dataset_name, config, split):
+    if "+" in split:
+        splits = [
+            load_dataset(dataset_name, config, split=s, streaming=True)
+            for s in split.split("+")
+        ]
+        return interleave_datasets(splits)
+    return load_dataset(dataset_name, config, split=split, streaming=True)
 
-# 2. Preparing the Feature Extractor and Tokenizer
-# Load feature extractor and tokenizer for Whisper
+# STREAMING train + validation
+fleurs_train = interleave_datasets([
+    load_streaming_dataset("google/fleurs", lang, "train") for lang in languages
+])
+fleurs_val = interleave_datasets([
+    load_streaming_dataset("google/fleurs", lang, "validation") for lang in languages
+])
+
 feature_extractor = WhisperFeatureExtractor.from_pretrained(whisper_model)
 tokenizer = WhisperTokenizer.from_pretrained(whisper_model, task="transcribe")
 processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
 
-
 def prepare_dataset(batch):
     fleurs_code = FULL_TO_FLEURS_CODE_MAPPING[batch["language"]]
-    target_lang = WHISPER_LANGUAGE_CODE_MAPPING[fleurs_code]
-    processor.tokenizer.language = target_lang
+    processor.tokenizer.language = WHISPER_LANGUAGE_CODE_MAPPING[fleurs_code]
     audio = batch["audio"]
-    input_features = processor.feature_extractor(
-        audio["array"],
-        sampling_rate=audio["sampling_rate"],
-    ).input_features[0]
+    input_features = processor.feature_extractor(audio["array"], sampling_rate=audio["sampling_rate"]).input_features[0]
     labels = processor.tokenizer(batch["transcription"]).input_ids
-
     return {"input_features": input_features, "labels": labels}
 
+fleurs_train = fleurs_train.map(prepare_dataset)
+fleurs_val = fleurs_val.map(prepare_dataset)
 
-keep_cols = ["audio", "transcription", "language"]
+
+
+# # Load & cast all languages
+# datasets = []
+# for lang in languages:
+#     for split in ["train","validation"]:
+#         ds = load_dataset("google/fleurs", lang, split=split).cast_column("audio", Audio(sampling_rate=16000))
+#         datasets.append(ds)
+
+# # Concatenate into train/val/test
+# fleurs_train = concatenate_datasets([d for d in datasets if d.split=="train"])
+# fleurs_val   = concatenate_datasets([d for d in datasets if d.split=="validation"])
+
+
+# # Ensure audio is 16kHz
+# fleurs_train = fleurs_train.cast_column("audio", Audio(sampling_rate=16000))
+# fleurs_val = fleurs_val.cast_column("audio", Audio(sampling_rate=16000))
+
+
+# # 2. Preparing the Feature Extractor and Tokenizer
+# # Load feature extractor and tokenizer for Whisper
+# feature_extractor = WhisperFeatureExtractor.from_pretrained(whisper_model)
+# tokenizer = WhisperTokenizer.from_pretrained(whisper_model, task="transcribe")
+# processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
+
+
+# def prepare_dataset(batch):
+#     fleurs_code = FULL_TO_FLEURS_CODE_MAPPING[batch["language"]]
+#     target_lang = WHISPER_LANGUAGE_CODE_MAPPING[fleurs_code]
+#     processor.tokenizer.language = target_lang
+#     audio = batch["audio"]
+#     input_features = processor.feature_extractor(
+#         audio["array"],
+#         sampling_rate=audio["sampling_rate"],
+#     ).input_features[0]
+#     labels = processor.tokenizer(batch["transcription"]).input_ids
+
+#     return {"input_features": input_features, "labels": labels}
+
+
+# keep_cols = ["audio", "transcription", "language"]
 
 
 # Apply the preprocessing to the training and test data. Each has input features(audio) and labels (transcript)
 fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=fleurs_train.column_names)
 fleurs_val = fleurs_val.map(prepare_dataset, remove_columns=fleurs_val.column_names)
 
-fleurs_train.cleanup_cache_files()
-fleurs_val.cleanup_cache_files()
+# fleurs_train.cleanup_cache_files()
+# fleurs_val.cleanup_cache_files()
 
 
 
@@ -96,29 +142,60 @@ model = WhisperForConditionalGeneration.from_pretrained(whisper_model)
     - Save and logging: Set save_steps, eval_steps, and logging_steps as needed. 
         Also, load_best_model_at_end=True with metric_for_best_model="wer" ensures we keep the best checkpoint (lowest WER)
 """
+
+
+# training_args = Seq2SeqTrainingArguments(
+#     output_dir="./whisper-fleurs-medium-plus-afri",
+#     per_device_train_batch_size=32,
+#     per_device_eval_batch_size=16,
+#     gradient_accumulation_steps=1,
+#     eval_strategy="steps",
+#     eval_steps=3700,
+#     learning_rate=1e-5,
+#     warmup_steps=100,
+#     num_train_epochs=10,
+#     gradient_checkpointing=True,
+#     fp16=True,
+#     # ==== checkpointing settings ====
+#     save_strategy="steps",
+#     save_steps=370,
+#     save_total_limit=1,                # keep only the most recent checkpoint
+#     load_best_model_at_end=False,
+#     metric_for_best_model="wer",
+#     greater_is_better=False,
+
+#     logging_steps=50,
+#     logging_strategy="steps",
+
+#     push_to_hub=True,
+#     overwrite_output_dir=False,        # IMPORTANT: do NOT overwrite output_dir on restart
+# )
+
+# ~200k examples / 32 batch ≈ 6250 steps per epoch → 10 epochs = 62500 steps
 training_args = Seq2SeqTrainingArguments(
-    #output_dir="./whisper-fleurs-small-{}".format(language_code),  # save directory (can be changed)
-    output_dir="./whisper-fleurs-small-indic", # combined dir
+    output_dir="./whisper-fleurs-medium-indic",
     per_device_train_batch_size=32,
     per_device_eval_batch_size=16,
-    gradient_accumulation_steps=1,  # increase this if reducing batch_size
-    eval_strategy="steps",    # evaluate every few steps (set eval_steps)
+    gradient_accumulation_steps=1,
+    eval_strategy="steps",
+    eval_steps=4000,
     learning_rate=1e-5,
     warmup_steps=100,
-    num_train_epochs=10,
+    max_steps=2000,                   # <-- REQUIRED for streaming
     gradient_checkpointing=True,
-    eval_accumulation_steps=4,
     fp16=True,
-    logging_steps=50,
-    eval_steps=5000,                
-    save_steps=5000,                
-    save_total_limit=2,            # only keep last 2 checkpoints
-    load_best_model_at_end=True,
+    save_strategy="steps",
+    save_steps=4000,
+    save_total_limit=3,
     metric_for_best_model="wer",
-    greater_is_better=False,       # lower WER is better
-    push_to_hub=True,
-    overwrite_output_dir=True,
+    greater_is_better=False,
+    logging_steps=50,
+    push_to_hub=True,        # Switch back later 
+    hub_strategy="end",
+    overwrite_output_dir=False,
 )
+
+
 
 
 
@@ -176,8 +253,17 @@ trainer = Seq2SeqTrainer(
     compute_metrics=compute_metrics,
     processing_class=processor.feature_extractor,  # this ensures the Trainer pads the features correctly
 )
-# After training, the best model (lowest WER on eval) will be loaded 
-trainer.train()
+
+
+last_checkpoint = get_last_checkpoint(training_args.output_dir)
+if last_checkpoint is not None:
+    print(f"Resuming training from checkpoint: {last_checkpoint}")
+    trainer.train(resume_from_checkpoint=last_checkpoint)
+else:
+    print("No checkpoint found — starting training from scratch")
+    trainer.train()
+
+
 
 # kwargs = {
 #     "dataset_tags": "google/fleurs",
@@ -194,8 +280,8 @@ kwargs = {
     "dataset_args": f"config: {','.join([HF_CODE_MAPPING[l] for l in languages])}, split: test",
     "language": "multilingual",                     # <— indicates multiple languages
     "tags": ",".join([HF_CODE_MAPPING[l] for l in languages]),  # <— use tags to list individual codes
-    "model_name": "Whisper Small FLEURS – Indic Fine‑tuning",
-    "finetuned_from": "openai/whisper-small",
+    "model_name": "Whisper Medium FLEURS - Indic - Fine-tuning",
+    "finetuned_from": "openai/whisper-medium",
     "tasks": "automatic-speech-recognition",
 }
 
@@ -204,6 +290,10 @@ model.save_pretrained(training_args.output_dir)
 processor.save_pretrained(training_args.output_dir)
 trainer.save_model(training_args.output_dir)
 trainer.push_to_hub(**kwargs)
+
+
+# trainer.save_model(training_args.output_dir)
+# processor.save_pretrained(training_args.output_dir)
 
 
 # Can use to load with       processor = WhisperProcessor.from_pretrained("your-username/your-model-name")

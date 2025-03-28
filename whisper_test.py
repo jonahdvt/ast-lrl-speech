@@ -6,11 +6,16 @@ import json
 import os 
 
 language_codes = [
-    "hi_in",
+    # "hi_in",
     "pa_in", 
     "ta_in", 
     "te_in", 
-    "ml_in"
+    "ml_in",
+    # "yo_ng",
+    # "sw_ke",
+    # "ha_ng",
+    # "ig_ng",
+    # "lg_ug"
     ]
 
 
@@ -38,9 +43,9 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
     for sample in data:
 
-        if (("whisper_s_ft" in sample) and "nllb_translation" not in sample):
+        if (("whisper_m_ft" in sample) and "nllb_translation" not in sample):
 
-            source_text = sample.get("whisper_s_ft")
+            source_text = sample.get("whisper_m_ft")
             translation = translator(source_text)
             sample["nllb_translation"] = translation[0]['translation_text']
 
@@ -57,7 +62,7 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
 for language_code in language_codes:
 # Path to the directory where the model & processor were saved (or the Hub identifier)
-    model_dir = f"jonahdvt/whisper-fleurs-small-indic"
+    model_dir = f"jonahdvt/whisper-fleurs-medium-indic"
     # model_dir = f"jonahdvt/whisper-fleurs-small-{language_code}"
 
 # 2. Load the FLEURS test dataset
@@ -98,7 +103,7 @@ for language_code in language_codes:
     count = 0
 
 # Create the directory if it doesn't exist
-    results_dir = "s_ft_whisper_results"
+    results_dir = "m_ft_whisper_results"
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
@@ -118,15 +123,16 @@ for language_code in language_codes:
         result = asr_pipeline(sample["audio"]["array"])
 
         predictions.append(result["text"])
+        print(result["text"])
         references.append(sample["transcription"])
 
 
     
     # Use the audio file's path as its unique code (fallback to sample index if not available)
-        wav_code = sample["audio"].get("path", f"sample_{count}")
+        file_name = sample["audio"].get("path", f"sample_{count}")
         result_list.append({
-            "wav_code": wav_code,
-            "whisper_s_ft": result["text"]
+            "file_name": file_name,
+            "whisper_m_ft": result["text"]
         })
         wer = wer_metric.compute(predictions=predictions, references=references)
     print(f"Final WER of {language_code} on FLEURS test set:", wer)

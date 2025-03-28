@@ -53,13 +53,27 @@ def remove_prefix_from_wav_code(input_file, output_file, prefix="test/"):
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 
-code = "sw_ke"
-file = f"s_ft_whisper_results/{code}_afri.json"
-rename_json_property(file, "wav_code", "file_name")
-remove_prefix_from_wav_code(file, file)
-matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
-matching.gold_translation_matching(file, "fleurs_lang_info/en_translations.csv", file)
-evaluation.compute_bleu_score(file, code, "nllb")
+
+# process for Indic Whisper
+codes = [
+    # "hi_in",
+    # "pa_in", 
+    "ta_in", 
+    "te_in", 
+    "ml_in"
+    # "yo_ng",
+    # "sw_ke",
+    # "ha_ng",
+    # "ig_ng",
+    # "lg_ug",
+    ]
+for code in codes:
+    file = f"m_ft_whisper_results/{code}_indic.json"
+    # rename_json_property(file, "wav_code", "file_name")
+    remove_prefix_from_wav_code(file, file)
+    matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
+    matching.gold_translation_matching(file, "fleurs_lang_info/en_translations.csv", file)
+    evaluation.compute_bleu_score(file, code, "nllb")
 
 
 
