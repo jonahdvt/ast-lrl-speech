@@ -32,9 +32,15 @@ FULL_TO_FLEURS_CODE_MAPPING = {
 
 # 1. Setup
 # Specify the target language code for FLEURS
-languages = ["hi_in", "pa_in", "ta_in", "te_in", "ml_in"]
-# languages= ["ig_ng","lg_ug","sw_ke", "yo_ng", "ha_ng"]
-whisper_model = 'openai/whisper-medium'
+# languages = ["hi_in", "pa_in", "ta_in", "te_in", "ml_in"]
+languages= [
+    "ig_ng",
+    "lg_ug",
+    # "sw_ke", 
+    "yo_ng", 
+    # "ha_ng"
+    ]
+whisper_model = 'openai/whisper-large-v3'
 
 
 
@@ -171,21 +177,31 @@ model = WhisperForConditionalGeneration.from_pretrained(whisper_model)
 #     overwrite_output_dir=False,        # IMPORTANT: do NOT overwrite output_dir on restart
 # )
 
-# ~200k examples / 32 batch ≈ 6250 steps per epoch → 10 epochs = 62500 steps
+
+# Afri-5  --- ~14k samples / 32 batch ≈ 440 steps per epoch 
+#       → 3 epochs = 1320 max_steps 
+#       → 5 epochs = 2200 max_steps 
+#       → 10 epochs = 4400 max_steps 
+# Indic-5  --- ~11.8k samples / 32 batch ≈ 370 steps per epoch 
+#       → 3 epochs = 1110 max_steps 
+#       → 5 epochs = 1850 max_steps 
+#       → 10 epochs = 3700 max_steps 
+
+
 training_args = Seq2SeqTrainingArguments(
-    output_dir="./whisper-fleurs-medium-indic",
+    output_dir="./whisper-fleurs-large-indic",
     per_device_train_batch_size=32,
-    per_device_eval_batch_size=16,
+    per_device_eval_batch_size=32,
     gradient_accumulation_steps=1,
     eval_strategy="steps",
-    eval_steps=4000,
+    eval_steps=7400,
     learning_rate=1e-5,
     warmup_steps=100,
-    max_steps=2000,                   # <-- REQUIRED for streaming
+    max_steps=3700,                   # <-- REQUIRED for streaming, do 10 epochs (4400 for Afri // 3700 for Indic)
     gradient_checkpointing=True,
     fp16=True,
     save_strategy="steps",
-    save_steps=4000,
+    save_steps=7400,
     save_total_limit=3,
     metric_for_best_model="wer",
     greater_is_better=False,
@@ -252,7 +268,7 @@ trainer = Seq2SeqTrainer(
     data_collator=data_collator,
     compute_metrics=compute_metrics,
     processing_class=processor.feature_extractor,  # this ensures the Trainer pads the features correctly
-)
+) 
 
 
 last_checkpoint = get_last_checkpoint(training_args.output_dir)
@@ -280,8 +296,8 @@ kwargs = {
     "dataset_args": f"config: {','.join([HF_CODE_MAPPING[l] for l in languages])}, split: test",
     "language": "multilingual",                     # <— indicates multiple languages
     "tags": ",".join([HF_CODE_MAPPING[l] for l in languages]),  # <— use tags to list individual codes
-    "model_name": "Whisper Medium FLEURS - Indic - Fine-tuning",
-    "finetuned_from": "openai/whisper-medium",
+    "model_name": "Whisper Large FLEURS - Indic - Fine-tuning",
+    "finetuned_from": "openai/whisper-large-v3",
     "tasks": "automatic-speech-recognition",
 }
 

@@ -7,15 +7,15 @@ import os
 
 language_codes = [
     # "hi_in",
-    "pa_in", 
-    "ta_in", 
-    "te_in", 
-    "ml_in",
+    # "pa_in", 
+    # "ta_in", 
+    # "te_in", 
+    # "ml_in",
     # "yo_ng",
     # "sw_ke",
-    # "ha_ng",
-    # "ig_ng",
-    # "lg_ug"
+    "ha_ng",
+    "ig_ng",
+    "lg_ug"
     ]
 
 
@@ -43,9 +43,9 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
     for sample in data:
 
-        if (("whisper_m_ft" in sample) and "nllb_translation" not in sample):
+        if (("whisper_m" in sample) and "nllb_translation" not in sample):
 
-            source_text = sample.get("whisper_m_ft")
+            source_text = sample.get("whisper_m")
             translation = translator(source_text)
             sample["nllb_translation"] = translation[0]['translation_text']
 
@@ -62,29 +62,28 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
 for language_code in language_codes:
 # Path to the directory where the model & processor were saved (or the Hub identifier)
-    model_dir = f"jonahdvt/whisper-fleurs-medium-indic"
-    # model_dir = f"jonahdvt/whisper-fleurs-small-{language_code}"
+    # model_dir = f"jonahdvt/whisper-fleurs-large-indic"
+    # # model_dir = f"jonahdvt/whisper-fleurs-small-{language_code}"
+    # feature_extractor = WhisperFeatureExtractor.from_pretrained(model_dir)
+    # tokenizer = WhisperTokenizer.from_pretrained(
+    #     model_dir,
+    #     language=WHISPER_LANGUAGE_CODE_MAPPING[language_code],
+    #     task="transcribe"
+    # )
+    # processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
+    # model = WhisperForConditionalGeneration.from_pretrained(model_dir)
+
+    model = 'openai/whisper-medium'
+    feature_extractor = WhisperFeatureExtractor.from_pretrained(model)
+    tokenizer = WhisperTokenizer.from_pretrained(model, language=WHISPER_LANGUAGE_CODE_MAPPING[language_code], task="transcribe")
+    processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
+
 
 # 2. Load the FLEURS test dataset
     fleurs_test = load_dataset("google/fleurs", language_code, split="test", trust_remote_code=True)
     fleurs_test = fleurs_test.cast_column("audio", Audio(sampling_rate=16000))
 
-# 3. Load the trained model and processor
-    feature_extractor = WhisperFeatureExtractor.from_pretrained(model_dir)
-    tokenizer = WhisperTokenizer.from_pretrained(
-        model_dir,
-        language=WHISPER_LANGUAGE_CODE_MAPPING[language_code],
-        task="transcribe"
-    )
-    processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
-    model = WhisperForConditionalGeneration.from_pretrained(model_dir)
-
-
-# 3b. Load the classic model and processor
-    #model = 'openai/whisper-small'
-    #feature_extractor = WhisperFeatureExtractor.from_pretrained(model)
-    #tokenizer = WhisperTokenizer.from_pretrained(model, language=WHISPER_LANGUAGE_CODE_MAPPING[language_code], task="transcribe")
-    #processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
+    
 
 # 4. (Optional) Create a Hugging Face pipeline for ASR
     asr_pipeline = pipeline(
@@ -97,18 +96,20 @@ for language_code in language_codes:
 
 # 5. Evaluate the model on the test set
     wer_metric = evaluate.load("wer")
+
+
     predictions = []
     result_list = [] # to store the was codes and transcriptions
     references = []
     count = 0
 
 # Create the directory if it doesn't exist
-    results_dir = "m_ft_whisper_results"
+    results_dir = "m_whisper_baseline"
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
 # Set JSON filename based on the language code
-    json_filename = f"{results_dir}/{language_code}_indic.json"
+    json_filename = f"{results_dir}/{language_code}.json"
 
     if os.path.exists(json_filename):
         with open(json_filename, "w") as f:
@@ -123,7 +124,6 @@ for language_code in language_codes:
         result = asr_pipeline(sample["audio"]["array"])
 
         predictions.append(result["text"])
-        print(result["text"])
         references.append(sample["transcription"])
 
 
@@ -132,7 +132,7 @@ for language_code in language_codes:
         file_name = sample["audio"].get("path", f"sample_{count}")
         result_list.append({
             "file_name": file_name,
-            "whisper_m_ft": result["text"]
+            "whisper_m": result["text"]
         })
         wer = wer_metric.compute(predictions=predictions, references=references)
     print(f"Final WER of {language_code} on FLEURS test set:", wer)
@@ -145,5 +145,3 @@ for language_code in language_codes:
 
 
     translate_dataset_nllb(source_language=language_code, target_language="en", json_ds=json_filename)
-
-
