@@ -2,7 +2,7 @@ import json
 import sacrebleu
 from jiwer import wer, Compose, RemoveEmptyStrings, ToLowerCase, RemoveMultipleSpaces, Strip, RemovePunctuation, ReduceToListOfListOfWords
 import pandas as pd
-
+import re
 
 def compute_wer(sc_lang):
     """
@@ -76,9 +76,25 @@ def compute_wer(sc_lang):
 
 
 
+def detokenize(text):
+    """
+    A simple detokenizer that removes spaces before punctuation.
+    This may be adjusted for language-specific needs.
+    """
+    return re.sub(r'\s([?.!,"](?:\s|$))', r'\1', text)
 
 
-def compute_bleu_score(file, language_code, mode):
+
+def compute_bleu_score(file, language_code, mode, force=False):
+    """
+    Computes the BLEU score using sacreBLEU for the provided translations.
+    
+    Parameters:
+      file (str): Path to the JSON file containing translation samples.
+      language_code (str): The language code for reporting.
+      mode (str): Which translation mode to evaluate ('seamless', 'seamless_indic', or 'nllb').
+      force (bool): If True, assumes the data is already detokenized and skips detokenization.
+    """
     with open(file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -91,47 +107,50 @@ def compute_bleu_score(file, language_code, mode):
     for sample in data:
         # Check if 'gold_translation' exists in the sample
         if 'gold_translation' in sample:
-            gold_translations.append(sample['gold_translation'])
+            gold_text = sample['gold_translation']
+            if not force:
+                gold_text = detokenize(gold_text)
+            gold_translations.append(gold_text)
         else:
             print(f"Warning: Missing gold translation in file {sample.get('file_name', 'Unknown file')}")
             continue
 
-        # Check if 'seamless_translation' exists and append
+        # Process based on the chosen mode, applying detokenization if required
         if mode.lower() == "seamless" and 'seamless_translation' in sample:
-            seamless_hypothesis_translations.append(sample['seamless_translation'])
+            translation = sample['seamless_translation']
+            if not force:
+                translation = detokenize(translation)
+            seamless_hypothesis_translations.append(translation)
         
         elif mode.lower() == "seamless_indic" and 'translation' in sample:
-            seamless_indic_hypothesis_translations.append(sample['translation'])
+            translation = sample['translation']
+            if not force:
+                translation = detokenize(translation)
+            seamless_indic_hypothesis_translations.append(translation)
         
-        # Check if 'nllb_translation' exists and append
         elif mode.lower() == "nllb" and 'nllb_translation' in sample:
-            nllb_hypothesis_translations.append(sample['nllb_translation'])
+            translation = sample['nllb_translation']
+            if not force:
+                translation = detokenize(translation)
+            nllb_hypothesis_translations.append(translation)
 
     # Calculate BLEU score for seamless translations (if available)
     if seamless_hypothesis_translations:
         bleu_seamless = sacrebleu.corpus_bleu(seamless_hypothesis_translations, [gold_translations])
         print(f"{language_code}, seamless, bleu = {bleu_seamless.score:.2f}")
-        with open("bleu_score.txt", "a", encoding="utf-8") as f:
-            f.write(f"{language_code}, seamless, bleu = {bleu_seamless.score:.2f}\n")
-    
 
+    # Calculate BLEU score for seamless indic translations (if available)
     if seamless_indic_hypothesis_translations:
-        bleu_seamless = sacrebleu.corpus_bleu(seamless_indic_hypothesis_translations, [gold_translations])
-        print(f"{language_code}, indic seamless, bleu = {bleu_seamless.score:.2f}")
-        with open("bleu_score.txt", "a", encoding="utf-8") as f:
-            f.write(f"{language_code}, indic seamless, bleu = {bleu_seamless.score:.2f}\n")
-
-
+        bleu_seamless_indic = sacrebleu.corpus_bleu(seamless_indic_hypothesis_translations, [gold_translations])
+        print(f"{language_code}, indic seamless, bleu = {bleu_seamless_indic.score:.2f}")
 
     # Calculate BLEU score for nllb translations (if available)
     if nllb_hypothesis_translations:
         bleu_nllb = sacrebleu.corpus_bleu(nllb_hypothesis_translations, [gold_translations])
         print(f"{language_code}, nllb, bleu = {bleu_nllb.score:.2f}")
-        with open("bleu_score.txt", "a", encoding="utf-8") as f:
-            f.write(f"{language_code}, nllb, bleu = {bleu_nllb.score:.2f}\n")
+
 
     # In case both seamless and nllb translations are available, handle both
     if seamless_hypothesis_translations and nllb_hypothesis_translations:
         print(f"{language_code}, both seamless and nllb available.")
-
 

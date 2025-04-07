@@ -1,5 +1,5 @@
 from config import FLEURS_BASE_URL
-
+from datasets import load_dataset, concatenate_datasets, Audio
 import pandas as pd
 import requests
 import tarfile
@@ -126,3 +126,36 @@ def get_gold_translation():
         combined_df.to_csv(output_combined_csv, index=False, encoding="utf-8")  # Save as a single CSV
         return combined_df
     
+
+
+def analyze_dataset(languages):
+    datasets = []
+    for lang in languages:
+        for split in ["train", "validation"]:
+            ds = load_dataset("google/fleurs", lang, split=split).cast_column("audio", Audio(sampling_rate=16000))
+            datasets.append(ds)
+
+    # Concatenate only the train splits
+    train_ds = concatenate_datasets([d for d in datasets if d.split == "train"])
+
+    # Compute the duration for each sample: duration (seconds) = number of samples / sampling_rate
+    def compute_duration(example):
+        audio = example["audio"]
+        return {"duration": len(audio["array"]) / audio["sampling_rate"]}
+    
+    train_ds = train_ds.map(compute_duration)
+
+    num_examples = train_ds.num_rows
+    total_duration = sum(train_ds["duration"])
+    avg_duration = total_duration / num_examples
+
+    print("Number of training examples:", num_examples)
+    print("Total duration (hours) across all training samples:", total_duration / 3600)
+    print("Average duration (seconds) across all training samples:", avg_duration)
+    
+    return {
+        "num_examples": num_examples,
+        "total_duration_sec": total_duration,
+        "total_duration_hours": total_duration / 3600,
+        "avg_duration_sec": avg_duration,
+    }

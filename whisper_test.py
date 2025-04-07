@@ -11,10 +11,10 @@ language_codes = [
     # "ta_in", 
     # "te_in", 
     # "ml_in",
-    # "yo_ng",
     # "sw_ke",
-    "ha_ng",
-    "ig_ng",
+    # "ha_ng",
+    # "yo_ng",
+    # "ig_ng",
     "lg_ug"
     ]
 
@@ -43,9 +43,9 @@ def translate_dataset_nllb(source_language=None, target_language="en", json_ds=N
 
     for sample in data:
 
-        if (("whisper_m" in sample) and "nllb_translation" not in sample):
+        if (("whisper_m_ft" in sample) and "nllb_translation" not in sample):
 
-            source_text = sample.get("whisper_m")
+            source_text = sample.get("whisper_m_ft")
             translation = translator(source_text)
             sample["nllb_translation"] = translation[0]['translation_text']
 
@@ -73,7 +73,7 @@ for language_code in language_codes:
     # processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
     # model = WhisperForConditionalGeneration.from_pretrained(model_dir)
 
-    model = 'openai/whisper-medium'
+    model = f'jonahdvt/whisper-fleurs-medium-plus-{language_code}'
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model)
     tokenizer = WhisperTokenizer.from_pretrained(model, language=WHISPER_LANGUAGE_CODE_MAPPING[language_code], task="transcribe")
     processor = WhisperProcessor(feature_extractor=feature_extractor, tokenizer=tokenizer)
@@ -104,12 +104,12 @@ for language_code in language_codes:
     count = 0
 
 # Create the directory if it doesn't exist
-    results_dir = "m_whisper_baseline"
+    results_dir = "m_plus_whisper_results"
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
 # Set JSON filename based on the language code
-    json_filename = f"{results_dir}/{language_code}.json"
+    json_filename = f"{results_dir}/{language_code}_afri.json"
 
     if os.path.exists(json_filename):
         with open(json_filename, "w") as f:
@@ -132,7 +132,7 @@ for language_code in language_codes:
         file_name = sample["audio"].get("path", f"sample_{count}")
         result_list.append({
             "file_name": file_name,
-            "whisper_m": result["text"]
+            "whisper_m_ft": result["text"]
         })
         wer = wer_metric.compute(predictions=predictions, references=references)
     print(f"Final WER of {language_code} on FLEURS test set:", wer)

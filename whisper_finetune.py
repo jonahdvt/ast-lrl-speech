@@ -11,20 +11,26 @@ from typing import Any, Dict, List, Union
 
 # 1. Setup
 # Specify the target language code for FLEURS
-# languages = ["hi_in", "pa_in", "ta_in", "te_in", "ml_in"]
-languages= [
-    "ig_ng",
-    "lg_ug",
-    "sw_ke", 
-    "yo_ng", 
-    "ha_ng"
+languages = [
+    # "hi_in", 
+    "pa_in", 
+    "ta_in", 
+    "te_in", 
+    "ml_in"
     ]
+# languages= [
+#     "ig_ng",
+#     "lg_ug",
+#     "sw_ke", 
+#     "yo_ng", 
+#     "ha_ng"
+#     ]
 
-language_code = "yo_ng"  
+
 
 
 for language_code in languages:
-    whisper_model = 'jonahdvt/whisper-fleurs-medium-afri'
+    whisper_model = 'jonahdvt/whisper-fleurs-medium-indic'
 
     # Load the FLEURS dataset for the specified language
     # Combine train + validation splits for training
@@ -97,9 +103,9 @@ for language_code in languages:
         gradient_checkpointing=True,
         eval_accumulation_steps=4,
         fp16=True,
-        logging_steps=50,
-        eval_steps=1000,                
-        save_steps=1000,                
+        logging_steps=100,
+        eval_steps=10000,                
+        save_steps=10000,                
         save_total_limit=2,            # only keep last 2 checkpoints
         load_best_model_at_end=True,
         metric_for_best_model="wer",
@@ -172,8 +178,8 @@ for language_code in languages:
         "dataset": "FLEURS",  
         "dataset_args": f"config: {HF_CODE_MAPPING[language_code]}, split: test",
         "language": HF_CODE_MAPPING[language_code],
-        "model_name": f"Whisper Medium FLEURS – {HF_CODE_MAPPING[language_code]} FLEURS+ African Fine‑tuning",
-        "finetuned_from": 'jonahdvt/whisper-fleurs-medium-afri',
+        "model_name": f"Whisper Medium FLEURS – {HF_CODE_MAPPING[language_code]} FLEURS + Indic Fine‑tuning",
+        "finetuned_from": 'jonahdvt/whisper-fleurs-medium-indic',
         "tasks": "automatic-speech-recognition",
     }
     # kwargs = {

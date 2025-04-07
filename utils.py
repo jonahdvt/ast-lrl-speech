@@ -53,25 +53,31 @@ def remove_prefix_from_wav_code(input_file, output_file, prefix="test/"):
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 
+
+
 codes = [
     # "hi_in",
     # "pa_in", 
     # "ta_in", 
     # "te_in", 
     # "ml_in",
-    # "yo_ng",
     # "sw_ke",
     # "ha_ng",
+    # "yo_ng",
     # "ig_ng",
     "lg_ug",
     ]
 for code in codes:
-    file = f"m_whisper_baseline/{code}.json"
-    # rename_json_property(file, "wav_code", "file_name")
+    file = f"m_plus_whisper_results/{code}_afri.json"
+
+
     remove_prefix_from_wav_code(file, file)
     matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
-    matching.gold_translation_matching(file, "fleurs_lang_info/en_translations.csv", file)
+    matching.gold_text_matching(file, "fleurs_lang_info/en_translations.csv", file, "translation") # Translations
     evaluation.compute_bleu_score(file, code, "nllb")
+
+    matching.gold_text_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file, "transcription") # Transcripts
+
 
 
 

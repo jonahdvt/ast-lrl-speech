@@ -36,7 +36,7 @@ def gold_codes_matching(json_path, csv_path, output_path):
 
 
 
-def gold_translation_matching(json_path, csv_path, output_path):
+def gold_text_matching(json_path, csv_path, output_path, mode): # either put same language for transcript, or english from translation as the csv
     """
     Matches the audio code in a JSON file with the corresponding gold translation
     from a CSV file.
@@ -63,11 +63,15 @@ def gold_translation_matching(json_path, csv_path, output_path):
     # Update JSON entries with the gold translation
     for entry in json_data:
         file_code = entry.get('code')
-        if file_code in name_mapping:
+        if file_code in name_mapping and mode.lower() == "translation":
             entry['gold_translation'] = name_mapping[file_code]
+        elif file_code in name_mapping and mode.lower() == "transcription":
+            entry['gold_transcript'] = name_mapping[file_code]
 
     # Save the updated JSON file
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(json_data, f, indent=4, ensure_ascii=False)
 
     print(f"Updated JSON saved to {output_path}")
+
+
