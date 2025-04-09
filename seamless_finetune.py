@@ -1,19 +1,21 @@
-from datasets import load_dataset, Audio
+from datasets import load_dataset, Audio, Dataset
 from config import HF_CODE_MAPPING  # Ensure your config includes necessary mappings for target languages
 from transformers import AutoProcessor, AutoModelForSpeechSeq2Seq, Seq2SeqTrainingArguments, Seq2SeqTrainer
 import evaluate
 import torch
 from dataclasses import dataclass
 from typing import Any, Dict, List, Union
+import pandas as pd 
+
 
 # 1. Setup
 # Specify the target language codes for FLEURS (e.g., Indic languages)
 languages = [
-    # "hi_in", 
-    "pa_in", 
-    "ta_in", 
-    "te_in", 
-    "ml_in"
+    "hi_in", 
+    # "pa_in", 
+    # "ta_in", 
+    # "te_in", 
+    # "ml_in"
     ]
 # Alternatively, for African languages:
 # languages = [
@@ -24,26 +26,57 @@ languages = [
 #     "ha_ng"
 # ]
 
+
+
+csv_path = "fleurs_lang_info/en_translations.csv"
+df = pd.read_csv(csv_path)
+df = df.rename(columns={"codes": "id", "transcript": "translation"})
+df = df.dropna(subset=["translation"])
+translations = Dataset.from_pandas(df[["id", "translation"]])
+id2trans = dict(zip(df["id"], df["translation"]))
+
+
 for language_code in languages:
-    m4t_model = "facebook/seamless-m4t-v2-large"
 
-    # Load the FLEURS dataset for the specified language
+
+    smls_map = {
+    "hi_in": "hin",  
+    "pa_in": "pan",  
+    "ta_in": "tam",  
+    "te_in": "tel",   
+    "ml_in": "mal",  
+    "sw_ke": "swa",   
+    "ha_ng": "hau",  
+    "yo_ng": "yor",  
+    "ig_ng": "ibo",  
+    "lg_ug": "lug"    
+    }
+
+    model_id = "facebook/seamless-m4t-v2-large"
+
     fleurs_train = load_dataset("google/fleurs", language_code, split="train")
-    fleurs_val = load_dataset("google/fleurs", language_code, split="validation")
-    fleurs_test = load_dataset("google/fleurs", language_code, split="test")
+    fleurs_val   = load_dataset("google/fleurs", language_code, split="validation")
+    for ds in (fleurs_train, fleurs_val):
+        ds = ds.cast_column("audio", Audio(sampling_rate=16_000))
 
-    # Ensure audio is 16kHz
-    fleurs_train = fleurs_train.cast_column("audio", Audio(sampling_rate=16000))
-    fleurs_val = fleurs_val.cast_column("audio", Audio(sampling_rate=16000))
-    fleurs_test = fleurs_test.cast_column("audio", Audio(sampling_rate=16000))
 
-    # 2. Preparing the Processor for Speech Translation
-    # Initialize the processor with task="translate", providing both source and target language codes.
+    def add_translation(example):
+        example["translation"] = id2trans.get(example["id"], "")
+        return example
+
+    fleurs_train = fleurs_train.map(add_translation)
+    fleurs_val   = fleurs_val.map(add_translation)
+
+
+    src_code = smls_map[language_code],
+    tgt_code = "eng"
+
     processor = AutoProcessor.from_pretrained(
-        m4t_model, 
-        task="translate", 
-        src_lang=HF_CODE_MAPPING[language_code], 
-        tgt_lang="en"
+        model_id,
+        task="translate",
+        src_lang=src_code,
+        tgt_lang=tgt_code,
+        trust_remote_code=True,
     )
 
     # 3. Preprocessing the Dataset
@@ -58,20 +91,19 @@ for language_code in languages:
         return batch
 
     # Apply preprocessing to the training and evaluation datasets
-    fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=fleurs_train.column_names)
-    fleurs_val = fleurs_val.map(prepare_dataset, remove_columns=fleurs_val.column_names)
-    fleurs_test = fleurs_test.map(prepare_dataset, remove_columns=fleurs_test.column_names)
+    keep = ["audio", "translation"]
+    fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=[c for c in fleurs_train.column_names if c not in keep])
+    fleurs_val   = fleurs_val.map(prepare_dataset,   remove_columns=[c for c in fleurs_val.column_names   if c not in keep])
+
+
 
     fleurs_train.cleanup_cache_files()
     fleurs_val.cleanup_cache_files()
-    fleurs_test.cleanup_cache_files()
 
-    # 4. Training Configuration
-    # Load the pre-trained Seamless M4T model for fine-tuning
-    model = AutoModelForSpeechSeq2Seq.from_pretrained(m4t_model)
+    model = AutoModelForSpeechSeq2Seq.from_pretrained(model_id, trust_remote_code=True)
 
     training_args = Seq2SeqTrainingArguments(
-        output_dir=f"./seamless-m4t-v2-large-plus-{language_code}",
+        output_dir=f"./seamless-m4t-v2-large-{language_code}",
         per_device_train_batch_size=16,
         per_device_eval_batch_size=4,
         gradient_accumulation_steps=1,
@@ -83,8 +115,8 @@ for language_code in languages:
         eval_accumulation_steps=4,
         fp16=True,
         logging_steps=100,
-        eval_steps=10000,
-        save_steps=10000,
+        eval_steps=100000,
+        save_steps=100000,
         save_total_limit=2,
         load_best_model_at_end=True,
         metric_for_best_model="bleu",
@@ -155,8 +187,8 @@ for language_code in languages:
         "dataset": "FLEURS",  
         "dataset_args": f"config: {HF_CODE_MAPPING[language_code]} -> en, split: test",
         "language": HF_CODE_MAPPING[language_code],
-        "model_name": f"Seamless M4T – {HF_CODE_MAPPING[language_code]} FLEURS + Indic Speech Translation Fine‑tuning",
-        "finetuned_from": m4t_model,
+        "model_name": f"Seamless M4T – {HF_CODE_MAPPING[language_code]} FLEURS Fine‑tuning",
+        "finetuned_from": model_id,
         "tasks": "speech-translation",
     }
 
