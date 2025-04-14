@@ -45,7 +45,7 @@ for language_code in languages:
     "ta_in": "tam",  
     "te_in": "tel",   
     "ml_in": "mal",  
-    "sw_ke": "swa",   
+    "sw_ke": "swh",   
     "ha_ng": "hau",  
     "yo_ng": "yor",  
     "ig_ng": "ibo",  

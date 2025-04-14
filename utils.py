@@ -2,6 +2,7 @@ from config import FLEURS_LANGUAGE_CODES
 import json
 import matching
 import evaluation 
+from typing import Tuple
 
 def rename_json_property(file=None, old_name=None, new_name=None):
     with open(file, 'r', encoding="utf-8") as f:
@@ -53,6 +54,22 @@ def remove_prefix_from_wav_code(input_file, output_file, prefix="test/"):
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 
+def average_words_per_entry(json_path: str) -> Tuple[int, int, float]:
+    total_words = 0
+    total_entries = 0
+
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        for entry in data:
+            transcript = entry.get("gold_transcript", "").strip()
+            if transcript:
+                total_entries += 1
+                total_words += len(transcript.split())
+
+    average = (total_words / total_entries) if total_entries else 0.0
+    print(json_path, average)
+    return total_entries, total_words, average
+
 
 
 codes = [
@@ -64,19 +81,24 @@ codes = [
     # "sw_ke",
     # "ha_ng",
     # "yo_ng",
-    # "ig_ng",
-    "lg_ug",
+    "ig_ng",
+    # "lg_ug",
     ]
 for code in codes:
-    file = f"m_plus_whisper_results/{code}_afri.json"
+    # file = f"ft_whisper_results/l_ft_whisper_results/indic-5/{code}_indic.json"
+    file = f"seamless_ft_results/{code}.json"
+    
 
 
     remove_prefix_from_wav_code(file, file)
     matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
     matching.gold_text_matching(file, "fleurs_lang_info/en_translations.csv", file, "translation") # Translations
-    evaluation.compute_bleu_score(file, code, "nllb")
+    evaluation.compute_bleu_score(file, code, "seamless")
+    # print(evaluation.detailed_wer(file))
 
-    matching.gold_text_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file, "transcription") # Transcripts
+    # matching.gold_text_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file, "transcription") # Transcripts
+
+    # average_words_per_entry(file)
 
 
 

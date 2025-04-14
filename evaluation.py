@@ -154,3 +154,117 @@ def compute_bleu_score(file, language_code, mode, force=False):
     if seamless_hypothesis_translations and nllb_hypothesis_translations:
         print(f"{language_code}, both seamless and nllb available.")
 
+
+
+def detailed_wer(json_path):
+    """
+    Compute detailed WER metrics between Whisper hypothesis and reference (gold) transcripts.
+    Supports JSON files where the top level is either:
+      - a dict with keys "whisper_transcript" and "gold_transcript", or
+      - a list of such dicts (e.g. multiple utterances).
+    
+    Returns a dict with:
+        substitution_rate, deletion_rate, insertion_rate, wer
+    all normalized by the total number of reference words.
+    """
+    # --- helper to compute raw counts for one pair of token lists ---
+    def _count_ops(ref_words, hyp_words):
+        n_ref = len(ref_words)
+        n_hyp = len(hyp_words)
+        # DP matrix
+        d = [[0]*(n_hyp+1) for _ in range(n_ref+1)]
+        for i in range(1, n_ref+1):
+            d[i][0] = i
+        for j in range(1, n_hyp+1):
+            d[0][j] = j
+        for i in range(1, n_ref+1):
+            for j in range(1, n_hyp+1):
+                cost = 0 if ref_words[i-1] == hyp_words[j-1] else 1
+                d[i][j] = min(
+                    d[i-1][j] + 1,          # deletion
+                    d[i][j-1] + 1,          # insertion
+                    d[i-1][j-1] + cost      # substitution or match
+                )
+        # backtrack
+        i, j = n_ref, n_hyp
+        subs = dels = ins = 0
+        while i>0 or j>0:
+            # match
+            if i>0 and j>0 and ref_words[i-1]==hyp_words[j-1] and d[i][j]==d[i-1][j-1]:
+                i, j = i-1, j-1
+            # substitution
+            elif i>0 and j>0 and d[i][j]==d[i-1][j-1]+1:
+                subs += 1
+                i, j = i-1, j-1
+            # deletion
+            elif i>0 and d[i][j]==d[i-1][j]+1:
+                dels += 1
+                i -= 1
+            # insertion
+            elif j>0 and d[i][j]==d[i][j-1]+1:
+                ins += 1
+                j -= 1
+            else:
+                # should not occur
+                break
+        return subs, dels, ins, n_ref
+
+    # --- load JSON ---
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    # initialize totals
+    total_subs = total_dels = total_ins = total_refs = 0
+
+    # case 1: list of utterances
+    if isinstance(data, list):
+        for idx, entry in enumerate(data):
+            try:
+                ref = entry['gold_transcript']
+                hyp = entry['whisper_l_ft']
+            except (TypeError, KeyError):
+                # skip any malformed entry
+                continue
+            ref_words = ref.split()
+            hyp_words = hyp.split()
+            s, d, i, n = _count_ops(ref_words, hyp_words)
+            total_subs += s
+            total_dels += d
+            total_ins += i
+            total_refs += n
+
+    # case 2: single utterance dict
+    elif isinstance(data, dict):
+        try:
+            ref_words = data['gold_transcript'].split()
+            hyp_words = data['whisper_l_ft'].split()
+        except (AttributeError, KeyError):
+            raise ValueError("JSON must contain 'gold_transcript' and 'whisper_l_ft' keys")
+        s, d, i, n = _count_ops(ref_words, hyp_words)
+        total_subs, total_dels, total_ins, total_refs = s, d, i, n
+
+    else:
+        raise ValueError("Top‐level JSON must be a dict or list of dicts")
+
+    # avoid division by zero
+    if total_refs == 0:
+        return {
+            'substitution_rate': 0.0,
+            'deletion_rate': 0.0,
+            'insertion_rate': 0.0,
+            'wer': float('inf')
+        }
+
+    # compute rates
+    substitution_rate = round(total_subs / total_refs, 3)
+    deletion_rate     = round(total_dels / total_refs, 3)
+    insertion_rate    = round(total_ins / total_refs, 3)
+    wer               = round((total_subs + total_dels + total_ins) / total_refs, 3)
+
+
+    return {
+        'sub': substitution_rate,
+        'del': deletion_rate,
+        'ins': insertion_rate,
+        'wer': wer
+    }

@@ -36,9 +36,9 @@ FULL_TO_FLEURS_CODE_MAPPING = {
 languages= [
     "ig_ng",
     "lg_ug",
-    # "sw_ke", 
+    "sw_ke", 
     "yo_ng", 
-    # "ha_ng"
+    "ha_ng"
     ]
 whisper_model = 'openai/whisper-large-v3'
 

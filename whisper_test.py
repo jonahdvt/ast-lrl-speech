@@ -6,15 +6,15 @@ import json
 import os 
 
 language_codes = [
-    # "hi_in",
-    # "pa_in", 
-    # "ta_in", 
-    # "te_in", 
-    # "ml_in",
-    # "sw_ke",
-    # "ha_ng",
-    # "yo_ng",
-    # "ig_ng",
+    "hi_in",
+    "pa_in", 
+    "ta_in", 
+    "te_in", 
+    "ml_in",
+    "sw_ke",
+    "ha_ng",
+    "yo_ng",
+    "ig_ng",
     "lg_ug"
     ]
 
