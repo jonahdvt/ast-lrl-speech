@@ -103,6 +103,8 @@ def compute_bleu_score(file, language_code, mode, force=False):
     seamless_hypothesis_translations = []
     nllb_hypothesis_translations = []
     seamless_indic_hypothesis_translations = []
+    gemini_translation = []
+    openai_translation = []
 
     for sample in data:
         # Check if 'gold_translation' exists in the sample
@@ -121,6 +123,18 @@ def compute_bleu_score(file, language_code, mode, force=False):
             if not force:
                 translation = detokenize(translation)
             seamless_hypothesis_translations.append(translation)
+
+        if mode.lower() == "gemini" and 'translation' in sample:
+            translation = sample['translation']
+            if not force:
+                translation = detokenize(translation)
+            gemini_translation.append(translation)
+
+        if mode.lower() == "openai" and 'translation' in sample:
+            translation = sample['translation']
+            if not force:
+                translation = detokenize(translation)
+            openai_translation.append(translation)
         
         elif mode.lower() == "seamless_indic" and 'translation' in sample:
             translation = sample['translation']
@@ -139,7 +153,15 @@ def compute_bleu_score(file, language_code, mode, force=False):
         bleu_seamless = sacrebleu.corpus_bleu(seamless_hypothesis_translations, [gold_translations])
         print(f"{language_code}, seamless, bleu = {bleu_seamless.score:.2f}")
 
-    # Calculate BLEU score for seamless indic translations (if available)
+    if gemini_translation:
+        bleu_seamless = sacrebleu.corpus_bleu(gemini_translation, [gold_translations])
+        print(f"{language_code}, gemini, bleu = {bleu_seamless.score:.2f}")
+
+    if openai_translation:
+        bleu_seamless = sacrebleu.corpus_bleu(openai_translation, [gold_translations])
+        print(f"{language_code}, openai, bleu = {bleu_seamless.score:.2f}")
+
+
     if seamless_indic_hypothesis_translations:
         bleu_seamless_indic = sacrebleu.corpus_bleu(seamless_indic_hypothesis_translations, [gold_translations])
         print(f"{language_code}, indic seamless, bleu = {bleu_seamless_indic.score:.2f}")
@@ -221,7 +243,7 @@ def detailed_wer(json_path):
         for idx, entry in enumerate(data):
             try:
                 ref = entry['gold_transcript']
-                hyp = entry['whisper_l_ft']
+                hyp = entry['whisper_m_ft']
             except (TypeError, KeyError):
                 # skip any malformed entry
                 continue
