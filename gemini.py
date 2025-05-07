@@ -1,4 +1,4 @@
-GOOGLE_API_KEY='AIzaSyD4MdKeGeHLsvhUaxktgHhWXSC6Ij5xOXY'
+
 
 
 from google import genai
