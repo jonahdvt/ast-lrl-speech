@@ -74,30 +74,37 @@ def average_words_per_entry(json_path: str) -> Tuple[int, int, float]:
 
 codes = [
     # "hi_in",
-    # "pa_in", 
-    # "ta_in", 
+#     # "pa_in", 
+#     # "ta_in", 
     # "te_in", 
-    # "ml_in",
+#     #"ml_in",
     # "sw_ke",
     # "ha_ng",
     # "yo_ng",
-    "ig_ng",
+    # "ig_ng",
     # "lg_ug",
+#     ]
+# codes = [
+    # "1h",
+    "5h", 
+    # "10h", 
+    # "20h"
     ]
 for code in codes:
-    # file = f"ft_whisper_results/l_ft_whisper_results/indic-5/{code}_indic.json"
-    file = f"seamless_ft_results/{code}.json"
-    
 
+    # file = f"whisper_l_train_data/{code}.json"
+    file = f"whisper_l_hours_results/ig_ng/{code}.json"
+    lang = "ig_ng"
 
     remove_prefix_from_wav_code(file, file)
+    rename_json_property(file, "file_id", "file_name")
     matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
     matching.gold_text_matching(file, "fleurs_lang_info/en_translations.csv", file, "translation") # Translations
-    evaluation.compute_bleu_score(file, code, "seamless")
-    # print(evaluation.detailed_wer(file))
+    evaluation.compute_bleu_score(file, code, "nllb")
+    
 
     # matching.gold_text_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file, "transcription") # Transcripts
-
+    # print(evaluation.detailed_wer(file))
     # average_words_per_entry(file)
 
 

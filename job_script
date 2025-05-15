@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --partition=unkillable 
-#SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:a100:1
-#SBATCH --time=2:00:00
-#SBATCH --mem=30G
+#SBATCH --partition=short-unkillable
+#SBATCH --cpus-per-task=6
+#SBATCH --gres=gpu:l40s:4
+#SBATCH --time=3:00:00
+#SBATCH --mem=32G
 #SBATCH --output=job_output_%j.txt
 #SBATCH --error=job_error_%j.txt
 
@@ -12,4 +12,10 @@ conda activate myenv
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
+
+
+# python whisper_finetune_yospeech.py
 python whisper_test.py
+
+
+

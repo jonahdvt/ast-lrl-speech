@@ -12,36 +12,36 @@ from typing import Any, Dict, List, Union
 # 1. Setup
 # Specify the target language code for FLEURS
 languages = [
-    # "hi_in", 
-    "pa_in", 
-    "ta_in", 
-    "te_in", 
-    "ml_in"
+#     "hi_in", 
+#     "pa_in", 
+#     "ta_in", 
+#     "te_in", 
+#     "ml_in",
+# #     ]
+# # # languages= [
+    # "ig_ng",
+    "lg_ug",
+    # "sw_ke", 
+    # "yo_ng", 
+    # "ha_ng",
     ]
-# languages= [
-#     "ig_ng",
-#     "lg_ug",
-#     "sw_ke", 
-#     "yo_ng", 
-#     "ha_ng"
-#     ]
 
 
 
 
 for language_code in languages:
-    whisper_model = 'jonahdvt/whisper-fleurs-medium-indic'
+    whisper_model = 'openai/whisper-medium'
 
     # Load the FLEURS dataset for the specified language
     # Combine train + validation splits for training
     fleurs_train = load_dataset("google/fleurs", language_code, split="train")
     fleurs_val = load_dataset("google/fleurs", language_code, split="validation")
-    fleurs_test  = load_dataset("google/fleurs", language_code, split="test")
+
 
     # Ensure audio is 16kHz
     fleurs_train = fleurs_train.cast_column("audio", Audio(sampling_rate=16000))
     fleurs_val = fleurs_val.cast_column("audio", Audio(sampling_rate=16000))
-    fleurs_test  = fleurs_test.cast_column("audio", Audio(sampling_rate=16000))
+
 
 
     # 2. Preparing the Feature Extractor and Tokenizer
@@ -61,13 +61,13 @@ for language_code in languages:
     # Apply the preprocessing to the training and test data. Each has input features(audio) and labels (transcript)
     fleurs_train = fleurs_train.map(prepare_dataset, remove_columns=fleurs_train.column_names)
     fleurs_val = fleurs_val.map(prepare_dataset, remove_columns=fleurs_val.column_names)
-    fleurs_test = fleurs_test.map(prepare_dataset, remove_columns=fleurs_test.column_names)
+
 
 
 
     fleurs_train.cleanup_cache_files()
     fleurs_val.cleanup_cache_files()
-    fleurs_test.cleanup_cache_files()
+
 
 
     # 4. Training config 
@@ -91,7 +91,7 @@ for language_code in languages:
             Also, load_best_model_at_end=True with metric_for_best_model="wer" ensures we keep the best checkpoint (lowest WER)
     """
     training_args = Seq2SeqTrainingArguments(
-        output_dir="./whisper-fleurs-medium-plus-{}".format(language_code),  # save directory (can be changed)
+        output_dir="./whisper-fleurs-medium-{}".format(language_code),  # save directory (can be changed)
         # output_dir="./whisper-fleurs-medium-afri", # combined dir
         per_device_train_batch_size=16,
         per_device_eval_batch_size=4,
@@ -178,8 +178,8 @@ for language_code in languages:
         "dataset": "FLEURS",  
         "dataset_args": f"config: {HF_CODE_MAPPING[language_code]}, split: test",
         "language": HF_CODE_MAPPING[language_code],
-        "model_name": f"Whisper Medium FLEURS – {HF_CODE_MAPPING[language_code]} FLEURS + Indic Fine‑tuning",
-        "finetuned_from": 'jonahdvt/whisper-fleurs-medium-indic',
+        "model_name": f"Whisper Medium FLEURS – {HF_CODE_MAPPING[language_code]} FLEURS Fine‑tuning",
+        "finetuned_from": 'openai/whisper-medium',
         "tasks": "automatic-speech-recognition",
     }
     # kwargs = {
