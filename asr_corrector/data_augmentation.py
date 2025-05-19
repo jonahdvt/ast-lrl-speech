@@ -115,12 +115,10 @@ def build_data(test=True):
     data_dir = test_dir if test else train_dir
     afri_df = load_all_jsons(os.path.join(data_dir, "afri-5/*.json"))
     print("Afri Data Stats")
-    print(afri_df.head())
     print(afri_df.shape)
 
     indic_df = load_all_jsons(os.path.join(data_dir, "indic-5/*.json"))
     print("Indic Data Stats")
-    print(indic_df.head())
     print(indic_df.shape)
 
     afri_df.to_csv(os.path.join(output_dir, afri_data_name), index=False)
