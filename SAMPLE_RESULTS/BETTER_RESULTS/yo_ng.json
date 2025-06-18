@@ -1,0 +1,407 @@
+[
+  {
+    "file_id": "272629172830834711.wav",
+    "code": 1817,
+    "gold": "Agbegbe Sengeni, sugbon o n sise bii ilu oto ni owo yi.",
+    "baseline": " Αν πιστεύεις ότι θα πιστεύεις, θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα πιστεύεις ότι θα π",
+    "wer_base": 1583.3333333333335,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "agbègbè sèngeni sùgbọ́n ò ń siṣẹ́ bí ìlú ọ̀tọ̀ ní ọwọ̀ye",
+        "wer": 100.0,
+        "wer_diff": 1483.3333333333335
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "agbègbè sèngeni súgbọ́n ún sisẹ́ bí i ilú ọ̀tọ̀ ní ọwọ́yìí",
+        "wer": 100.0,
+        "wer_diff": 1483.3333333333335
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "agbègbè sèngeni súgbọ́n ń siṣẹ́ bí i ilú ọ̀tọ̀ ní ọwọ́yì",
+        "wer": 100.0,
+        "wer_diff": 1483.3333333333335
+      }
+    ]
+  },
+  {
+    "file_id": "5677631026366447962.wav",
+    "code": 1809,
+    "gold": "Wọ́n tètè sàfihàn àwọn ìgbọ̀nwọ́ ojú ọ̀nà irin láti sàrídájú pé àwọn ipa wà déédé. Ó sàfihàn wípé àwọn ipa yìí yóó múná dóko bíwọ́n bá ní ọ̀pá irin lókè.",
+    "baseline": " ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻŋ ʻ�",
+    "wer_base": 296.6666666666667,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "wọ́n tètè sàfihàn àwọn ìgbọ̀wọ̀ ojú ọ̀nà ìrìn láti sàrídájú pé àwọn ìpá wà dìdí o sàfihàn wípé àwọn ìpá yìí yóò múná dùkó bí wọ́n bá ní ọ̀pá ìrìn lókẹ́",
+        "wer": 43.333333333333336,
+        "wer_diff": 253.33333333333331
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "wọ́n tètì sàfihàn àwọn ìgbọ̀wọ́ ojú ọ̀nà ìrìn làti ṣàrídájú pé àwọn ẹ̀pá wà dìdí o sàfihàn wípé àwọn ẹ̀pá yìí yíò múnà dúkó bí wọ́n bá ní ọ̀pá ìrìn lókì",
+        "wer": 56.666666666666664,
+        "wer_diff": 240.00000000000003
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "wọ́n tètì sàfihàn àwọn ìgbọ̀wọ́ ojú ọ̀nà ìrìn láti sàdájú pé àwọn ẹ̀pá wà dídí o sàfihàn wìé pé àwọn ẹ̀pá yìí yíò múnà dùkó bí wọ́n bá ní ọ̀pá ìrìn lókì",
+        "wer": 60.0,
+        "wer_diff": 236.66666666666666
+      }
+    ]
+  },
+  {
+    "file_id": "15319762854077554090.wav",
+    "code": 1794,
+    "gold": "Ọ̀làjú jẹ́ àṣà tí a pín nípasẹ̀ ẹgbẹ́ tó tóbi tí wọ́n ṣiṣẹ́ tí wọ́n sì ń gbé papọ̀, ẹgbẹ́ kan.",
+    "baseline": " Ola juje asa ti akmi ni pase e gbe tio tobi, ti wan si se, ti wan si nge beg papo, e gbe kan. Ola juje asa ti akmi ni pase e gbe tio tobi, ti wan si se, ti wan si nge beg papo, e gbe kan.",
+    "wer_base": 223.80952380952382,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọ̀làjú jẹ́ àsà tí a kín nípasẹ̀ ẹgbẹ́ tí ó tóbi tí wọ́n síṣẹ́ tí wọ́n sí ń gbé papọ̀ ẹgbẹ́ kan",
+        "wer": 42.857142857142854,
+        "wer_diff": 180.95238095238096
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "olàjú jẹ́ àṣà tí a kún inípasẹ̀ ẹgbẹ́ tí ó tóbi tí wọ́n si ṣẹ́ tí wọ́n sí ń gbé papọ̀ ẹgbẹ́ kan",
+        "wer": 47.61904761904761,
+        "wer_diff": 176.19047619047618
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ọ̀làjú jẹ́ àṣà tí a kún inípasẹ̀ ẹgbẹ́ tí ó tóbi tí wọ́n sì ǹgbé papọ̀ ẹgbẹ́ kan",
+        "wer": 52.38095238095239,
+        "wer_diff": 171.42857142857144
+      }
+    ]
+  },
+  {
+    "file_id": "17275473253987360864.wav",
+    "code": 1802,
+    "gold": "Ìtàkùn ayélujára ṣe àgbájọ ìbáraẹ́nisọ̀rọ̀ gbogbogbò àti ọlọ́danni.",
+    "baseline": " I takunga ye luja la she akba jo i ba rey ni soro bu gu ati olo doni.",
+    "wer_base": 225.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ìtàkùn ayélujára ṣe àgbàjọ́ ìbára-ẹni-sọ̀rọ̀ gbogbo àti ọlọ́danni",
+        "wer": 62.5,
+        "wer_diff": 162.5
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ìtàkùn ayélujára ṣe àgbàjọ ìbára-ẹni sọ̀rọ̀ gbogbogbo àti ọlọ́danni",
+        "wer": 75.0,
+        "wer_diff": 150.0
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ìtàkùn ayélujára ṣe àgbàjọ ìbára-ẹni sọ̀rọ̀ gbogbogo àti ọlọ́danni",
+        "wer": 75.0,
+        "wer_diff": 150.0
+      }
+    ]
+  },
+  {
+    "file_id": "7767379896247134653.wav",
+    "code": 1975,
+    "gold": "Àwọn èrò ìlú Vatican tó bí i ẹgbẹ̀rin. ó jẹ́ ìlú olómìnira kékeré kan lágbàláayé àti orílèèdè tó ní èrò tó kéré jù.",
+    "baseline": " A wè i rò i lù vati kan. Tò bi, e gben rè, o djè i lù, o lù mè nirake kè rè kan, lak bè la ye, la ye ati, o rile dè tò ni i rò, tò kè rè djù.",
+    "wer_base": 178.26086956521738,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "àwọn èrò ìlú batikan tó bí ẹgbẹ̀rín rín ó jẹ́ ìlú olómìnira kékeré kan lágbàláyé àti orílèdè tó ní èrò tó kéré jù",
+        "wer": 30.434782608695656,
+        "wer_diff": 147.82608695652172
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "àwọn èrò ìlú vatican tó bí ẹgbẹ̀rin ó jẹ́ ìlú olómìnira kékerí kan lágbàláyé àti orílẹ̀èdè tó ní èrò tó kéré jù",
+        "wer": 34.78260869565217,
+        "wer_diff": 143.47826086956522
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "àwọn èrò ìlú batikan tó bí ẹgbẹ̀rin ó jẹ́ ìlú olómìnira kíkiri kan lágbàláyé àti orílẹ̀èdè tó ní èrò tó kéré jù",
+        "wer": 34.78260869565217,
+        "wer_diff": 143.47826086956522
+      }
+    ]
+  },
+  {
+    "file_id": "8952678000406962214.wav",
+    "code": 1712,
+    "gold": "Lati 1966, awon Sundabani ti je ile mimo eranko, won daba pe bii ekun Bengali Oloba 400 ati agbonrin alami 30,00 nlo wa ni agbegbe naa.",
+    "baseline": " ଲੈଲੋ ଛଇ 1966, ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ ଛଇ �",
+    "wer_base": 242.3076923076923,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "láti 1966 àwọn sọ́n dàbáni ti jẹ́ ilẹ̀ mímọ ẹ̀rànkó wọn dàbá pé bí ẹkún bengali ọlọ́ba 400 àti agbọn rìn alami 30,000 lọ wá ní agbẹ̀pẹ̀ náà",
+        "wer": 96.15384615384616,
+        "wer_diff": 146.15384615384613
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "láti 1966 àwọn sọǹdàbáni tí jẹ́ ilẹ̀ mímọ̀ ẹ̀rànko wọ́n dàbá pé bí i ẹkùn bengali ọlọ́ba 400 àti agbórí alami 30,000 lọ wá ní agbègbè náà",
+        "wer": 96.15384615384616,
+        "wer_diff": 146.15384615384613
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "láti 1966 àwọn sọǹdábanì tí jẹ́ ilẹ̀ mímọ̀ ẹ̀rànkó wọ́n dàbá pé bí i ẹkùn bengali ọlọ́ba 400 àti agbórin alami 30,000 lọ wá ní agbẹ̀gbẹ̀ náà",
+        "wer": 96.15384615384616,
+        "wer_diff": 146.15384615384613
+      }
+    ]
+  },
+  {
+    "file_id": "9017501371273958402.wav",
+    "code": 1929,
+    "gold": "Del Potro ní àfàní láti ìbẹ̀rẹ̀ ní ìpín kẹjì, sùgbọn èyí náà pèfún yíyanjú ìfagagbága lẹ̀yín ayo mẹ́fà si mẹ́fà.",
+    "baseline": " Dè pò trò nì an fà nì là tì i bè rè nì i kwen kè jì, sùk bèn e jì nè an kwen fùn yì nè djù i fà gà gà gà lè njì a yù mè fà si mè fà.",
+    "wer_base": 204.99999999999997,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "de potro ní àǹfàní láti ìbẹ̀rẹ̀ ní ìpínkejì ṣùgbọ́n èyí náà pè fún yíyanjú ìfagagbága lẹ́yìn ayò mẹ́fà sí mẹ́fà",
+        "wer": 60.0,
+        "wer_diff": 144.99999999999997
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "dẹ́ pótrò ní àǹfàní láti ìbẹ̀rẹ̀ ní ìpínkejì sùgbọ́n èyí náà pé fún yíyanjú ìfagaggagá lẹ́yìn ayò mẹ́fà sí mẹ́fà",
+        "wer": 65.0,
+        "wer_diff": 140.0
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "de potro ní àǹfàní láti ìbẹ̀rẹ̀ ní ìpínkejì ṣùgbọ́n èyí náà pé fún yíyanjú ìfagaggbaga lẹ́yìn ayò mẹ́fà sí mẹ́fà",
+        "wer": 65.0,
+        "wer_diff": 140.0
+      }
+    ]
+  },
+  {
+    "file_id": "4389936240616060469.wav",
+    "code": 1929,
+    "gold": "Del Potro ní àfàní láti ìbẹ̀rẹ̀ ní ìpín kẹjì, sùgbọn èyí náà pèfún yíyanjú ìfagagbága lẹ̀yín ayo mẹ́fà si mẹ́fà.",
+    "baseline": " Dè pò tù nì yàn fà nì là tì i bè rè nì i kùm kè jì, sù gbè rè i nè kwe fù yì nyo dù i fà gà gà gà lè nyi ayù mè fà si mè fà.",
+    "wer_base": 195.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "dẹ́ pọ́ọ̀trò ní àǹfàání láti ìbẹ̀rẹ̀ ní ìpínkejì ṣùgbọ́n èyí náà pè fún yíyanjú ìfagagbaga lẹ́yìn ayò mẹ́fà sí mẹ́fà",
+        "wer": 65.0,
+        "wer_diff": 129.99999999999997
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "dẹ́ pọ́ọ̀trò ní àǹfàání láti ìbẹ̀rẹ̀ ní ìpín kejì sùgbọ́n èyí náà pè fún yíyanjú ìfà gagbaga lẹ́yìn ayò mẹ́fà sí mẹ́fà",
+        "wer": 65.0,
+        "wer_diff": 129.99999999999997
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "dẹ́ pọ̀tro ní àǹfàání láti ìbẹ̀rẹ̀ ní ìpínkejì sùgbọ́n èyí náà pé fún yíya ju ìfagagbága lẹ́yìn ayò mẹ́fà sí mẹ́fà",
+        "wer": 70.0,
+        "wer_diff": 125.0
+      }
+    ]
+  },
+  {
+    "file_id": "14370374362263086628.wav",
+    "code": 1870,
+    "gold": "Àfihàn àwọn ìwòye di mímọ̀ lórí àwọnn pírámìdì àti wípé onírúurú pírámìdì ma ń tan iná sóke.",
+    "baseline": " A fi nga wè wè wè di mè mè lò rì a wè piramè di ati wè o nè rù rù piramè di nè an tè inan so kè.",
+    "wer_base": 164.70588235294116,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "àfihàn àwọn ìwòye di mímọ̀ lórí àwọn pírámìdì àti wípé onírúurú pírámìdì ni àntan iná soke",
+        "wer": 35.294117647058826,
+        "wer_diff": 129.41176470588235
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "àfihàn àwọn ìwòye dí mímọ̀ lórí àwọn pírámìdì àti wípé oníruurú pírámìdì ni àntan iná ṣòkè",
+        "wer": 47.05882352941176,
+        "wer_diff": 117.64705882352939
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "àfihàn àwọn ìwòye dí mímọ̀ lórí àwọn pírámèdìá ti wípé o ní ruru pírámèdì ní àntan iná sòkè",
+        "wer": 70.58823529411765,
+        "wer_diff": 94.11764705882352
+      }
+    ]
+  },
+  {
+    "file_id": "12483235827989407557.wav",
+    "code": 1765,
+    "gold": "Láti ipile Asensioni ní 1537, Paragueti gbìyànjú láti pa púpọ̀ nínú ìwà àti ìyàtọ̀ rẹ̀ mọ́.",
+    "baseline": " La ti i kwi le anser siyo ni, ni 1537. Paragwe ti binyo ju, la ti kwa kuko ni nu i wa ati i yato re me.",
+    "wer_base": 168.75,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "láti ìpínlẹ̀ ansesioni ní 1537 paragbẹ́ ti gbìyànjú láti pa púpọ̀ nínú ìwà àti ìyàtọ̀ rẹ mọ́",
+        "wer": 50.0,
+        "wer_diff": 118.75
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "láti ìpínlẹ̀ ansesioni ní 1537 padàgùẹ́ ti gbìyànjú láti pa púpọ̀ nínú ìwà àti ìyàtọ̀ rẹ mọ́",
+        "wer": 50.0,
+        "wer_diff": 118.75
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "láti ìpínlẹ̀ ansesioni ní 1537 paraguay ti gbìyànjú láti pa púpọ̀ nínú ìwà àti ìyàtọ̀ rẹ mọ́",
+        "wer": 50.0,
+        "wer_diff": 118.75
+      }
+    ]
+  },
+  {
+    "file_id": "107557018025737043.wav",
+    "code": 1711,
+    "gold": "Àwọn tíọ́rì wọ̀nyí se àyẹ̀wò ohun tí ó jẹ́ nípa àwọn ènìyàn tí wọ́n fi ń fẹ́ se nǹkan tí wọ́n ń se àti ohun tí àyíká wọ́n mún wọ́n se tàbí ohun tí kò jẹ́ kí wọ́n se.",
+    "baseline": " A wot i o ni woyi, she a ye wu wu wu wu wu ti uje ni pa wu e ni wot i won fi, won fi in fe she in konti wan she, a ti wu wu ti a ye ka wu wu wu wan she, ta bi wu wu ti ku je ki wan she.",
+    "wer_base": 143.5897435897436,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "àwọn tí ọ̀rìnwọ̀nyí se àyẹ̀wò ohun tí ó jẹ́ nípa àwọn ènìyàn tí wọ́n fi ń fẹ́ ṣe nǹkan tí wọ́n ṣe àti ohun tí àyíkà wọ́n mú wọ́n ṣe tàbí ohun tí kò jẹ́ kí wọ́n ṣe",
+        "wer": 30.76923076923077,
+        "wer_diff": 112.82051282051282
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "àwọn tí ọrìnwọ̀nyí se àyẹ̀wò ohun tí ó jẹ́ nípa àwọn ènìyàn tí wọ́n fi ń fẹ́ ṣe nkan tí wọ́n ṣe àti ohun tí àyíkà wọ́n mú wọ́n ṣe tàbí ohun tí kò jẹ́ kí wọ́n ṣe",
+        "wer": 30.76923076923077,
+        "wer_diff": 112.82051282051282
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "àwọn tí ọrìnwọ̀nyí se àyẹ̀wò ohun tí ó jẹ́ nípa àwọn ènìyàn tí wọ́n fi ń fẹ́ sẹ nkan tí wọ́n sẹ àti ohun tí àyíkà wọ́n mú wọ́n sẹ tàbí ohun tí kò jẹ́ kí wọ́n sẹ",
+        "wer": 30.76923076923077,
+        "wer_diff": 112.82051282051282
+      }
+    ]
+  },
+  {
+    "file_id": "16997729121965531604.wav",
+    "code": 1879,
+    "gold": "Èèyàn a kàn máa rokàn pé kí ni yóò gbẹ̀yìn dùrù nígbàtí kò bá si nǹkan kan.",
+    "baseline": " E nya kama ro kampa ki ni yo gwenyi duru ni bati kobasi mkaka. E nya kama ro kampa ki ni yo gwenyi duru ni bati kobasi mkaka.",
+    "wer_base": 158.8235294117647,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "eyín a kàn máa ró kàn pé kí ni yóò gbẹ̀yìn ìdòrù nígbàtí kọ̀ bá sí ǹkànkán",
+        "wer": 47.05882352941176,
+        "wer_diff": 111.76470588235294
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "eyan kan ma ro kan pe ki ni yio gbeyin duru nigbati ko ba si nkankan",
+        "wer": 88.23529411764706,
+        "wer_diff": 70.58823529411764
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "eyan kan ma ro kan pe ki ni yo gbeyin duru ni gbati ko ba si nkankan",
+        "wer": 94.11764705882352,
+        "wer_diff": 64.70588235294117
+      }
+    ]
+  },
+  {
+    "file_id": "4385336232386177906.wav",
+    "code": 1907,
+    "gold": "Láìpẹ́ tí ìfúngunmọ́ni bẹ̀rẹ̀, Ilẹ̀ Britian bẹ̀rẹ̀ síní fi ikọ̀ ológun ojú omi dá ilẹ̀ Germany dúró.",
+    "baseline": " La i kwe ti i fi gume ni bere, i le britain bere sinifi i ko u lo gun oju o mida i le jamni dhuru.",
+    "wer_base": 152.94117647058823,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "láìpẹ́ tí ìfigúnmọ́nìbẹ̀rẹ̀ ilẹ̀ britain bẹ̀rẹ̀ síní fi ikọ̀ ológun ojú omi dá ilẹ̀ germany dúró",
+        "wer": 41.17647058823529,
+        "wer_diff": 111.76470588235294
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "láìpẹ́ tí ìfiggunmọ́ ní bẹ̀rẹ̀ ilẹ̀ britain bẹ̀rẹ̀ síní fi ikọ̀ ológun ojú omi dá ilẹ̀ germany dúró",
+        "wer": 47.05882352941176,
+        "wer_diff": 105.88235294117645
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "laipe ti ifigunmo ni bere ile britain bere sini fi ikọ ológun oju omi da ile germany duro",
+        "wer": 88.23529411764706,
+        "wer_diff": 64.70588235294117
+      }
+    ]
+  },
+  {
+    "file_id": "9176228315282194625.wav",
+    "code": 1923,
+    "gold": "Ọgbọ́n náà dára, yíyọ àwọn ǹkan èlò tí ológun àti àwọn ènìyàn, ṣùgbọ́n ìdènà yìí kò tọ̀nà fún òfin orílẹ̀èdè tí wọ́n fọwọ́sí tí àwọn tó wà ní òkè òkun fọwọ́sí fún ọ̀pọ̀lọpọ̀ ọdún sẹ́yìn.",
+    "baseline": " Ogbon ndara, yi yu an wan kan e lo ti o lo guma ti an wen nyo shuban e dena yi kutono fun o fin yu lile de ti wan fawosi ti an wan to wa ni o ki u kon fawosi fun o kolokbo ndun sen.",
+    "wer_base": 134.28571428571428,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ọgbọ́n náà dára yíyọ àwọn nǹkan èlò tí ológun àti àwọn ènìyàn ṣùgbọ́n èdè náà yìí kò tọ́nà fún òfin orílẹ̀èdè tí wọ́n fọwọ́sí tí àwọn tó wà ní òkè òkun fọwọ́sí fún ọ̀pọ̀lọpọ̀ ọdún sẹ́yìn",
+        "wer": 22.857142857142858,
+        "wer_diff": 111.42857142857142
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ọgbọ́n náa dára yíyọ àwọn nǹkan èlò tí ológun àti àwọn ènìyàn sùgbọ́n èdè náà yìí kò tọ́nà fún òfin orílẹ̀èdè tí wọ́n fọwọ́sí tí àwọn tó wà ní òkè òkun fọwọ́sí fún ọ̀pọ̀lọpọ̀ ọdún sẹ́yìn",
+        "wer": 28.57142857142857,
+        "wer_diff": 105.7142857142857
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ogbonna dara yiyo yio awon n kan elo ti olugun ati awon eniyan sugbon ede na yi ko tona fun ofin orileede ti won fawosi ti awon to wa ni oke okun fawosi fun wopo lopo odun seyi",
+        "wer": 108.57142857142857,
+        "wer_diff": 25.71428571428571
+      }
+    ]
+  },
+  {
+    "file_id": "5569535002770063528.wav",
+    "code": 1806,
+    "gold": "Torípé ìṣòro ẹ̀gbin iná óyàtọ̀ sí bó ṣe wà lónìí, wọ́n ma n sábà wà ní ilu tàbí ọgbà ilé ìwé, o rọrùn láti débẹ̀ jú àwọn tí a kọ́ ní igbalode lọ.",
+    "baseline": " Tori pe, isoro egbe, ina yatosi bose walo ne, wama unsabawa ne ilu tabi ogba ile iwe, ororon lati debe ju awanti ako ne ibalu de lo. Tori pe, isoro egbe, ina yatosi bose walo ne, wama unsabawa ne ilu tabi ogba ile iwe, ororon lati debe ju awanti ako ne ibalu de lo.",
+    "wer_base": 163.63636363636365,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "torí pé ìṣòro ẹ̀gbìn iná yàtọ̀ sí bó se wà lónìí wọn a máa n sába wà ní ìlú tàbí ọgbà ilé ìwé ó rọrùn láti débẹ̀ ju àwọn tí a kọ́ ní ìgbàlódé lọ",
+        "wer": 54.54545454545454,
+        "wer_diff": 109.09090909090911
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "torí pé ìṣòro ẹ̀gbìn iná yàtọ̀sí bó se wà lónìí wọn a máa n sába wà ní ìlú tàbí ọgbà ilé ìwé o rọrùn láti débẹ̀ ju àwọn tí a kọ́ ní ìgbàlódé lọ",
+        "wer": 54.54545454545454,
+        "wer_diff": 109.09090909090911
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "torí pé ìsòro ẹ̀gbìn iná yàtọ̀ sí bó se wà lónìí wọn a máa n sába wà ní ìlú tàbí ọgbà ilé ìwé orọrùn láti débẹ̀ ju àwọn tí a kọ́ ní ìgbàlódé lọ",
+        "wer": 60.60606060606061,
+        "wer_diff": 103.03030303030303
+      }
+    ]
+  }
+]

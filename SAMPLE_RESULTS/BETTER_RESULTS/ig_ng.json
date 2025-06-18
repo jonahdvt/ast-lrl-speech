@@ -1,0 +1,407 @@
+[
+  {
+    "file_id": "6430235742323038125.wav",
+    "code": 1698,
+    "gold": "Ihe niile dị na elu ụwa a nwere mata. Mata niile bụ njikọ ọtụtụ obere ihe a na-akpọ atọm.",
+    "baseline": " Nyi li li li li li uwa uwe Mata. Mata li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li li",
+    "wer_base": 2300.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ihe nile dị n'elu ụwa nwere mata mata nile ebu n'ejikọ ọtụtụ obere ihe a na-akpọ atọm",
+        "wer": 57.89473684210527,
+        "wer_diff": 2242.105263157895
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ihe niile dị n'eluụwa nwere mmaata. mmaata niile ebu n'injikọ ọtụsọ ozọrọ ihe a na-akpọ atọm",
+        "wer": 63.1578947368421,
+        "wer_diff": 2236.842105263158
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ihe niile dị n'elu ụwa nwere mata ma mata niile ebu njikọ ọtụtụ ozerenye akpọ atom",
+        "wer": 68.42105263157895,
+        "wer_diff": 2231.578947368421
+      }
+    ]
+  },
+  {
+    "file_id": "2704635476015886281.wav",
+    "code": 1844,
+    "gold": "Elu ọnwa bụ ụmụ okwute na ájá mejupụtara ya. Mkpuchi mpụga ọnwa ka a na-akpọ krọstụ.",
+    "baseline": " I loa wabumu wuhuten aja me djibu daraya, wuchin pugo wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana wakana",
+    "wer_base": 937.5,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ụlọ ọnwa bụ ụmụ ohute na-aja mejupụtara ya mkpuchi mpụga ọnwa ka a na-akpọ krọst",
+        "wer": 43.75,
+        "wer_diff": 893.75
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "elu ọnwa bụ ụmụ ohute na-aja mejupụtara ya mkpuchi mpụga ọnwa ka a na-akpọ krọst",
+        "wer": 43.75,
+        "wer_diff": 893.75
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "elu onwa bụ ụmụ ohute na-aja mejupụtara ya mkpuchi mpụga ọnwa ka a na-akpọ krọst",
+        "wer": 50.0,
+        "wer_diff": 887.5
+      }
+    ]
+  },
+  {
+    "file_id": "3489448095165629025.wav",
+    "code": 1834,
+    "gold": "Ọzọkwa n'ugwu leta nnukwu Ebe Nsọ nke Nwanyị Anyị nke Fatima (Ebenchụaja), otu ebe ama ama n'ụwa niile maka ụmụ ihe ngosipụta nke Marịa.",
+    "baseline": " Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo,",
+    "wer_base": 616.6666666666667,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ọzọkwa na ugwu leta nnukwu ebe nso nke nwanyị anyị nke fatima ebe nchọaja otu ebe ama ama n'ụwa niile maka ụmụ ihe ngosipụta nke maria",
+        "wer": 45.83333333333333,
+        "wer_diff": 570.8333333333334
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọzọkwa na ugwu leta nnukwu ebe nso nke nwanyị anyị nke fatịmọ ebe nchụ aja otu ebe ama ama n'ụwa nile maka ụmụ ihe ngosipụta nke ma arịa",
+        "wer": 58.333333333333336,
+        "wer_diff": 558.3333333333334
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ọzọkwa na ugwu leta nnukwu ebe nso nke nwanyị anyị nke fatima ebe nchọjọ otu webe ama ama na ụwa niile maka ụmụ ihe ngosipụta nke maria",
+        "wer": 58.333333333333336,
+        "wer_diff": 558.3333333333334
+      }
+    ]
+  },
+  {
+    "file_id": "13171435289881358128.wav",
+    "code": 1926,
+    "gold": "A nabatara echiche Aristotle gbasara okwu sayensi niile ma mmuta akparamagwa ya bu psychology",
+    "baseline": " ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ ਸੇ",
+    "wer_base": 528.5714285714286,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "na nabatara echiche aristophe gbasara okwu sayensi niile ma mmuta akparama agwaya bu saikologi",
+        "wer": 35.714285714285715,
+        "wer_diff": 492.8571428571429
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ana batara echiche a aristoteles gbasara okwu sayensi niile ma mmuta akpara maagwa ya bu saikologi",
+        "wer": 50.0,
+        "wer_diff": 478.57142857142856
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ha na batara echiche aristọtụ gbasara okwu sayensị niile ma mmụta akparamaagwa ya bụ psychology",
+        "wer": 57.14285714285714,
+        "wer_diff": 471.42857142857144
+      }
+    ]
+  },
+  {
+    "file_id": "5543128307024677695.wav",
+    "code": 1980,
+    "gold": "Na mwute, ịmụ maka otu okporo njem si aga siri maka na e nweghi ike ikwu kpọm n'ọgụ otu narị pasentị ụdị omume ọkwọ ụgbọ nwere ike ime.",
+    "baseline": " Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo,",
+    "wer_base": 528.5714285714286,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "n'otu imu maka otu okporo njem si aga siri maka na enweghị ike ikwu kpọ n'ọgụ otu narị pasentị vidịo mmụọkwụ ụgbọ nwere ike ime",
+        "wer": 35.714285714285715,
+        "wer_diff": 492.8571428571429
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "t. i mụ maka otu okporo njem si agasịrị maka na-enweghị ike ịkwụ ụgbọ na ọgụ otu narị pasentị dị o mmụọkwụ ụgbọ nwere ike ime",
+        "wer": 57.14285714285714,
+        "wer_diff": 471.42857142857144
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "itemụ maka otu okporo njem si agasịrị maka na-enweghị ike ịkwụ gbọm na ọgụ otu narị pasentị vidiyo mmụọ kwa ụgbọ nwere ike ime",
+        "wer": 57.14285714285714,
+        "wer_diff": 471.42857142857144
+      }
+    ]
+  },
+  {
+    "file_id": "9346917863505125151.wav",
+    "code": 1806,
+    "gold": "Dị ka mmetọ keọkụ n'isimbụ ha abụghị ụdị nsogbu ọ bụ ugbu a, a na-ahụkarị ha n'ime obodo ma ọ bụ na kampọs, nke dị mfe irute karịa ndị ahụ arụrụ n'oge ugbu a.",
+    "baseline": " Kwa hivyo, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa k",
+    "wer_base": 523.5294117647059,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "dịka mmetọ nke ọkụ n'ise mbụ ha abụghị rụdị nsụgba ọ bụ ugbu a na-ahụkarị ha n'ime obodo ma ọ bụ na kampọs nke dị mfe irute karịa ndị ahụ arụrụ n'oge ugbu a",
+        "wer": 32.35294117647059,
+        "wer_diff": 491.1764705882353
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "dịka mmetọ nke ọkụ n'ise mbụ ha bụ iru dị nsogbu ọ bụ ugbu a na-ahụkarị ha n'ime obodo ma ọ bụ na kampọs nke dị mfe irute karịa ndị ahụ arụrụ n'oge ugbu a",
+        "wer": 35.294117647058826,
+        "wer_diff": 488.2352941176471
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "dịka mmetọ nke ọkụ n'ise mbụ ha bụ ịrụ dị nsụgbu ọ bụ ugbu a na-ahụkarị ha n'ime obodo ma ọ bụ na kampọs nke dị mfe irute karịa ndị ahụ arụrụ n'oge ugbu a",
+        "wer": 38.23529411764706,
+        "wer_diff": 485.2941176470589
+      }
+    ]
+  },
+  {
+    "file_id": "5679269521795573477.wav",
+    "code": 1920,
+    "gold": "Ha na-enwekarị nri pụrụ iche, mmanya na ụmụ onyinye ntụrụndụ, iji debe ndị ọbịa n'ọnọdụ dị mma, ma debe ha n'ogige ahụ.",
+    "baseline": " ʰa ʰe wə kari ʰi ʰi pə ʰi ʷi ʷi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi ʰi �",
+    "wer_base": 513.6363636363636,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ha na-erekarị nre pụrụ iche mmanya na ụmụ onyinye ntụrụndụ iji deba ndị ọbịa n'ọnọdụ ọdịmma ma debia ha n'ogige ahụ",
+        "wer": 45.45454545454545,
+        "wer_diff": 468.18181818181824
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ha na-ewakari nri pụrụ iche mmanya na ụmụ onye nye ntụrụ ndụ iji debe ndị ọbịa n'ọnọdụ ọdịmma ma debe ha n'ogige ahụ",
+        "wer": 45.45454545454545,
+        "wer_diff": 468.18181818181824
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ha na-ere karịa nreipụrụ iche mmanya na ụmụ onyinye ntụrụ ndụ iji debe ndị ọbịa na ọnọdụ ọdị mma ma debe ha n'ogige ahụ",
+        "wer": 54.54545454545454,
+        "wer_diff": 459.0909090909092
+      }
+    ]
+  },
+  {
+    "file_id": "6331623119834445680.wav",
+    "code": 2001,
+    "gold": "Ana adusi ndi njem odu ike ha mara gbasara ihe ndaba nke ekpem-oku maobu di oke ukwuu nke na emetuta ogbe ha dika onwere ike imetuta atumatu ime-njem obula.",
+    "baseline": " Anātūsi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ndi ",
+    "wer_base": 503.44827586206895,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "a na-atụsị ndị njem ọdụ ike ha mara gbasara ihe ndaba nke ekpepe ọkụ maọbụ dị oke ukwu nke n'emetụta ugbe ha dị ka uwe ike imetụta atụmatụ ime njem ọbụla",
+        "wer": 68.96551724137932,
+        "wer_diff": 434.48275862068965
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "a na-atụsị ndị njem ọdụ ike ha mara gbasara ihe ndaba ndaba nke ekpepe ọkụmọbụ dị oke ụkwụ nke na-emetụta ugbe ha dị ka o nwere ike imetụta atụmatụ ime njem ọbụla",
+        "wer": 72.41379310344827,
+        "wer_diff": 431.03448275862064
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "a na-adụsị ndị njem ọdụ ike ha mara gbasara ihe ndaba nke ekpepe ọkụ maọbụ dị oke ukwu nke na-emetụta ugbe ha dị ka o nwee ike imetụta atụmatụ ime njem ọbụla",
+        "wer": 72.41379310344827,
+        "wer_diff": 431.03448275862064
+      }
+    ]
+  },
+  {
+    "file_id": "12772976065106919574.wav",
+    "code": 1676,
+    "gold": "Dịka o si adị n'ogige mba niile nọ na Sawụtụ Afrịka, e nwere ụgwọ nchekwa n mbanye a na-akwụ kwa ụbọchị n'ogige a.",
+    "baseline": " ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭ ੭",
+    "wer_base": 482.60869565217394,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "dịka ozi a dị n'ogige mba niile nọ na sawụt afrịka enwere ụgbọ nchekwa na mbanye a na akwụkwọ ụbọchị n'ogige a",
+        "wer": 56.52173913043478,
+        "wer_diff": 426.0869565217392
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "dịka osi a dị n'ogige mba niile nọ na sawụt afrịka enwere ụgbọ nchekwa na mbanye a na akwụkwọ ụbọchị n'ogige a",
+        "wer": 56.52173913043478,
+        "wer_diff": 426.0869565217392
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "dịka osi a dị n'ogige mba niile nọ na sawụt afrịka enwere ụgbọ nchekwa na mbanye a na akwụkwọ ụbọchị n'ogige a",
+        "wer": 56.52173913043478,
+        "wer_diff": 426.0869565217392
+      }
+    ]
+  },
+  {
+    "file_id": "9272251598067329624.wav",
+    "code": 1793,
+    "gold": "Oburu na imaatachabeghi ka esi anya ugboala n’okporouzo ime obodo, ume ahapukwala gi: uzo n’akpode akpode, uzo di wara wara na nkuku nko juru eju.",
+    "baseline": " Mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi, mburi,",
+    "wer_base": 444.00000000000006,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọ bụrụ na ịmatachebe ike esi anya ụgbọala n'okporo ụzọ ime obodo ume agha pụkwala gị ụzọ na-akpọda akpọdi ụzọ dị wara wara na nkụkụ nko juru eji",
+        "wer": 72.0,
+        "wer_diff": 372.00000000000006
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ọ bụrụ na ịmatachebeghị ka e si anya ụgbọala n'okporo ụzọ ime obodoume aghapụkwala gị ụzọ na-akpọda akpọdị ụzọ dị wara wara na nkuku nko juru eji",
+        "wer": 72.0,
+        "wer_diff": 372.00000000000006
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ọ bụrụ na ịmatachebeghi ka e si anya ụgbọala n'okporo ụzọ ime obodo ngbe aghapụkwala gị ụzọ na-akpọda akpọdị ụzọ dị wara wara na nkuku nkụ juru eji",
+        "wer": 76.0,
+        "wer_diff": 368.00000000000006
+      }
+    ]
+  },
+  {
+    "file_id": "17190310514249497709.wav",
+    "code": 1811,
+    "gold": "Oke 802.11n na arụ ọrụ ma na frikwensi nke 2.4Ghz na nke 5.0Ghz.",
+    "baseline": " ੧ ੧.11n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ੧.011n ",
+    "wer_base": 430.7692307692308,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "oke 802.11n na-arụ ọrụ mana frikwensị nke 2.4ghz nke 5.0ghz",
+        "wer": 69.23076923076923,
+        "wer_diff": 361.5384615384615
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "oke 802.11n n'arụ ọrụ mana frikwensị nke 2.4 ghz nke 5.0 ghz",
+        "wer": 76.92307692307693,
+        "wer_diff": 353.8461538461538
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "onke 802.11n-n'oru oru mana frekwensi nke 2.4ghz nke 5.0ghz",
+        "wer": 84.61538461538461,
+        "wer_diff": 346.15384615384613
+      }
+    ]
+  },
+  {
+    "file_id": "2629154023120760287.wav",
+    "code": 1841,
+    "gold": "O nweghị ihe ọzọ enwere ike ịhụ na-abụghị eluigwe dị n’elu gbachapụrụ, maa mma na ọtụtụ ugwu gbara gburugburu. Nanị obere nke ụwa ka enwere ike ịhụ ma ọ bụ nụ site n’ime nnukwu ọnụala ahụ.",
+    "baseline": " Uwe e hanzo, iwe e iken hona, na abu e liwe ijinilu, wachakuru, ma, ma na osesu, kumbara buruburu, na noberenka, owa, awe e iken, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa, owa",
+    "wer_base": 422.22222222222223,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ụgwọ enyi ihe ọzọ ịnwere ike ịhụ na-abụghị eluigwe dị n'elu gbachapụrụ ma mma na ọsịso ụgbara gburugburu naanị obere nke ụwa anwere ike ịnwọ obodo nke ime nnukwu ọnụ ala ahụ",
+        "wer": 63.888888888888886,
+        "wer_diff": 358.33333333333337
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "o nwere ihe ọzọ a nwere ike ịhụ na-abụghị eluigwe dị n'ụlọ gbachakwuru ma mma na ọsịso ụgbara gburugburu naanị obere nke ụwa a nwere ike ịnwa ọbụ nsịtịnime nnukwu ọnụ ala ahụ",
+        "wer": 66.66666666666666,
+        "wer_diff": 355.5555555555556
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "onweghi ihe ọzọ enwere ike ịhụ na-abụghị eligo idi n'ilo gbachakwuru ma mma na ọsịsọ ụgbara gburugburu na n'obere nka ụwa enwere ike morgan steen ime nnukwu ọnụ ala ahụ",
+        "wer": 69.44444444444444,
+        "wer_diff": 352.77777777777777
+      }
+    ]
+  },
+  {
+    "file_id": "3181527060533707127.wav",
+    "code": 1777,
+    "gold": "Ottawa bu isi obodo mara mma, nwere asusu abuo nke Canada ma nwekwa galari nka na ebe ngosi nka di iche iche n’egosiputa Canada n’oge gara aga ma n’oge ugbu a.",
+    "baseline": " Kota wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wabwisi wab",
+    "wer_base": 361.2903225806451,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kọtawa bụ isi obodo mara mma nwere asụsụ abụọ nke kanada ma nwekwaa galari na ebe ngosi nka dị iche iche na-egosipụta kanada n'oge gara aga ma n'oge ugbu a",
+        "wer": 45.16129032258064,
+        "wer_diff": 316.1290322580645
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kọtawa bụ isi obodo mara mma nwere asụsụ abụọ nke kanada ma nwekwe galeri na ebe ngosi nka dị iche iche na-egosipụta kanada n'oge gara aga ma n'oge ugbu a",
+        "wer": 48.38709677419355,
+        "wer_diff": 312.9032258064516
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọtawa bụ isi obodo mara mma nwere asụsụ abụọ nke kanada ma nwekwee galarị na ebe ngosi nka dị iti iti n'igosipụta kanada n'oge gara aga ma n'oge ugbu a",
+        "wer": 54.83870967741935,
+        "wer_diff": 306.4516129032258
+      }
+    ]
+  },
+  {
+    "file_id": "9157500654183120632.wav",
+    "code": 1865,
+    "gold": "Njem nnyagharị nke Senti Piitasbọg gụnyere oge n'ime obodo. Ndị njem nke njem nnyagharị bụ ndị ewezụgara site n'ụmụ ihe ndị achọrọ maka visa (lelee usoro ahụ).",
+    "baseline": " Ndèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèm",
+    "wer_base": 329.6296296296296,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "njem nnyagharị nke st pitasbọọgụ guere oge n'ime obodo ndị njem nke njem nnyagharị bụ ndị ewezukara site n'ụmụ ihe ndị achọrọ maka visa lelee usoro ahụ",
+        "wer": 33.33333333333333,
+        "wer_diff": 296.2962962962963
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "njem nnyarị nke st pitasbọọgụ ere oge n'ime obodo ndị njem nke njem nnyarị bụ ndị ewezụgara site n'ụmụ ihe ndị achọrọ maka visa lelee usoro ahụ",
+        "wer": 37.03703703703704,
+        "wer_diff": 292.5925925925926
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "njem nnyaarị nke st pitasbọọgụ gụere oge n'ime obodo ndị njem nke njem nnyaarị bụ ndị ewezụkara site n'ụmụ ihe ndị achọrọ maka visa lelee usoro ahụ",
+        "wer": 40.74074074074074,
+        "wer_diff": 288.88888888888886
+      }
+    ]
+  },
+  {
+    "file_id": "8035176092256475026.wav",
+    "code": 1865,
+    "gold": "Njem nnyagharị nke Senti Piitasbọg gụnyere oge n'ime obodo. Ndị njem nke njem nnyagharị bụ ndị ewezụgara site n'ụmụ ihe ndị achọrọ maka visa (lelee usoro ahụ).",
+    "baseline": " Ndèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèmò njèm",
+    "wer_base": 329.6296296296296,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "njem nnyagharị nke st pitasbọọg gunyere oge n'ime ụbọdụ ndị njem nke njem nnyagharị bụ ndị e wezugara site n'ụmụ ihe ndị achọrọ maka visa lelee usoro ahụ",
+        "wer": 37.03703703703704,
+        "wer_diff": 292.5925925925926
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "njem nnyagharị nke st pitasbọọgụ gụnyere oge n'ime obodo ndị njem nke njem nnyagharị bụ ndị e wezugara site n'ụmụ ihe ndị a chọrọ maka visa lelee usoro ahụ",
+        "wer": 40.74074074074074,
+        "wer_diff": 288.88888888888886
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "njem nnyegharị nke st pitasbọg gụnyere oge n'ime obodo ndị njem nke njem nnyegharị bụ ndị e wezụgara site n'ụmụ ihe ndị achọrọ maka visa lelee usoro ahụ",
+        "wer": 40.74074074074074,
+        "wer_diff": 288.88888888888886
+      }
+    ]
+  }
+]

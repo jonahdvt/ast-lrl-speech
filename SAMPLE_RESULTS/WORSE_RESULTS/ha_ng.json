@@ -1,0 +1,119 @@
+[
+  {
+    "file_id": "10600401760102194440.wav",
+    "code": 1932,
+    "gold": "Mintuna biyar da fara nunin wata iska ya fara shigowa ciki, kusan minti daya daga baya, iskar ta doshi 70km/h... daga baya ruwan sama yazo, amma da yawa da karfinsa ya sauko yadda zai bugi fatarka kamar allura, saannan wani kankara ya fado daga sama, mutane suna firgita suna kururuwa suna tattake juna.",
+    "baseline": " Minto na biyar dafara nuni mwata iska yafara shigoo wachiki. Kusammenti lea dagabaya iskaratadushi kilomita sabayin. Dagabaya ruwansa maezu amaa dayewa da karifinsa ya sawuko ya daze buji. Fatarka kamar alura Sanna mweni hakangara ya falo daga sama Mutani suna bergita Suna kuhuruwa Suna tatakijuna",
+    "wer_base": 86.79245283018868,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mintuna biyar da fara nunin wata iska ya fara shigo wa ciki kusan minti laya daga baya iskar ta doshi 70km daga baya ruwan sama ya zo amma da yawa da karfinsa ya sauko yadda zai bugi fatar kakafunsa ya zo kuma mintuna biyar da fara nunin wata iska ya fara shigo wa ciki kusan minti laya daga baya iskar ta do shi kilomita saba'in daga baya ruwan sama ya zo amma da yawa da ƙarfinsa ya sauko yadda zai bugi fatar kakafunsa ya zo a ɗa wani ƙarmin saukon yadda za'a zai bugi a ƙarfinsa ya sauko ƙarfinsa ya sauko ƙarfinsa ya sauko ƙadda zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗa zai bugi a ɗakamar allura sannan wani kankara ya fado daga sama mutane suna firgita suna kururuwa suna tattake juna",
+        "wer": 303.77358490566036,
+        "wer_diff": -216.98113207547172
+      }
+    ]
+  },
+  {
+    "file_id": "14620243124141540562.wav",
+    "code": 1753,
+    "gold": "Yayin da yake wannan yawanci ra’ayi ne wanda ba daidai ba, hanya mafi kyau don yin sabo a cikin Paris har yanzu shine kasancewa kan halayyarka mafi kyau, yin aiki kamar wanda yake “bien élevé” (wanda ya sami tarbiyya mai kyau). Zai sanya yin sabo ya kasance mai sauki.",
+    "baseline": " Hello, my name is Yawanchi Raayini. I am from the village of Mofikewa, in the suburb of Paris. I am from the village of Halayarka. I am a woman, and I am a woman. I am a woman, and I am a woman. I am a woman, and I am a woman. I am a woman, and I am a woman.",
+    "wer_base": 122.44897959183673,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "yayin da ya ke wannan yawanci ra'ayi ne wanda ba daidai ba hanya mafi kyau don yin sabo a trim paris har yanzun shi ne kasancewa kan halayyarka mafi kyau yin aiki kamar wanda ya ke benedict benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke benedict eleve wanda ya ke baninciyar yana hannu aini ya sami tarbiyyar mai kyau zai san yayin sabu ya kasance mai sauki",
+        "wer": 275.51020408163265,
+        "wer_diff": -153.06122448979593
+      }
+    ]
+  },
+  {
+    "file_id": "12919203968157916182.wav",
+    "code": 1719,
+    "gold": "Mummunan yanayi kalma ce ga duk wani yanayi mai hatsari tare da yiwuwar haifar da lalacewa, rikicewar zamantakewar jama'a, ko asarar rayuwar ɗan adam.",
+    "baseline": " Adam. The",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mummunan yanay kalma ce ga duk wani yanay mai hatsari tare da yiwuwar haifar da lalacewa rikicer zamanta kewa jama'a ko asarar rayuwar ɗan adammummunan yanayi kalma ce ga duk wani yanayi ne hatsari tare da yiwuwar haifar da lalacewar rikicewar zaman ta kewa da ma'a ko asara rayuwan dan adam",
+        "wer": 145.83333333333331,
+        "wer_diff": -45.83333333333333
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mummunan yanayi kalmace ga duk wani yanayi ne hatsari tare da yiwuwar haifar da lalacewa rikiciar zaman takewa jama'a ko asarar rayuwar dan adammummunan yanayi kalma ce ga duk wani yanayi ne hatsari tare da yiwuwar haifar da lalacewar rikicewar zaman ta kewa da ma ko asara rayuwan dan adam",
+        "wer": 145.83333333333331,
+        "wer_diff": -45.83333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "15443272355279904019.wav",
+    "code": 1850,
+    "gold": "Wannan zai ba shi damar zama mai dacewa da baya 802.11a, 802.11b da 802.11g, matukar dai tashar tushe tana da rediyo biyu.",
+    "baseline": " I am very happy to be here today. I am very happy to be here today. The radio view is the same as the radio. The radio is the same as the radio. The radio is the same as the radio.",
+    "wer_base": 186.36363636363635,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "wannan zai ba shi damar zama mai dacewa da bayadari takwas da biyu da dugo sha ɗaya a rukunin a dari takwas da biyu da dugo sha ɗaya rukunin b da dari takwas da biyu da dugo sha ɗaya rukunin g matukar da tashar tushe tana da rediyo biyusakamako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimako-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakimazo-yakim za kai kai kai kai kai kai kai kai kai kai kai kai",
+        "wer": 213.63636363636363,
+        "wer_diff": -27.27272727272727
+      }
+    ]
+  },
+  {
+    "file_id": "9601585702676263468.wav",
+    "code": 1748,
+    "gold": "Rundunar kashe gobara sunyi nasara kashe wutan a dai-dai karfe 11:35pm.",
+    "baseline": " Habunduna kashigubara. Sunye nasaba kashivuta adeiding kabifiguma shatnaya datalating nadabi.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "habun duna kashe gobara sun yi nasaba kashe wuta a daidin karfe 10 sha ɗaya da 30 na dabe",
+        "wer": 127.27272727272727,
+        "wer_diff": -27.27272727272727
+      }
+    ]
+  },
+  {
+    "file_id": "6796506543211793661.wav",
+    "code": 1999,
+    "gold": "A duk tsawon 1960, Brzezinski yayi ma John F. Kenedy aiki a matsayin mai bada shawara kuma yayi aiki da gwamnatin Lyndon B. Johnson.",
+    "baseline": " Adopt awa 1960, Rozanziski yae wa John F. Kennedy aiki amatayime baada shawara kuma yae aiki da gwamnetu nindon B. Johnson.",
+    "wer_base": 58.333333333333336,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "a duk tsawon 1960 rzanziski ya yi wa john f kennedy aiki a matayin mai ba da shawara kuma ya yi aiki da gwamnatin lindon b johnson",
+        "wer": 70.83333333333334,
+        "wer_diff": -12.5
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "a duk tsawon 1960 ross eski ya yi wa john f kennedy aiki a matsayin mai ba da shawara kuma ya yi aiki da gwamnatin lindon b jensen",
+        "wer": 70.83333333333334,
+        "wer_diff": -12.5
+      }
+    ]
+  },
+  {
+    "file_id": "6841053470847724286.wav",
+    "code": 1905,
+    "gold": "Babban birnin Moldova shi ne Chişinău. yaren cikin gida shi ne Romaniyanci, amma ana amfani da harshen Rasha sosai.",
+    "baseline": " Pabambebne Moldova shi ne shisanaw. Yabin chikin kitanshi ne abuman niyanchi. Ama ana amfanid hapshing Russia susay.",
+    "wer_base": 78.94736842105263,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "babban babne moldova shine shisanao yabin cikin gidanshi ne abu ma na yancin amma ana amfani da hapshin abisha sosai",
+        "wer": 84.21052631578947,
+        "wer_diff": -5.263157894736836
+      }
+    ]
+  }
+]

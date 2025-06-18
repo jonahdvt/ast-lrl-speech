@@ -1,0 +1,317 @@
+[
+  {
+    "file_id": "8568764395453779817.wav",
+    "code": 1953,
+    "gold": "Baadaye alihamishiwa Hospitalini Addenbrooke katika Cambridge.",
+    "baseline": " Baadai alihamishwa hospitalini Addenbrooke katika Cambridge.",
+    "wer_base": 50.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "baadaye alihamishwa hospitali na edinburgh katika cambridge",
+        "wer": 100.0,
+        "wer_diff": -50.0
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "baadaye alihamishwa hospitalini edinburgh katika cambridge",
+        "wer": 83.33333333333334,
+        "wer_diff": -33.333333333333336
+      }
+    ]
+  },
+  {
+    "file_id": "2349841663438353312.wav",
+    "code": 1879,
+    "gold": "Mtu anaweza kujiuliza kibodi itakuwa nini wakati kitu kipya kitakapokuja.",
+    "baseline": " Mtu anaweza kujiuliza kibodi itakuwa nini wakati kitu kipia kitakapo kuoja.",
+    "wer_base": 30.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mtu anaweza kujiuliza kibudi itakua nini wakati kitokipi ya kitakapwa kuoja",
+        "wer": 70.0,
+        "wer_diff": -40.0
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mtu anaweza kujiuliza kibudi itakuwa nini wakati kitokipi ya kitakapo kuoja",
+        "wer": 60.0,
+        "wer_diff": -30.0
+      }
+    ]
+  },
+  {
+    "file_id": "17327414793589476612.wav",
+    "code": 1870,
+    "gold": "Matuko yanaonyeshwa kwenye piramidi na piramidi tofauti huangaza.",
+    "baseline": " Matuko ya noyeshuwa kwenye piramidi na piramidi tofauti huangaza.",
+    "wer_base": 25.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "matuko ianoyeshwa kwenye biramidi na biramidi tofauti huangaza",
+        "wer": 62.5,
+        "wer_diff": -37.5
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "matuko yanayeshwa kwenye piramidi na piramidi tofauti huangaza",
+        "wer": 37.5,
+        "wer_diff": -12.5
+      }
+    ]
+  },
+  {
+    "file_id": "9625546681167118921.wav",
+    "code": 1902,
+    "gold": "Mwanzoni alikuwa amelazwa kwenye Hospitali ya James Paget katika Great Yarmouth.",
+    "baseline": " Mwanzoni alikuwa amelazo kwenye ustali ya James Spaget katika Great Yarmouth.",
+    "wer_base": 27.27272727272727,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mwanzoni alikuwa amelazwa kwenye austalia james paget katika great yamath",
+        "wer": 63.63636363636363,
+        "wer_diff": -36.36363636363637
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mwanzoni alikuwa amelazwa kwenye ustali ya james spaget katika great yamautha",
+        "wer": 54.54545454545454,
+        "wer_diff": -27.27272727272727
+      }
+    ]
+  },
+  {
+    "file_id": "10013269209685538610.wav",
+    "code": 1999,
+    "gold": "Katika miaka yote ya 1960, Brzezinski alimfanyia kazi John F. Kennedy kama mshauri wake na pia utawala wa Lyndon B. Johnson.",
+    "baseline": " Katika meka yote ya 1169, Brzezinski alinfanya kazi John F. Kennedy kama mshauri wake na pia utawala wa Leonard B. Johnson.",
+    "wer_base": 19.047619047619047,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "katika meka yote ya 1960 brzezinski alimfanyia kazi john f. kennedy kama mshauri wake na pia utoala wa leonard b. johnson",
+        "wer": 52.38095238095239,
+        "wer_diff": -33.333333333333336
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "katika miaka yote ya 1960 bziziki alimfanyia kazi john f. kennedy kama mshauri wake na pia utawala wa leonard b. johnson",
+        "wer": 42.857142857142854,
+        "wer_diff": -23.809523809523807
+      }
+    ]
+  },
+  {
+    "file_id": "14406930030496892493.wav",
+    "code": 1662,
+    "gold": "Aloi kimsingi ni mchanganyiko wa metali mbili au zaidi. Usisahau kwamba kuna elementi nyingi kwenye jedwali la elementi.",
+    "baseline": " Aloi kimsingi ni mchanga yankiwa kwa metali mbili au zaidi. Usisahau kwamba kuna elementi nyingi kwenye jedwali la elementi.",
+    "wer_base": 16.666666666666664,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "aloi kimsingi ni mchanga ya nkiwa kwa metali mbili au zaidi usisahau kwamba kuna elementi nyingi kwenye jeruali la elementi",
+        "wer": 50.0,
+        "wer_diff": -33.333333333333336
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "aluri kimsingi ni mchanga yankiwa kwa metali mbili au zaidi usisahau kwamba kuna elementi nyingi kwenye jerwali la elementi",
+        "wer": 44.44444444444444,
+        "wer_diff": -27.77777777777778
+      }
+    ]
+  },
+  {
+    "file_id": "10527478660634646182.wav",
+    "code": 2003,
+    "gold": "Ili kujionea Hong Kong vizuri zaidi, ondoka kiswani kisha uelekee upande wa mwambao wa Kowloon ulio mkabala.",
+    "baseline": " Hili kujionea Hong Kong vizuri zaidi ondoka kiswani kisha uweleke upande wa muambao wa Kowloon ulio mkabala",
+    "wer_base": 29.411764705882355,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ili kujionea hong kong wizuri zaidi ondoka kiswani kisha uelekeu pande wa mwambao wa kowloon ulio mkabala",
+        "wer": 52.94117647058824,
+        "wer_diff": -23.52941176470588
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ili kujionea hong kong vizuri zaidi ondoka kiswani kisha uelekeo upande wa mwambao wa kowloon ulio mkabala",
+        "wer": 41.17647058823529,
+        "wer_diff": -11.764705882352938
+      }
+    ]
+  },
+  {
+    "file_id": "14519679988615215174.wav",
+    "code": 2003,
+    "gold": "Ili kujionea Hong Kong vizuri zaidi, ondoka kiswani kisha uelekee upande wa mwambao wa Kowloon ulio mkabala.",
+    "baseline": " Ili kujionea Hong Kong vizuri zaidi ondoka kisuani kisha ueleke upande wa mwambao wa kolon uliomu kabala.",
+    "wer_base": 35.294117647058826,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ili kujionea hong kong vizuri zaidi ondoka kisuani kisha huelekee upande wa mambao wa cologne uliomkabala",
+        "wer": 58.82352941176471,
+        "wer_diff": -23.52941176470588
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ili kujionea hong kong vizuri zaidi ondoka kiswani kisha uelekee upande wa mambao wa cologne uliomkabala",
+        "wer": 47.05882352941176,
+        "wer_diff": -11.764705882352938
+      }
+    ]
+  },
+  {
+    "file_id": "6059127562569875968.wav",
+    "code": 1779,
+    "gold": "Tangazo lilifanywa baada ya Trump kuwa na mazungumzo ya simu na Rais wa Uturuki Recep Tayyip Erdogan.",
+    "baseline": " Tangazo nilifanyo baada ya Trump kuwa na mazungumzu ya simu na raisu uturuki Recep Tayyip Erdogan.",
+    "wer_base": 29.411764705882355,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "tangazo lilifanywa baada ya trump kwana mazungumzo ya simu na rais wa uturuki receptayip erdoğan",
+        "wer": 52.94117647058824,
+        "wer_diff": -23.52941176470588
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "tangazo lilifanywa baada ya trump kuwa na mazungumzo ya simu na rais wa uturuki reseptayip erdoğan",
+        "wer": 41.17647058823529,
+        "wer_diff": -11.764705882352938
+      }
+    ]
+  },
+  {
+    "file_id": "1305783249989953994.wav",
+    "code": 1669,
+    "gold": "Mkuu wa polisi Chandra Shekar Solanki alisema mshtakiwa alitokea mahakamani na uso uliofunikwa.",
+    "baseline": " Mkuu wa polisi Chandra Shekha Solanki alisema mstakiwa alitokea makamani na uso uliofunikwa.",
+    "wer_base": 23.076923076923077,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mkuu wa polisi cha kandrasekhar solanki alisema mshtakiwa alitokea maakamani na uso uliofunikwa",
+        "wer": 46.15384615384615,
+        "wer_diff": -23.076923076923077
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mkuu wa polisi cha kandrasheka solanki alisema mshtakiwa alitokea mahakamani na uso uliofunikwa",
+        "wer": 38.46153846153847,
+        "wer_diff": -15.384615384615385
+      }
+    ]
+  },
+  {
+    "file_id": "192740999727533857.wav",
+    "code": 1899,
+    "gold": "Muhammad alivutiwa sana na mambo zaidi ya maisha haya ya kawaida. Alikuwa akitembelea sana pango ambalo lilikuja kujulikana kama \"Hira\" katika mlima wa \"Noor\" (nuru) kwa kutafakari.",
+    "baseline": " Muhammad alivutiwa sana na mambo zaidi ya maisha haya ya kawaida. Alikuwa akitembeleana sana pango ambalo lilikuja kujulikana kama hira katika mlima wa nuru kwa kutafakari.",
+    "wer_base": 14.814814814814813,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "muhammad alivutiwa sana na mambo zaidi ya maesha haya ya kawaida alikuwa akitembeleana sana pango ambalo lilikuja kujulikana kama hira katika milima wa nuru kwa kutafakari",
+        "wer": 37.03703703703704,
+        "wer_diff": -22.22222222222222
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "muhammad alivutiwa sana na mambo zaidi ya maisha haya ya kawaida alikuwa akitembeleana sana pango ambalo lilikuja kujulikana kama hira katika milima wa nuru kwa kutafakari",
+        "wer": 33.33333333333333,
+        "wer_diff": -18.51851851851852
+      }
+    ]
+  },
+  {
+    "file_id": "16057556102600269348.wav",
+    "code": 1942,
+    "gold": "Sisi hutengeneza nyumba zetu kwa mimea na kutengeneza nguo zetu kwa mimea. Chakula kingi ambacho sisi hula ni mimea. Bila mimea, wanyama hawawezi kuishi.",
+    "baseline": " Sisi utengeneza nyumba zetu kwa mimea na kutengeneza nguo zetu kwa mimea. Chakula kingi ambacho sisi hula ni mimea. Bila mimea wanyama hawezi kuishi.",
+    "wer_base": 12.5,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "sisi hutengeneza nyumba zetu kwa mimea na kutengeneza nguo zetu kwa mimea chakula kingi ambacho sisi hula ni mimea bila mimea wanyama hauwezi kuishi",
+        "wer": 33.33333333333333,
+        "wer_diff": -20.833333333333332
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "sisi hutengeneza nyumba zetu kwa mimea na kutengeneza nguo zetu kwa mimea. chakula kingi ambacho sisi hula ni mimea. bila mimea wanyama hauwezi kuishi",
+        "wer": 25.0,
+        "wer_diff": -12.5
+      }
+    ]
+  },
+  {
+    "file_id": "16968954117211301471.wav",
+    "code": 1905,
+    "gold": "Mji mkuu wa Moldova ni Chisinau. Lugha ya ndani ni Kiroma, lakini Kirusi inatumika sana.",
+    "baseline": " Mji mkuu wa Maldowa ni Chisienau, luga ya ndani ya Kiroma, lakini Kirosi inatumika sana.",
+    "wer_base": 33.33333333333333,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mji mkuu wa maldova ni chisinau lugha ya ndani ya kiroma lakini kirusi inatumika sana",
+        "wer": 53.333333333333336,
+        "wer_diff": -20.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mji mkuu wa maldova ni kisienao lugha ya ndani ya kiroma lakini kirusi inatumika sana",
+        "wer": 53.333333333333336,
+        "wer_diff": -20.0
+      }
+    ]
+  },
+  {
+    "file_id": "619104466144188407.wav",
+    "code": 1747,
+    "gold": "Mabondia wenzake pia walimuombeleza Luna.",
+    "baseline": " Mabondia wenzake pia wali muomboleza Luna.",
+    "wer_base": 40.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mabondia wenzake pia walimwamboleza luna",
+        "wer": 60.0,
+        "wer_diff": -19.999999999999996
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mabondia wenzake pia walimwamboleza luna",
+        "wer": 60.0,
+        "wer_diff": -19.999999999999996
+      }
+    ]
+  },
+  {
+    "file_id": "6378570022749293724.wav",
+    "code": 1712,
+    "gold": "Tangu mwaka wa 1966 Sandabani zimekuwa mbuga za wanyama pori, na inakadiriwa kuwa sasa kuna chui 400 wa Royal Bengal na kulungu takribani 30,000 katika eneo hilo.",
+    "baseline": " Tangu mwaka wa 1966, sandabani zimekua mbuga za onyamabori na inakerdiwa kuwa sasa kuna achui amniaine wa Royal Bengal na kulungu takribani 1030 katika eneo hilo.",
+    "wer_base": 33.33333333333333,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "tangu 1966 sandabani zimekuwa mbuga za unyamabori na inakaridiwa kuwa sasa kunachui 40% wa royal pengal na kunungu takribani 30,000 katika eneo hilo",
+        "wer": 51.85185185185185,
+        "wer_diff": -18.51851851851852
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "tangu 1966 sandabani zimekuwa mbuga za unyamaburi na inakardhiwa kuwa sasa kuna chui 400 wa royal pengal na kulungu takribani 30,000 katika eneo hilo",
+        "wer": 37.03703703703704,
+        "wer_diff": -3.7037037037037033
+      }
+    ]
+  }
+]

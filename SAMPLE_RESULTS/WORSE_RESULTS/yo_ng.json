@@ -1,0 +1,293 @@
+[
+  {
+    "file_id": "18109627037388050044.wav",
+    "code": 1875,
+    "gold": "Ìdá ogún omi tó dà sílẹ̀ nínú àwọn odò ayé sínú òkun wá láti Amazon.",
+    "baseline": " Hida ugu umituda sileni nwa uo udua yesi nukunwa walati Amazon.",
+    "wer_base": 93.33333333333333,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ìdá ogun omi tó dà sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ̀ sílẹ́ ó gb à ti",
+        "wer": 540.0,
+        "wer_diff": -446.6666666666667
+      }
+    ]
+  },
+  {
+    "file_id": "11678509637229581800.wav",
+    "code": 1716,
+    "gold": "Ìtàkùn Ìròyìn ìdárayá tí a mọ̀ sí TMZ jẹ́ kó yé pé àayàwòrán náà dá ọkọ̀ òun dúró lẹ́gbẹ̀ẹ́ kejì Sepulveda Boulevard, ó sì gbìyànjú láti ya àwòránibi ìdánidúró àwọn ọlọ́pàá kí ó tó sọdá sí òdì kejì tí ó sì tẹ̀síwájú, ní èyí tí ó mú kí àwọn ọlọ́pàá òpópónà California tí wọn n ṣe ètò sún kẹrẹ̀ fà kẹrẹ ọkọ dáa dúró kí o padà ní ẹ̀ẹ̀méj.",
+    "baseline": " Ita kuwen ronyi daraya ti amos si TMZ. Djekoji upe a ya wun rono da okon duru legbe keji sepu veda abu levad. Usi binyon jula ti ja a wun rono nibi i dani duru a wun lopa ki otosoda si udikeji. Tiwosi te siwaju ni eji tiwomo kia wanlopa wopono wa California Tiwanshi to sun kere fa kere oko daduro ki opada si, ki opada ni emeji",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "itako iroyin idaraya ti a mo ctmz je ko ye pe ayaworan naa da oko oun duro legebe keji sepu veda boulevard o si gbiyanju lati ya awon ran nibi idani duro awon olopa ki o to soda si odi keji ti o si tesiwaju ni eyi ti o mo ki awon olopa opopo naa california ti won se etosun kere fakere ogun periode ni aroha ki a to se gbiyanaju lati ko se ibi oto koji idaraya ti a mo ctẹ́ ni aroha ki a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a loki ti a lookáyú iiẹ́ i tà bí i dàá ní ẹ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ i dọ́ iò kò dáa dúró kí o padà ní èmẹ́ ìjì",
+        "wer": 373.9130434782609,
+        "wer_diff": -273.9130434782609
+      }
+    ]
+  },
+  {
+    "file_id": "2546389839352926420.wav",
+    "code": 1743,
+    "gold": "Ọ̀pọ̀lọpọ̀ àwọn ìtunmọ̀ ìpinu ìmọ̀ ẹ̀rọ pín àbá méjì, pé ìdágbàsóké ìms ẹ̀rọ fún rarẹ̀ fàyègba ọ̀nà tó jù àṣà àti òṣèlù lọ, ìms ẹ̀rọ nà ní “ipa” lóri àwùjọ tí a jogúnbá, jú àwùjọ ìlóniníyè lọ.",
+    "baseline": " Okpo loko awan ituma ipeno ima ero pun abamejipe idagba soke ima ero fun rade fa igba ona tojo asa atio selulo ima erone ipa lori A ujo ti a jogumba ju a ujo ilo nile ilo.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọ̀pọ̀lọpọ̀ àwọn ìtúmà ìpinnu ìmọ̀ẹ̀rọ̀ pín àbá méjì pé ìdágbàsókẹ ìmọ̀ẹ̀rọ̀ fún ara rẹ faàyè gba ọ̀nà tó jò àsà àti ò sèlúlọ. ìmọ̀ẹ̀rọ̀ ní ipa lórí àwùjọ tí ajogún bá ju àwùjọ ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ àti ìmọ̀ìlò nilẹ́yìnlọ́ọ̀",
+        "wer": 272.97297297297297,
+        "wer_diff": -172.97297297297297
+      }
+    ]
+  },
+  {
+    "file_id": "18367733051619021710.wav",
+    "code": 1937,
+    "gold": "Amóò, àwọn ètò wọ̀nyí kúròláṣà mọ́jú nígbàtí bíi ajagun 800,000 láti Egbe Ajagun Pupa tì Ìgbìmọ̀ Sofieti wọlé, wọ́n díbọ́n Belarusi àti Yukireni léhin tí wọ́n ṣẹ́gun apá ila òórùn Polandi, ní ìlòdì sí Àdéhùn Àláfíà Riga, Àdéhùn Má-Jàkadì Sofieti-Polandi, pẹ̀lú gbogbo àwọn Àdéhùn ìlúsílù, àti t’oníìlú méjì ati t’oníìlú púpọ̀ si.",
+    "baseline": " Ama, anwen eto wan yi kuro lasa moju nigba ti bi ajagun 800,000, la ti ege ajagun kupa ti igiman sofyeti. Wole, wan di bon Belarusi ati yikure ni lenyi. Ti wan segun apa ila horon Polandi. Ni ilo disi ade un alafi ariga, ade un majakadi, sofieti Polandi. Welo bukwa wan ade un ilisulu ati tonilu meji, ati tonilu kupo si.",
+    "wer_base": 109.61538461538463,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "àmọ́ àwọn ètò wọ́n yí kúrò lásà mọ́jú nígbàtí bí i ajagun 800,000 láti ẹgbẹ́ ajagun púpa ti ìgbìmọ̀ sovieti wọlé wọ́n dìbọn belarusi àti yíkúrẹnì lẹ́yìn tí wọ́n sẹ́gun apá ìlà ọ̀ọ̀rùn polandi ní ìlòdì sí àdéhùn àláfíà ríga àdéhùn ma jàdán láàrin wákàtí ì lọ́dí àdéhùn àláfíà rígá fún bí i kò rẹ̀ tó yẹ kò rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀ fi rẹ̀fiakadi sovieti polandi pelu gbogbo awon adehun ilesulu ati tonilu meji ati tonilukupo si",
+        "wer": 221.15384615384616,
+        "wer_diff": -111.53846153846155
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "àmọ́ àwọn ètò wọ̀nyí kúrò láṣà mọ́jú nígbàtí bí i ajagun 800,000 láti ẹgbẹ́ ajagun púpá ti ìgbìmọ̀ sọfíẹ̀tì wọlé wọ́n dìbọn belarusi àti yíkúrẹ́ni lẹ́yìn tí wọ́n sẹ́gun apá ìlà ahó òrùn polandi ní ìlòdì sí àdéhùn àlàfíàrígà àdéhùn ma jàbi tó deèbọ̀ nínú russia àti ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlòdì tó deèbọ̀ nínú ìlò́ wọnfakadi sovieti polandi pelu gbogbo awon adehun ili sulu ati to nilu meji ati to nilu kupo si ...",
+        "wer": 186.53846153846155,
+        "wer_diff": -76.92307692307692
+      }
+    ]
+  },
+  {
+    "file_id": "12731877821522737851.wav",
+    "code": 1782,
+    "gold": "Bákan náà, láàárin àkókò ilẹ̀ ọba kan, ọjọ́ orí tí kìí dúró llójú kan, tí ó pín ìgbèríko.Eyí tí a mọ̀ ju nínú irúfẹ́ àkokò yìí ni ìbẹ̀ẹ̀rẹ̀ ìjọba mẹ́ta tí ó wáyé fún ọgọ́ta ọdún láàárin ogún ọba Han àti Ji.",
+    "baseline": " Baka nan, lani akoko i le oba kan ojo oriti ki iduro loju kan ti okwen beriko e iti aman junino irufe akoko i ne ibere i joba meta ti owaye fun ogota odon lani ogun oba ha. Adi Ji",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "bákanáà láàrìn àkókò ilẹ̀ ọba kan ọjọ́ orítí kì í dúró lójú kan tí ó pin gbèríko èyí tí? a mọ̀ jù nínú irúfẹ́ àkókò yìí ni ìbẹ̀rẹ̀ ìjọba mẹ́ta tí ó wáyé fún ọgọ́ta ọdún láàrìn ogun ọba hàn àti ìdúró lójú kan tí ó pín gbèríko èyí tí? a mọ̀ jù nínú irúfẹ́ àkókò yìí ni ìbẹ̀rẹ̀ ìjọba mẹ́ta tí ó wáyé fún ọgọ́ta ọ̀dún láàrìn ogun ọba hàn àti ìlú fún òwọ̀ná ìwà ìlọ̀ná tí ó wáyé fún ọ̀gọ́ta ọ̀dún láàrin ogun ọ bá hàn àti ìlú wọn ì wọnàtì yìí",
+        "wer": 171.42857142857142,
+        "wer_diff": -71.42857142857142
+      }
+    ]
+  },
+  {
+    "file_id": "17033796017155970147.wav",
+    "code": 1885,
+    "gold": "Laarin ago 10:00-11:00 ale MDT, awon elewon to wa ninu ogba bere ina kan.",
+    "baseline": " La ane, agume wasi agumokan lale MDT, awele wan, towa ninu ogba bere inakan.",
+    "wer_base": 85.71428571428571,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "láàrín aago mẹ́wàá sí aago mọ́kànlá alẹ́ md tí àwọn ẹlẹ́ wọn tó wà nínú ọgbà bẹ̀rẹ̀ iná kan",
+        "wer": 135.71428571428572,
+        "wer_diff": -50.000000000000014
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "láàrin ago mẹ́wàá sí ago mọ́kànlá alẹ́ ẹ̀mdì tii àwọn ẹlẹ́ wọn tó wà nínú ọgbà abẹ́rẹ̀ iná kan",
+        "wer": 128.57142857142858,
+        "wer_diff": -42.85714285714287
+      }
+    ]
+  },
+  {
+    "file_id": "11505142443405569376.wav",
+    "code": 1978,
+    "gold": "Fun awon Springbooki, o so ipadanu ere-marun seyin dopin.",
+    "baseline": " Fua wong spring brookie, o so ikbadanu i rimarong senye dupni.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "fún àwọn spring brookie ó sọ ìpàdánù eré márùn ún sẹ́yìn èdò pin",
+        "wer": 144.44444444444443,
+        "wer_diff": -44.44444444444444
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "fún àwọn spring brooky o sọ ìpadànù eré márùn sẹ́yìn ìdópina",
+        "wer": 111.11111111111111,
+        "wer_diff": -11.111111111111116
+      }
+    ]
+  },
+  {
+    "file_id": "4323400926633227237.wav",
+    "code": 1778,
+    "gold": "Iroyin lati ori amohunmaworan fihan pe efin n jade lati inu koriko wa.",
+    "baseline": " Iro yin lati ori amou mawona fiyan wipe, e fi jade lati ino koriko wa.",
+    "wer_base": 69.23076923076923,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ìròyìn láti orí amóhùnmáwòrán fi à ń wípé ẹ̀ fín jáde láti inú koriko wá",
+        "wer": 107.6923076923077,
+        "wer_diff": -38.46153846153846
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ìròyìn láti orí amóhùnmáwòrán fíàn wípé èéfín jáde láti inú kòrí kò wá.",
+        "wer": 100.0,
+        "wer_diff": -30.76923076923077
+      }
+    ]
+  },
+  {
+    "file_id": "6580267011613738017.wav",
+    "code": 1811,
+    "gold": "Eto 802.11n sise pelu eto igbohun si afefe 2.4Ghz ati 5.0Ghz.",
+    "baseline": " Eto 2.11n. Shisepe lu etoe wu si afefe 2.4GHz ati 5.0GHz.",
+    "wer_base": 63.63636363636363,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ètò 2.11n ṣiṣẹ́ pẹ̀lú ètò ìgbóhùnsí afẹ́fẹ́ 2.4GHz àti 5.0GHz",
+        "wer": 100.0,
+        "wer_diff": -36.36363636363637
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ètò 2.11n ṣiṣẹ́ pẹ̀lú ètò ìgbòwònsí afẹ́fẹ́ 2.4ghz àti 5.0ghz",
+        "wer": 100.0,
+        "wer_diff": -36.36363636363637
+      }
+    ]
+  },
+  {
+    "file_id": "8068622143536622766.wav",
+    "code": 1728,
+    "gold": "Omi kabeeji maa paro awo eyi dalelori oye asidi tabi besiki (alkalaini) to wa ninu kemika naa.",
+    "baseline": " Umi kabeji ma unkparo awoyo iyi, dalilori uye asidi tabi besiki akalaine, tuwa nino kemekana.",
+    "wer_base": 82.35294117647058,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "omi ká bẹjì ma ń parọ̀ àwò èyí dálí lórí òye ásìdì tàbí bésìk akalaini tó wà nínú kẹmíkà náà",
+        "wer": 117.64705882352942,
+        "wer_diff": -35.29411764705883
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "omi kábéjì ma ń pààrọ̀ àwọ̀ èyí dalé lórí òye ásíìdì tàbí bésìkì akaláìnì tó wà nínú kẹ́míkà náà",
+        "wer": 111.76470588235294,
+        "wer_diff": -29.41176470588236
+      }
+    ]
+  },
+  {
+    "file_id": "5545149144423088749.wav",
+    "code": 1708,
+    "gold": "Hune ti fiwe sile, won de ma fi Ed Dafe MP ropo e ni Igbimo. Nomani Lab MP ni a n reti pe o ma gba ise Minista Isowo ti Dafe ma fi sile.",
+    "baseline": " Tion ti fiwe sile, wan de ma fi i di dafi MP rokore ni igbima nomini lab MP ni atire tikpe o ma ba ise minister iso wo ti dafi ma fi sile.",
+    "wer_base": 55.88235294117647,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "tí hàn tí fi wé sílẹ̀ wọ́n dẹ́ máa fi ìdídafe mp rọ́pò rẹ ní ìgbìmọ̀ nominí lab mp ni àtírètí pé o máa gba isẹ́ mínísítà ìsòwò tí dáfè máa fi sílẹ̀",
+        "wer": 91.17647058823529,
+        "wer_diff": -35.29411764705882
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "tí ó ní fi wé sílẹ̀ wọ́n dẹ́ máa fi ìdídafe mp rọ́pó rẹ̀ ní ìgbìmanominilab mp ni a tí retí pé o ma gba isẹ́ minista ìsowò tí dáfè máa fi sílẹ̀",
+        "wer": 82.35294117647058,
+        "wer_diff": -26.470588235294112
+      }
+    ]
+  },
+  {
+    "file_id": "15778549436981445223.wav",
+    "code": 1932,
+    "gold": "Ìṣẹ́jú márùn ún síwájú idán, ìjì bẹ̀rẹ̀ sí ni jà, bí ìṣẹ́jú kan si, ìjì náà dé orí àádọ́rin kìlómítà láàrín wákàtí kan…léyìn náà ni òjò bẹ̀rẹ̀ sí ni rọ̀ to bẹ́ẹ̀ ti dídún rẹ̀ lára dàbí abẹ́rẹ́, bẹ́ẹ̀ ni yìnyín ń bọ́ láti ojú ọ̀run, gbogbo ẹnìyàn bẹ̀rẹ̀ sí ní wá rìrì, wọ́n ń bẹ̀rù, wọ́n ń pariwo, wọ́n sì ń sá gba orí ara wọn.",
+    "baseline": " I seju marun si waju idan iji bere sineja bi i seju kansi ijinan de uri a adone kilometa. La ni wakatika le nyi nan ni uju bere si nin ro tu be ti i dan i jidi dunre la ra dabi a bere. Be nye nye nye mbo lati o jwo ron Bo gweni ya bere se nye wariri Wan se mberu Wan pari wo Wan se nsa ba ori ara wan",
+    "wer_base": 104.4776119402985,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ìṣẹ́jú márùn síwájú ìdán ìjì bẹ̀rẹ̀ sí ní ìjà bí ìṣẹ́jú kan sí ìjì náà dé orí àádọ́rin kìlómítà láàrin wákàtí kan lẹ́yìn iná ní ojò bẹ̀rẹ̀ sí ní ẹrọ tó bẹ́ẹ̀ tí dídun rẹ lára dàbí àbi dániláàtò rẹ̀ fún ìṣẹ́jú kàn si ìjì náà dé orí àádọ́rin kìlómítà láàrin wákàtí kan lẹ́yìn iná ni ojò bẹ̀rẹ̀ sí ní ẹrọ tó bẹ̀ẹ̀ tí ì dídun rẹ lára dàbí àbi dániláàtorí ì ìṣẹ́jú kòé dìbòbẹ̀rẹ́ bẹ́ẹ̀ ni yẹnyìn ń bọ́ láti ojú ọrún gbogbo ènìyàn bẹ̀rẹ̀ se ní wárírì wọ́n sì ń bẹ̀rù wọ́n ń paríwọ́ wọ́n sì ń sàgbà òrí àrà wọn",
+        "wer": 138.80597014925374,
+        "wer_diff": -34.32835820895524
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ìṣẹ́jú márùn síwájú ìdán ìjì bẹ̀rẹ̀ sí ni ìjà bí ìṣẹ́jú kan sí ìjì náà dé orí àádọ́rin kìlómítà láàni wákàtí kan lẹ́yìn náà ni ojò bẹ̀rẹ̀ sí ni írọ̀ tó bẹ̀ tí dídùn rẹ lára dàbi àbí orí ìjì kọmíṣọ́ nínú rẹ̀ tó yàtọ̀ ju ibi tó ìwé ìgbà tí ìwé ìjì kanbẹ̀rẹ̀ bẹ̀rẹ̀ ní yẹ̀yìn ń bọ́ láti ojú ọrún gbogbo ènìyàn bẹ̀rẹ̀ sí ní wárìrì wọ́n sì n bẹ̀rù wọ́n ń pariwo wọ́n sì n sàgbà orí ara wọn",
+        "wer": 105.97014925373134,
+        "wer_diff": -1.4925373134328401
+      }
+    ]
+  },
+  {
+    "file_id": "8787239037370814635.wav",
+    "code": 1991,
+    "gold": "Ni akoko yi ni itan abalaye Yuropi, Ijo Katoliki, to ti di olow ati alagbara, wa labe imojuto fini fini.",
+    "baseline": " Ni akoko yini itan abalaye Yoropi ijo Katoliki toti diyo logo ati alagbara wa labe imojuto fini-fini.",
+    "wer_base": 60.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ní àkókò yí ni ìtàn àbá láyé yúróòpì ìjọ̀ kátòlíkì tó ti di olówó àti alágbára wà lábẹ̀ ìmójútó fínífíní",
+        "wer": 90.0,
+        "wer_diff": -30.000000000000004
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ní àkókò yí ni ìtàn àbáláyé yúròpì ìjọ katolíki tó ti di olówó àti alágbára wà lábẹ́ ìmójútó fínifíní",
+        "wer": 85.0,
+        "wer_diff": -25.0
+      }
+    ]
+  },
+  {
+    "file_id": "11442113536511549948.wav",
+    "code": 2006,
+    "gold": "Awọn ohun elo bii kasiọmu ati potasiọmu jẹ gẹgẹ bi irin, bẹẹ ni irin bii wura ati fadaka naa wa.",
+    "baseline": " Awan, onwe lobi, kasyo mu ati potasyo mu, jegegebirin, benirin, biwura ati fadaka nanwa.",
+    "wer_base": 85.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "àwọn ohun èlò bí i ká sí ọmún àti ipò ta sí ọmún jẹ́ gẹ́gẹ́ bí irin bẹ́ẹ̀ni irin bí ìwúrántí fàdá ká náà wà",
+        "wer": 114.99999999999999,
+        "wer_diff": -29.999999999999993
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "àwọn ohun èlò bí i kalsiọ́mù àti potasiọ́mù jẹ́gẹ́gẹ́ bí rín bẹ́ẹ̀ ni rin bí ìwúrà tí fàdá kà náà wà",
+        "wer": 95.0,
+        "wer_diff": -9.999999999999998
+      }
+    ]
+  },
+  {
+    "file_id": "1794872211220671695.wav",
+    "code": 1731,
+    "gold": "Nínu archipelagos àti lakes, o kò fi taratara nílò yacht.",
+    "baseline": " Nino aki kwe Lagos ati leks, okofi taratara nilu yat.",
+    "wer_base": 90.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "nínú a kí pé lagos àti lakes ó kò fí taratara nílò yacht",
+        "wer": 120.0,
+        "wer_diff": -29.999999999999993
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "nínú a kí pé lagos àti lakes ó kò fi taratara nílò yats",
+        "wer": 110.00000000000001,
+        "wer_diff": -20.000000000000007
+      }
+    ]
+  }
+]

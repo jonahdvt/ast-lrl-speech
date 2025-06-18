@@ -1,0 +1,227 @@
+[
+  {
+    "file_id": "17999210160761730950.wav",
+    "code": 1679,
+    "gold": "Le groupe Aerosmith a annulé les derniers concerts de sa tournée.",
+    "baseline": " Le groupe Aerosmith a annulé les derniers concerts de sa tournée.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "le groupe iro smith s'est annulé les derniers concerts de sa tournée",
+        "wer": 45.45454545454545,
+        "wer_diff": -45.45454545454545
+      }
+    ]
+  },
+  {
+    "file_id": "14206493875283087347.wav",
+    "code": 1871,
+    "gold": "Dans le climat chaud du Moyen-Orient, la maison n'était pas si importante.",
+    "baseline": " Dans le climat chaud du Moyen-Orient, la maison n'était pas si importante.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "dans le cumacho du moyen-orient la maison n'était pas si importante",
+        "wer": 41.66666666666667,
+        "wer_diff": -41.66666666666667
+      }
+    ]
+  },
+  {
+    "file_id": "14682302550249108464.wav",
+    "code": 1679,
+    "gold": "Le groupe Aerosmith a annulé les derniers concerts de sa tournée.",
+    "baseline": " Le groupe Aerosmith a annulé les derniers concerts de sa tournée.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "le groupe aerosmith s'est annulé les derniers concerts de sa tournée",
+        "wer": 36.36363636363637,
+        "wer_diff": -36.36363636363637
+      }
+    ]
+  },
+  {
+    "file_id": "12024924858287651798.wav",
+    "code": 1737,
+    "gold": "Les lions sont les chats les plus sociables, vivant en grands groupes appelés meutes.",
+    "baseline": " Les lions sont les chats les plus sociables vivant en grands groupes appelés meutes.",
+    "wer_base": 7.142857142857142,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "les lions sont les chats les plus sociables vivant en grand groupe appelé meutes",
+        "wer": 42.857142857142854,
+        "wer_diff": -35.71428571428571
+      }
+    ]
+  },
+  {
+    "file_id": "11644651343215870474.wav",
+    "code": 1838,
+    "gold": "La Grande Pyramide de Gizeh est la seule des sept merveilles qui existe encore aujourd’hui.",
+    "baseline": " La Grande Pyramide de Gizeh est la seule des sept merveilles qui existe encore aujourd'hui.",
+    "wer_base": 6.666666666666667,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "la grande pyramide de gizeh est la seule des sept merveilles qui existent encore aujourd'hui",
+        "wer": 40.0,
+        "wer_diff": -33.333333333333336
+      }
+    ]
+  },
+  {
+    "file_id": "16106836482408969060.wav",
+    "code": 1902,
+    "gold": "Il a d'abord été hospitalisé à l'hôpital James Paget de Great Yarmouth.",
+    "baseline": " Il a d'abord été hospitalisé à l'hôpital James Pagé de Great Yarmouth.",
+    "wer_base": 8.333333333333332,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "il a d'abord été hospitalisé à l'hôpital james paget de great yarmouth",
+        "wer": 41.66666666666667,
+        "wer_diff": -33.333333333333336
+      }
+    ]
+  },
+  {
+    "file_id": "3741436966315149418.wav",
+    "code": 1996,
+    "gold": "L’Australien Mitchell Gourley est arrivé 11e du Super-G debout homme. Le Tchèque Oldrich Jelinek s'est classé 16e au Super-G assis homme.",
+    "baseline": " L'Australien Mitchell Gourlet est arrivé 11e du super-G debout homme. Le Tchèque Aldrich Gilenik s'est classé 16e au super-G assis homme.",
+    "wer_base": 28.57142857142857,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "l'ostranien michael gourlet est arrivé 11e du super-g debout homme le tchèque aldrich jilenik s'est classé 16e au super-g à six hommes",
+        "wer": 61.904761904761905,
+        "wer_diff": -33.333333333333336
+      }
+    ]
+  },
+  {
+    "file_id": "7250834376430784014.wav",
+    "code": 1839,
+    "gold": "Pensez à l'itinéraire de ski comme à un itinéraire de randonnée similaire.",
+    "baseline": " Pensez à l'itinéraire de ski comme un itinéraire de randonnée similaire.",
+    "wer_base": 8.333333333333332,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "pensez à l'itinéraire de ski comme un itinéraire d'ordonnée similaire",
+        "wer": 41.66666666666667,
+        "wer_diff": -33.333333333333336
+      }
+    ]
+  },
+  {
+    "file_id": "14679599176309841444.wav",
+    "code": 1926,
+    "gold": "Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+    "baseline": " Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "les opinions d'aristote sur toutes les questions scientifiques y compris la psychologie ont été acceptées",
+        "wer": 33.33333333333333,
+        "wer_diff": -33.33333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "17338748029224301554.wav",
+    "code": 1926,
+    "gold": "Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+    "baseline": " Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "les opinions d'aristote sur toutes les questions scientifiques y compris la psychologie ont été acceptées",
+        "wer": 33.33333333333333,
+        "wer_diff": -33.33333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "17810850355374913939.wav",
+    "code": 1926,
+    "gold": "Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+    "baseline": " Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "les opinions d'aristote sur toutes les questions scientifiques y compris la psychologie ont été acceptées",
+        "wer": 33.33333333333333,
+        "wer_diff": -33.33333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "11274182791174433905.wav",
+    "code": 1753,
+    "gold": "Bien que ce stéréotype soit souvent inexact, la meilleure façon de s'entendre à Paris reste de se comporter au mieux, d'agir comme quelqu'un de bien élevé. Cela facilitera considérablement vos déplacements.",
+    "baseline": " Bien que ce stéréotype soit inexact, la meilleure façon de s'entendre à Paris reste de se comporter au mieux, d'agir comme quelqu'un de bien élevé. Cela facilitera considérablement vos déplacements.",
+    "wer_base": 3.225806451612903,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "bien que ces stéréotypes se sentent inexactes la meilleure façon de s'entendre à paris reste de se comporter au mieux d'agir comme quelqu'un de bien élevé cela facilitera considérablement vos déplacements",
+        "wer": 35.483870967741936,
+        "wer_diff": -32.25806451612904
+      }
+    ]
+  },
+  {
+    "file_id": "17759617197651838861.wav",
+    "code": 1693,
+    "gold": "Mais après avoir perdu le guichet de son capitaine, l'Inde n'a réalisé que 36 courses et perdu sept guichets jusqu'à la fin de la manche.",
+    "baseline": " Mais après avoir perdu le guichet de son capitaine, l'Inde n'a réalisé que 36 courses et perdu 7 guichets jusqu'à la fin de la manche.",
+    "wer_base": 4.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mais après avoir perdu le lichet de son capitaine l'inde n'a réalisé que trenticourse ait perdu sept lichets jusqu'à la fin de la manche",
+        "wer": 36.0,
+        "wer_diff": -32.0
+      }
+    ]
+  },
+  {
+    "file_id": "1063626966878784571.wav",
+    "code": 1742,
+    "gold": "L'île de Hong Kong donne son nom au territoire de Hong Kong et représente le principal centre d'intérêt pour de nombreux touristes.",
+    "baseline": " L'île de Hong Kong donne son nom au territoire de Hong Kong et représente le principal centre d'intérêt pour de nombreux touristes.",
+    "wer_base": 0.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "l’île de hong kong donne son nom au territoire de hong kong et représente le principal centre d’intérêt pour de nombreux touristes",
+        "wer": 31.818181818181817,
+        "wer_diff": -31.818181818181817
+      }
+    ]
+  },
+  {
+    "file_id": "18224148165506643663.wav",
+    "code": 1909,
+    "gold": "Les équipes virtuelles sont soumises aux mêmes standards d'excellence que les équipes conventionnelles, mais il existe de subtiles différences.",
+    "baseline": " Les équipes virtuelles sont soumises aux mêmes standards d'excellence que les équipes conventionnelles, mais il existe de subsides différences.",
+    "wer_base": 5.263157894736842,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "les équipes virtuelles sont soumises au même standard d'excellence que les équipes conventionnelles mais il existe de subsides différences",
+        "wer": 36.84210526315789,
+        "wer_diff": -31.57894736842105
+      }
+    ]
+  }
+]

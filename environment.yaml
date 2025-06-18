@@ -1,0 +1,35 @@
+name: speech-processing-env
+channels:
+  - conda-forge
+  - pytorch
+  - huggingface
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - pandas
+  - librosa
+  - soundfile
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8 
+  - transformers
+  - datasets
+  - evaluate
+  - tokenizers
+  - torchmetrics
+  - sacrebleu
+  - tqdm
+  - pyyaml
+  - requests
+  
+  - pip:
+    - accelerate
+    - evaluate
+    - jiwer
+    - werpy
+    - google-generativeai
+    - openai
+    

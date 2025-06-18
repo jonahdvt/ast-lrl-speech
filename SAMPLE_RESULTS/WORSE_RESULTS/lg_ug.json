@@ -1,0 +1,191 @@
+[
+  {
+    "file_id": "3781786197265066515.wav",
+    "code": 1937,
+    "gold": "Newankubadde, entekateeka zino zafulibwa ddala kumpi zakiro, nga abajaasi abasuka 800,000 okuva mu maje amamyufu agebyokwegatta byabasoviyeti yayingira n'ekola nabokumwanjo ba Belaruss ne Ukraine oluvanyuma lw'okulumba ebitundu by'ebuva njuba bwa Poland nga bawakanya endagaano y'emirembe eya Riga, Soviyeti - polisi endagaano y'obutalwaana, n'endagaano endala ez'amawanga, ezababiri ne sekinomu.",
+    "baseline": " Ndiwa nkuwa dee ntee kateka zinuzafuli wa dhala kumpi za akiru Nga wajasea wa suku ulugumilunana Okuvoma je ama miufu Agabiyo kwe gata Biya apa sovieti Ya ingiri inkula Ndabo kwa mawanjo Pa Belarus na Ukraine Olufanyuma Roku lumbe bitundu bivufanyuba Bwa Polandi Nga bo wakanya indagano ya mirembe ya Riga Soviet polisi enda gano, yobu talwana, ne enda gano enda la zo, zama wanga, ezabiri, nesikinomu.",
+    "wer_base": 133.33333333333331,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "newankubadde entekateka zino zafulibwa ddala ku mpiza kilo ngabajasa yabasuka 18 okuvva omajje amamiufu ag'ebyokwegatta byapa soviet yayingira enkola nabokwa amawanjo pa belarus ne ukraine oluvanyuma lw'okulumba ebitundu bwa buvanjuba bwa poland nga bawakanya endagaano y'emirembe eya riga soviet police endagaano ebikoola nga bwakabana ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga tebalwale ebyobusagana nga te balwomu oba polandu nga bawakanya endagaano emiremba eya riga soviet police endaga end agyo butalwana n'endagano endala ez'amawanga ez'abiri n'esikin'nomu",
+        "wer": 245.83333333333334,
+        "wer_diff": -112.50000000000003
+      }
+    ]
+  },
+  {
+    "file_id": "17848098869194634450.wav",
+    "code": 1999,
+    "gold": "Mumwaka gwona ogwa 1960 Brzezinski yakolera John F. Kennedy nga omuwabuzi we oluvannyuma adiminstration ya Lyndon B. Johnson.",
+    "baseline": " Mumuaka gona ogwa 1960, Barzenski ya koleda John F. Kennedy nguo mwapoziwe olufanyuma administration ya Lyndon B. Johnson.",
+    "wer_base": 61.111111111111114,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mu mwaka gona ogwa 1960 barzenski yakolera john f. kennedy ng'omuwabuziwe oluvanyuma adwinsweshonnya lyndon b. johnson",
+        "wer": 88.88888888888889,
+        "wer_diff": -27.777777777777768
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mu mwaka gonna ogwa 1960 bazenski yakolerwa john f. kennedy nga omwabuzi iwe oluvanyuma adinswesioni ya lyndon b. johnson",
+        "wer": 83.33333333333334,
+        "wer_diff": -22.22222222222222
+      }
+    ]
+  },
+  {
+    "file_id": "793556622631815212.wav",
+    "code": 1731,
+    "gold": "Mubidiba ne munyanja teweetaga ryaato.",
+    "baseline": " Mubidiva ni munyanja te weta agariyato.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mubidiba ne mu nya nja teweetaaga lyato",
+        "wer": 120.0,
+        "wer_diff": -19.999999999999996
+      }
+    ]
+  },
+  {
+    "file_id": "11131330975622181195.wav",
+    "code": 1731,
+    "gold": "Mubidiba ne munyanja teweetaga ryaato.",
+    "baseline": " Mbidiba ne mnyanja te weta agariyatu.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mu bidiba ne mu nyaanja tewetaga lyaato",
+        "wer": 120.0,
+        "wer_diff": -19.999999999999996
+      }
+    ]
+  },
+  {
+    "file_id": "2698231839224979650.wav",
+    "code": 1747,
+    "gold": "Banne bwe bazanya ogw'ebigwo nabo bamukungubagidde.",
+    "baseline": " Banne bwebazanya ogwebigu na bobamukungu bagidi.",
+    "wer_base": 83.33333333333334,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "banne bwebazzanya ogwebigo nabbo bamukungu bagidde",
+        "wer": 100.0,
+        "wer_diff": -16.666666666666664
+      }
+    ]
+  },
+  {
+    "file_id": "968739124466979344.wav",
+    "code": 1728,
+    "gold": "Omukamulo gw'emboga gukyuusa langi okusinzila Ku ngeri asidi oba (alkaline) kemiko kyeri.",
+    "baseline": " Omukamulo gwenboga guchu salanji oksin zirakungeri asidi obak alukalaini kemiko kweri.",
+    "wer_base": 75.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "omukamuulo gwe mboga gukyusala ngi okusinzira ku ngeri acid oba alukalaini kwemiko kweri",
+        "wer": 91.66666666666666,
+        "wer_diff": -16.666666666666664
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "omukamuulo gwe mboga gukyusala nji okusinzira ku ngeri asidi oba alkaline kwemiko kweli",
+        "wer": 83.33333333333334,
+        "wer_diff": -8.333333333333337
+      }
+    ]
+  },
+  {
+    "file_id": "6476896004706873558.wav",
+    "code": 1670,
+    "gold": "Eneyisa yabwe eya thamo teteredde nga empuku ennene ezo kunsi ezikuma ebugumu erisamusamu, naye ky’omudiringanwa mu binnya ebiwanvu eby’omutaka, Glen clushing owa United States Geological Survey (USGS) yagamba nti timu ya Astrogeology naba Ssetendekero ya Northern Arizona abasangibwa mu Flagstaff, Arizona.ll”",
+    "baseline": " Enei saa yawe, eya thamu, tetele denga empuku enene ezoku nsi, ezikuuma ebugumu erisamu samu. Na eechoku dilinganwa mwinya ebiwamvu vio mutaka. Glenn Clashing wa United States Geographical Survey ya Gambanti, Simia Astrology na abasetende kiloya Northern Arizona basa angiwa no Flagstaff, Arizona, Eokubiri.",
+    "wer_base": 90.2439024390244,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "eneeyisa yabwe eyathamo teteredde nga empuku enene ezokunsi ezikuuma ebbugumu eri samu samunaye ekyokudiringanwa mu binnya ebiwanvu by'omuttakaglen klashing owa united states geographical survey yagamba nti simu ya astrology n'abasittendekero ya northern arizona nga tebalwala omuto nnyo n'abantu nnaa emmanyikiddwa omuti geograafi ya sabi wani omujjuzo gw'abantu neleyo gy'abantubasangibwa mu flagstaff arizona ey'okubiri",
+        "wer": 104.8780487804878,
+        "wer_diff": -14.634146341463417
+      }
+    ]
+  },
+  {
+    "file_id": "9730756801028012957.wav",
+    "code": 1999,
+    "gold": "Mumwaka gwona ogwa 1960 Brzezinski yakolera John F. Kennedy nga omuwabuzi we oluvannyuma adiminstration ya Lyndon B. Johnson.",
+    "baseline": " Mumuaka gona ugualukumruenda ankaaga benzechi ya korila John F. Kennedy nga omuawuziwe Uruvanyuma administration ya Lyndon B. Johnson",
+    "wer_base": 66.66666666666666,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mu mwaka gwona ogwa 1960 benzeki yakolera john f. kennedy nga omuwabuziwe oluvanyuma administration yali ndoni b. johnson",
+        "wer": 77.77777777777779,
+        "wer_diff": -11.111111111111116
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mu mwaka gwonna ogwa 1960 benze ki yakolera john f. kennedy nga omuwabuzi we oluvanyuma administration ya lindon b. johnson",
+        "wer": 72.22222222222221,
+        "wer_diff": -5.555555555555558
+      }
+    ]
+  },
+  {
+    "file_id": "15095543648903337741.wav",
+    "code": 1781,
+    "gold": "Madagascar y’ekyaasinze obunene, era ssemazinga yaayo bwekituuka kun solo zoomunsiko",
+    "baseline": " Madagascar yecha asinzo mneni. Irasima zinga yaawekitu kakunsolo. Zomu nsiko.",
+    "wer_base": 90.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "madagasika ye kyasinze obunene era semazinga yayo wekituuka ku nsolo z'omunsiko",
+        "wer": 100.0,
+        "wer_diff": -9.999999999999998
+      }
+    ]
+  },
+  {
+    "file_id": "11860205842975127853.wav",
+    "code": 1728,
+    "gold": "Omukamulo gw'emboga gukyuusa langi okusinzila Ku ngeri asidi oba (alkaline) kemiko kyeri.",
+    "baseline": " Omukamulo gwe mboga guchu salanji okusinzi lakungeri asidi oba alukalaini kemiko kueri.",
+    "wer_base": 66.66666666666666,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "omukamulo gwe mboga gukyusalangi okusinzira ku ngeri asidi oba alkyl chemical kweli",
+        "wer": 75.0,
+        "wer_diff": -8.333333333333337
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "omukamulo gwe mboga gukyusala ngi okusinzira ku ngeri asidi oba alukalaini kemiko kw'eri",
+        "wer": 75.0,
+        "wer_diff": -8.333333333333337
+      }
+    ]
+  },
+  {
+    "file_id": "11326937649807364928.wav",
+    "code": 1831,
+    "gold": "E Plitvice Lakes national park waliyo ekibira kinene,naddala ne beech, spruce, ne fir trees, ne bintu mu Alpine ne Mediterranean vegetation",
+    "baseline": " Air Pilt Vice Lakes National Park waliye kibidaki nene? Nadala ne beach, spruce, ne fir trees, ne windum alpine, ne Mediterranean vegetation.",
+    "wer_base": 66.66666666666666,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "e-piltvice lacinopak wali yekibira kinene naddala ne beech spruce ne fir trees n'ebintu mu alpine ne mediterranean vegetation",
+        "wer": 71.42857142857143,
+        "wer_diff": -4.761904761904767
+      }
+    ]
+  }
+]

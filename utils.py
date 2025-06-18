@@ -1,7 +1,7 @@
-from config import FLEURS_LANGUAGE_CODES
+from mapping import FLEURS_LANGUAGE_CODES
 import json
 import matching
-import evaluation 
+import metrics 
 from typing import Tuple
 
 def rename_json_property(file=None, old_name=None, new_name=None):
@@ -72,48 +72,63 @@ def average_words_per_entry(json_path: str) -> Tuple[int, int, float]:
 
 
 
-codes = [
-    # "hi_in",
-#     # "pa_in", 
-#     # "ta_in", 
-    # "te_in", 
-#     #"ml_in",
-    # "sw_ke",
-    # "ha_ng",
-    # "yo_ng",
-    # "ig_ng",
-    # "lg_ug",
+# codes_model = [
+#     "hi_in",
+#     "pa_in", 
+#     "ta_in", 
+#     "te_in", 
+#     "ml_in",
+#     # "sw_ke",
+#     # "ha_ng",
+#     # "yo_ng",
+#     # "ig_ng",
+#     # "lg_ug",
+#     # "fr_fr",
 #     ]
-# codes = [
-    # "1h",
-    "5h", 
-    # "10h", 
-    # "20h"
+
+
+# codes_lang = [
+#     "hi_in",
+#     "pa_in", 
+#     "ta_in", 
+#     "te_in", 
+#     "ml_in",
+#     # "sw_ke",
+#     # "ha_ng",
+#     # "yo_ng",
+#     # "ig_ng",
+#     # "lg_ug",
+#     # "fr_fr",
+#     ]
+
+codes = [
+    "hi_in",
+    "pa_in", 
+    "ta_in", 
+    "te_in", 
+    "ml_in",
+    "sw_ke",
+    "ha_ng",
+    "yo_ng",
+    "ig_ng",
+    "lg_ug",
+    # "fr_fr",
     ]
+
 for code in codes:
 
-    # file = f"whisper_l_train_data/{code}.json"
-    file = f"whisper_l_hours_results/ig_ng/{code}.json"
-    lang = "ig_ng"
-
-    remove_prefix_from_wav_code(file, file)
-    rename_json_property(file, "file_id", "file_name")
-    matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
-    matching.gold_text_matching(file, "fleurs_lang_info/en_translations.csv", file, "translation") # Translations
-    evaluation.compute_bleu_score(file, code, "nllb")
-    
-
+    file = f"asr_corrector/prediction_plus_json/{code}.json"
+    # remove_prefix_from_wav_code(file, file)
+    # rename_json_property(file, "file_id", "file_name")
+    # matching.gold_codes_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file)
+    # matching.gold_text_matching(file, "fleurs_lang_info/en_translations.csv", file, "translation") # Translations
+    metrics.compute_bleu_score(file, code, "nllb")
     # matching.gold_text_matching(file, f"fleurs_lang_info/{code}_fleurs_info.csv", file, "transcription") # Transcripts
-    # print(evaluation.detailed_wer(file))
-    # average_words_per_entry(file)
+    metrics.simple_wer(file, code)
 
+        
 
-
-
-
-
-
-
-
+        # print(evaluation.detailed_wer(file))
+        # average_words_per_entry(file)
 
 

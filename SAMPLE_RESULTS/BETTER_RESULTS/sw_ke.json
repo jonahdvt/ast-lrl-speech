@@ -1,0 +1,407 @@
+[
+  {
+    "file_id": "6646723031759150182.wav",
+    "code": 1850,
+    "gold": "Hii itaiwezesha kutangamana kwa nyuma na 802.11a, 802.11b na 802.11g, mradi tu kituo cha ardhini kina redio mbili.",
+    "baseline": " Hii itayuezesha kutangamana kwa nyuma Na nane sufuri mbili nukutamoja moja A Na nane sufuri mbili nukutamoja moja B Na nane sufuri mbili nukutamoja moja G Muraditu kituo cha albini kinaridio mbili",
+    "wer_base": 150.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "hii itaiwezesha kutangamana kwa nyuma na 802.11a 802.11b na 802.11g muradi tu kituo cha ardhini kina redio mbili",
+        "wer": 27.77777777777778,
+        "wer_diff": 122.22222222222223
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "hii itaiwezesha kutangamana kwa nyuma 802.11a 802.11b na 802.11g muradi tu kituo cha ardhini kina redio mbili",
+        "wer": 33.33333333333333,
+        "wer_diff": 116.66666666666667
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "hii itaiwezesha kutangamana kwa nyuma na 8 0 2.11a 8 0 2.11b na 8 0 2.11g mradi tu kituo cha ardhini kinaridio 2",
+        "wer": 72.22222222222221,
+        "wer_diff": 77.77777777777779
+      }
+    ]
+  },
+  {
+    "file_id": "10743840040761404658.wav",
+    "code": 1770,
+    "gold": "Hii inaonekana kuwa busara, kwa sababu Dunia haionekani kana kwamba inasonga, au sivyo?",
+    "baseline": " This is a story of a man named Abdukara. Because the world is like a song or a song.",
+    "wer_base": 146.15384615384613,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "hii inaonekana kuwa busara kwa sababu dunia haionekani kwamba inasonga au hivyo",
+        "wer": 46.15384615384615,
+        "wer_diff": 99.99999999999999
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "hii inaonekana kuwa busara kwa sababu dunia haionekani kama kwamba inaonga au hivyo",
+        "wer": 46.15384615384615,
+        "wer_diff": 99.99999999999999
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "hii inaonekana kuwa busara kwa sababu dunia haionikani kwamba inasonga au hivyo",
+        "wer": 53.84615384615385,
+        "wer_diff": 92.3076923076923
+      }
+    ]
+  },
+  {
+    "file_id": "16907000486690054476.wav",
+    "code": 1760,
+    "gold": "Mosasaurus ilikuwa mwindaji mkubwa wa wakati huo, kwa hivyo haikuogopa chochote isipokuwa Mosasaurus wengine.",
+    "baseline": " Mosasa Urus ilikuwa muindaji mkubawa wakati huo. Kwa hivyo, haikuwa Gopa Chuchote isipokuwa Mosasa Urus mwingine.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mosasaurus ilikuwa mwindaji mkubwa wa wakati huo kwa hivyo haikuogopa chochote isipokuwa mosasaurus mwengine",
+        "wer": 28.57142857142857,
+        "wer_diff": 71.42857142857143
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mosasaurus ilikuwa mwindaji mkubwa wa wakati huo kwa hivyo haikuogopa chochote isipokuwa mosasaurus mwengine",
+        "wer": 28.57142857142857,
+        "wer_diff": 71.42857142857143
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "mosasaurus ilikuwa mwindaji mkubwa wa wakati huo kwa hivyo haikuogopa chochote isipokuwa musasaurus mwengine",
+        "wer": 28.57142857142857,
+        "wer_diff": 71.42857142857143
+      }
+    ]
+  },
+  {
+    "file_id": "10462937719200750609.wav",
+    "code": 1936,
+    "gold": "Perry alisema, \"Nitarudi Texas ili kutathmini matokeo ya mkutano wa usiku wa leo, kuamua kama kuna njia yangu ya kusonga mbele katika mbio hizi\", lakini baadaye akasema kwamba angebaki kwenye mbio na kushindana katika uchaguzi wa msingi wa Carolina Kusini mnamo Januari 21.",
+    "baseline": " Perry alisema,",
+    "wer_base": 95.34883720930233,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "perry alisema  ni tarudi texas ilikutathmini matokeo ya mkutano wa usiku wa leo kuamua kama kuna njia yangu ya kusonga mbele katika mbio hizi lakini baadaye akasema kwamba angebaki kwenye mbio na kushindana katika uchaguzi wa msingi wa carolina kusini mnamo januari 21",
+        "wer": 27.906976744186046,
+        "wer_diff": 67.44186046511629
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "perry alisema  ni taruri texas ili kutadhimini matokeo ya mkutano wa usiku wa leo kuamua kama kuna njia yangu ya kusonga mbele katika mbio hizi lakini baadaye akasema kwamba angebaki kwenye mbio na kushindana katika uchaguzi wa msingi wa carolina kusini mnamo januari 21",
+        "wer": 27.906976744186046,
+        "wer_diff": 67.44186046511629
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "perry alisema  ni taruri texas ilikutadhimini matokyo ya mkutano wa usiku wa leo kuamua kama kuna njia yangu ya kusonga mbele katika mbio hizi lakini baadaye akasema kwamba angebaki kwenye mbio na kushindana katika uchaguzi wa msingi wa carolina kusini mnamo januari 21.",
+        "wer": 27.906976744186046,
+        "wer_diff": 67.44186046511629
+      }
+    ]
+  },
+  {
+    "file_id": "11354924298283627100.wav",
+    "code": 1679,
+    "gold": "Aerosmith wameghairi maonyesho yaliyobaki katika ziara yao.",
+    "baseline": " Aero Smith, gomegairi maunyesho ya liobaki katika ziara yao.",
+    "wer_base": 85.71428571428571,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "aerosmith wameghairi maonyesho yaliyobaki katika ziara yao",
+        "wer": 28.57142857142857,
+        "wer_diff": 57.14285714285714
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "hiro smith wameghairi maonyesho yaliyobaki katika ziara yao",
+        "wer": 42.857142857142854,
+        "wer_diff": 42.857142857142854
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "hsieh iru smith wameghairi maunyesho yaliyobaki katika ziara yao",
+        "wer": 71.42857142857143,
+        "wer_diff": 14.28571428571428
+      }
+    ]
+  },
+  {
+    "file_id": "9756970688789077272.wav",
+    "code": 1721,
+    "gold": "Baada ya bwawa kujengwa mwaka wa 1963, mafuriko ya msimu ambayo yangeenea kote yalisimamishwa.",
+    "baseline": " Paada ya mabuawa kujengwa mwaka wa ilifumoja miatisa siti na tatu Mafuriko ya misimu ambayo ya ngeenea kote ya lisimamishwa",
+    "wer_base": 92.85714285714286,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "baada ya mabwawa kujengwa mwaka wa 1963 mafuriko ya misimu ambayo yangeenea kote yalisimamishwa",
+        "wer": 35.714285714285715,
+        "wer_diff": 57.14285714285714
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "baada ya mabuawa kujengwa mwaka wa 1963 mafuriko ya misimu ambayo yangeenea kote yalisimamishwa",
+        "wer": 35.714285714285715,
+        "wer_diff": 57.14285714285714
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "paada ya amabuawa kujengwa mwaka wa 1963 mafuriko ya misimu ambayo yangeenea kote yalisimamishwa",
+        "wer": 35.714285714285715,
+        "wer_diff": 57.14285714285714
+      }
+    ]
+  },
+  {
+    "file_id": "7728229167831723264.wav",
+    "code": 1722,
+    "gold": "Cuomo, mwenye umri wa miaka 53, alianza ugavana wake mapema mwaka huu na kutia saini mswada mwezi uliopita wa kuhalalisha ndoa za jinsia moja.",
+    "baseline": " Kuomo mwenye umri wa meka msini na tatu Halianza ugavana wake mapema mwaka huna Kutia saini msoda wa muzi uliopita Wakuhalalisha ndawa za jinsi ya moja",
+    "wer_base": 75.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "kuomo mwenye umri wa meka 53 alianza ugavana wake mapema mwaka huu na kutia saini mswada wa mwezi uliopita wa kuhalalisha ndoa za jinsia moja",
+        "wer": 20.833333333333336,
+        "wer_diff": 54.166666666666664
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kuomo mwenye umri wa meka 53 alianza ugavana wake mapema mwaka huu na kutia saini uswada wa mwezi uliopita wa kuhalalisha ndoa za jinsia moja",
+        "wer": 25.0,
+        "wer_diff": 50.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kuomo mwenye umri wa meka 53 alianza ugavana wake mapema mwaka huu na kutia saini uswada wa muzi uliopita wa kuhalalisha ndoa za jinsia moja",
+        "wer": 29.166666666666668,
+        "wer_diff": 45.83333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "10785065465776710196.wav",
+    "code": 1837,
+    "gold": "Ukosoaji huru wa juhudi za ujenzi upya umezingatia utoaji wa kandarasi za ujenzi upya kwa wajuzi wanaodhaniwa wa Washington.",
+    "baseline": " Ukwa swaji huru wajuhudi za ujenzi upia, umezingatia utawaji wakandarasi za ujenzi upia kwa wajuzi wanao dhaniwa na wa Washington.",
+    "wer_base": 63.1578947368421,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ukosoaji huru wa juhudi za ujenzi upya umezingatia utoaji wa kandarasi za ujenzi upya kwa wajuzi wanaodhaniwa wa washington",
+        "wer": 10.526315789473683,
+        "wer_diff": 52.63157894736842
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ukosoaji huru wa juhudi za ujenzi upya umezingatia utoaji wa kandarasi za ujenzi upya kwa wajuzi wanaodhaniwa na wa washington",
+        "wer": 15.789473684210526,
+        "wer_diff": 47.368421052631575
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ukosoaji huru wa juhudi za ujenzi upya umezingatia utoaji wa kandarasi za ujenzi upya kwa wajuzi wanaodhaniwa na wa washington",
+        "wer": 15.789473684210526,
+        "wer_diff": 47.368421052631575
+      }
+    ]
+  },
+  {
+    "file_id": "12540197613249881119.wav",
+    "code": 1748,
+    "gold": "Kundi la uokoaji wa moto hatimaye walizima moto huo saa 11:35 usiku.",
+    "baseline": " Kundila wakoaji wa moto atimai walizima moto uo saa kuminamoja nukita 35 usiku",
+    "wer_base": 75.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "kundi la uokoaji wa moto hatimaye walizima moto huo saa 11.35 usiku",
+        "wer": 25.0,
+        "wer_diff": 50.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kundi la uwakoaji wa moto hatimaye walizima moto huo saa 11.35 usiku",
+        "wer": 33.33333333333333,
+        "wer_diff": 41.66666666666667
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kundi la uwekoaji wa moto hatimaye walizima moto huo saa 11.35 usiku",
+        "wer": 33.33333333333333,
+        "wer_diff": 41.66666666666667
+      }
+    ]
+  },
+  {
+    "file_id": "17086804590454998700.wav",
+    "code": 1704,
+    "gold": "Mnamo 1990, uliongezwa katika orodha ya maeneo ya urithi duniani yaliyo hatarini, kwa sababu ya tishio la mchanga wa jangwani.",
+    "baseline": " Mnamo mwaka 1990, ulio ngezwa katika urodha ya mainewa ya urethi duniani ya Leo Hatarini kwa sababu ya Tishyola Mchanga Wajangwani.",
+    "wer_base": 70.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mnamo 1990 uliongezwa katika orodha ya maeneo ya urithi duniani yaliyo hatarini kwa sababu ya tishio la mchanga wa jangwani",
+        "wer": 20.0,
+        "wer_diff": 49.99999999999999
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "mnamo 1990 uliongezwa katika orodha ya maeneo ya urithi duniani yaliyo hatarini kwa sababu ya tishio la mchanga wa jangwani",
+        "wer": 20.0,
+        "wer_diff": 49.99999999999999
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mnamo 1990 uliongezwa katika orodha ya maeneo ya urithi duniani yaliyo hatarini kwa sababu ya tishiola mchanga wa jangwani",
+        "wer": 30.0,
+        "wer_diff": 40.0
+      }
+    ]
+  },
+  {
+    "file_id": "7748875706431858106.wav",
+    "code": 1739,
+    "gold": "Likiwa juu ya mojawapo ya milima kaskazini mwa Mecca, pango hilo limetengwa kabisa na ulimwengu.",
+    "baseline": " Kiki wajuu moja wapo ya mjirima kaskazini mwaneka pango hilo ni metengu wakabisa na ulimungu.",
+    "wer_base": 73.33333333333333,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ikiwa juu mojawapo ya milima kaskazini mwa meka pango hilo limetengwa kabisa na ulimungu",
+        "wer": 26.666666666666668,
+        "wer_diff": 46.666666666666664
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kikiwa juu mojawapo ya mirima kaskazini mwa meka pango hilo limetengwa kabisa na ulimungu",
+        "wer": 33.33333333333333,
+        "wer_diff": 40.0
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kekiwa juu mojawapo ya milima kaskazini mwa mecca pango hino limetengwa kabisa na ulimungo",
+        "wer": 33.33333333333333,
+        "wer_diff": 40.0
+      }
+    ]
+  },
+  {
+    "file_id": "6197027477880848549.wav",
+    "code": 1927,
+    "gold": "Angel (2006), anaeleza mbinu ya Msururu kama njia inayotumika kusaidia mashirika kufikia kiwango cha juu cha utenda kazi.",
+    "baseline": " Enjo, elfu mbili na sita, anayeleza mbinu ya msururu kama nje na utumika kusaidia mashirika kufikia kiwango cha njoo cha utanda kazi",
+    "wer_base": 72.22222222222221,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "enzo 2006 anaeleza mbinu ya msururu kama njia inayotumika kusaidia mashirika kufikia kiwango cha juu cha utendakazi",
+        "wer": 27.77777777777778,
+        "wer_diff": 44.44444444444444
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "enjo 2006 anaeleza mbinu ya msururu kama njia inayotumika kusaidia mashirika kufikia kiwango cha juu cha utendaka hazi",
+        "wer": 27.77777777777778,
+        "wer_diff": 44.44444444444444
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "enjo 2006 anaeleza mbinu ya msururu kama njia inayotumika kusaidia mashirika kufikia kiwango cha juu cha utandaka hazi",
+        "wer": 27.77777777777778,
+        "wer_diff": 44.44444444444444
+      }
+    ]
+  },
+  {
+    "file_id": "12489120449954073292.wav",
+    "code": 1724,
+    "gold": "Inajulikana kwa kuwa kitovu cha anasa ilianza takribani 400 A.D. na ilidumu hadi karibu 1100 A.D.",
+    "baseline": " Inajulikana kwa kuwa kitovu cha anasa kilianza takriban mwaka wa miya ini AD na ilidumu hadi karibu mwaka walfu moja miya moja AD.",
+    "wer_base": 81.25,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "inajulikana kwa kugu kitovu cha anasa kilianza takribani 40 AD na ilidumu hadi karibu 1100 AD",
+        "wer": 37.5,
+        "wer_diff": 43.75
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "inajulikana kwa kituo chaa anasa kilianza takribani 400 ad na ilidumu hadi karibu 11,100 ad",
+        "wer": 50.0,
+        "wer_diff": 31.25
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "inajulikana kwa kuwa kitovu cha anasa kilianza kilianza takribani mwaka wa 400 ad na ilidumu hadi karibu mwaka wa 1100 ad",
+        "wer": 56.25,
+        "wer_diff": 25.0
+      }
+    ]
+  },
+  {
+    "file_id": "15097445175770408261.wav",
+    "code": 1981,
+    "gold": "Ikiwa huwa unaenda ufukweni tu ukitumia safari za meli hutahitaji visa tofauti (kufikia mwaka wa 2009).",
+    "baseline": " Ikiwa hua unenda ufukueni tu, ukitumia safari zameli, utahitaji visa tofauti kufika mwaka 2009.",
+    "wer_base": 62.5,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ikiwa huwa unaenda ufukweni tu ukitumia safari za meli hutahitaji visa tofauti kufika mwaka wa 2009",
+        "wer": 18.75,
+        "wer_diff": 43.75
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ikiwa huwa unaenda ufukweni tu ukitumia safari za meli hutahitaji visa tofauti kufika mwaka wa 2009",
+        "wer": 18.75,
+        "wer_diff": 43.75
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ikiwa huwa unaenda ufukweni tu ukitumia safari za meli hutahitaji visa tofauti kufika 2009",
+        "wer": 31.25,
+        "wer_diff": 31.25
+      }
+    ]
+  },
+  {
+    "file_id": "3135361219560767621.wav",
+    "code": 1734,
+    "gold": "Wanasayansi waliweza kuhitimisha kuwa udusi mweusi unaathiri udusi mwingine mweusi kwa njia ile ile ya kawaida.",
+    "baseline": " Una sayansi waleweza kuitinisha kuwa upisi muizi, una atiri upisi mungine muizi kwanjia ileile ya kawaida.",
+    "wer_base": 87.5,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "wanasayansi waliweza kuhitimisha kuwa utusi muyusi unahtiri utusi mwingine muisi kwa njia ile ile ya kawaida",
+        "wer": 43.75,
+        "wer_diff": 43.75
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "wanasayansi waliweza kuhitimisha kuwa upusi muhimsi una tere upusi mwingine muhimsi kwa njia ile ile ya kawaida",
+        "wer": 50.0,
+        "wer_diff": 37.5
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "wanasayansi waliweza kuitimisha kuwa utusi muyuzi unaateri utusi mwingine muyusi kwa njia ile ile ya kawaida",
+        "wer": 50.0,
+        "wer_diff": 37.5
+      }
+    ]
+  }
+]

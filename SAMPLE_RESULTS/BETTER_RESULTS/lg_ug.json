@@ -1,0 +1,407 @@
+[
+  {
+    "file_id": "17590201225168110931.wav",
+    "code": 1668,
+    "gold": "Kyalibade kyamugaso okugula Wild Card eyingiza mu bibangirize bye eby'obutonde ebimu mu South Africa oba byonna mu South Africa.",
+    "baseline": " Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo,",
+    "wer_base": 778.9473684210526,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "kyalibadde kyamugaso okugola worldcard eyingiza mu bibangirizi byebitonde ebimu mu south africa oba byonna mu south africa",
+        "wer": 57.89473684210527,
+        "wer_diff": 721.0526315789474
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kyalibadde kyamugaso okugola world card eyingiza mu bibangirizi byebitonde ebimu mu south africa oba byona mu south africa",
+        "wer": 63.1578947368421,
+        "wer_diff": 715.7894736842105
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kyalibadde kyamugaso okugola world card eyingiza mu bibiangirizi byebitonde ebibu mu south africa oba byonna mu south africa",
+        "wer": 63.1578947368421,
+        "wer_diff": 715.7894736842105
+      }
+    ]
+  },
+  {
+    "file_id": "11436842062857656827.wav",
+    "code": 1676,
+    "gold": "Era ngabwekiri mu kkumiro lyebisolo mu maserengeta ga Africa, wabeerawo ebikolebwamu bulijjo era wabawo ne ssente ezisasulwa okuyingira mu ppaaka.",
+    "baseline": " Mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka mwaka",
+    "wer_base": 740.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "era nga bwekili mu kumiro ly'ebisolo maserengeta ga afrika wabeerawo ebikolebwa mu bulijjo era wabaawo ne ssente ezisasula okuyingira mu paaka",
+        "wer": 60.0,
+        "wer_diff": 680.0000000000001
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "era nga bwekiri mu koomiro ly'ebisolo maserengeta ga afrika wabeerawo ebikolebwa mu bulijjo era wabaawo ne ssente ezisasula okuyingira mu paaka",
+        "wer": 60.0,
+        "wer_diff": 680.0000000000001
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "era nga bwekiri mu koomiro ly'ebisolo maserengeta ga afirika wabeerawo ebikolebwa mu gulijjo era wabaawo ne ssente ezisasula okuyingira mu paaka",
+        "wer": 65.0,
+        "wer_diff": 675.0
+      }
+    ]
+  },
+  {
+    "file_id": "2227556902017515460.wav",
+    "code": 1759,
+    "gold": "Dr. Malar Balasubramanian, 29, yasangibwa mu vvu elya bululu, Ohio, ekyalo ekiri okutwaliza awamu mayiro 15 mu mambuka ga Cincinnati nga yebase wansi ku luguudo mu saati ne empale ey’omunda mu mbeera eraga nti yakubiddwa eddagala liingi",
+    "baseline": " Dr. Mbala Balasuburumania Avili Mwenda Yasangi wamu vu edi ya Bururu, Ohio Echalo echiri oktualiza awamu mairo kuminatano Mbambuka gasini sinati Ngayeba sewansi kulugudo Musati nempale eyo munda Mbela iraganti ya kubidwa eda galarinji Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo,",
+    "wer_base": 486.4864864864865,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "dr. mbala balasubulumaniya 29 yasangibwa mu v erya bululu ohio ekyalo ekiri okutwaliza awamu mayilo 15 mu mambuka ga sinisinati nga yebase wansi ku luguudo mu saati n'empale eyomunda mu mbeera eraga nti yakubiddwa eddagala lingie",
+        "wer": 37.83783783783784,
+        "wer_diff": 448.6486486486487
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "dr. mabala balasubulumaniya 29 yasangibwa muvu erya bululu ohio ekyalo ekiri okutwaliza awamu mayiro 15 mu mambuka ga sinisinati nga yebase wansi ku luguudo mu saati n'empale eyomunda mu mbeera eraga nti yakubiddwa eddagala lingisubs by www.zeoranger.co.uk",
+        "wer": 43.24324324324324,
+        "wer_diff": 443.2432432432432
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "dr. mbala balasubramanian 29 yasangibwa mu v erya bululu ohio ekyalo ekiri okutwaliza awamu mayilo 15 mu mambuka ga sinisinati nga yebase wansi ku luguudo mu saati n'empale eyomunda mu mbeera eraganti yakubiddwa eddagala lingie",
+        "wer": 43.24324324324324,
+        "wer_diff": 443.2432432432432
+      }
+    ]
+  },
+  {
+    "file_id": "13406790302148369364.wav",
+    "code": 1674,
+    "gold": "Mu bifo ebimu okufumba amazzi okumala edakiika kimala, mu bilala olina okugafumba edakiika eziwelako.",
+    "baseline": " Mubi fo ewi mu ok fumba ama zi ok mala e dachi ka chimala. Mubi dala orina ok ga fumba e dachi ka ezi ueda ko.",
+    "wer_base": 185.71428571428572,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mu bifo ebimu okufumba amazzi okumala eddakiika kimala mu bilala olina okugafumba eddakiika eziwerako",
+        "wer": 35.714285714285715,
+        "wer_diff": 150.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mu bifo ebimu okufumba amazzi okumala eddakiika kimala mu bilala olina okugafumba eddakiika eziwerako",
+        "wer": 35.714285714285715,
+        "wer_diff": 150.0
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "mu bifo ebimu okufumba amazzi okumala eddakiika kimala mu bilala olina okugafumba eddakiika eziwerako",
+        "wer": 35.714285714285715,
+        "wer_diff": 150.0
+      }
+    ]
+  },
+  {
+    "file_id": "16140736022796425474.wav",
+    "code": 1964,
+    "gold": "Ebyawandikibwa 25 ebya Dunlap broadsides ebiriwo byebisinga obukadde ebyawonawo ku kiwandiko. Ekiwandiko ekya sooka wo ekyawandikibwa tekyawona.",
+    "baseline": " Hebi ya wandi kibwa abidi mbitano, hebi ya dunlap broadside, hebi diwobi hebi singa obukade, hebi ya unao kuchi wandi iko. Echi wandi iko echa sokao, echa wandi kibwa, techa unao.",
+    "wer_base": 182.35294117647058,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ebyawandikibwa 25 ebya dunlap broadsides ebiriwo byebisinga obukadde ebyawonawo ku kiwandiiko ekiwandiiko ekyasookawo ekyawandikibwa tekyawona",
+        "wer": 47.05882352941176,
+        "wer_diff": 135.29411764705884
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ebyaawandiikibwa 25 ebya dunlap broadsides ebiri wo byebisinga obukadde ebyawonawo ku kiwandiiko ekiwandiiko ekyasookawo ekyawandiikibwa tekyawona",
+        "wer": 64.70588235294117,
+        "wer_diff": 117.64705882352939
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ebyawandiikibwa 25 ebya dunlap-broadside ebiri wo byebisinga obukadde ebyawunawo ku kiwandiiko ekiwandiiko ekyasokawo ekyawandiikibwa tekyawuna",
+        "wer": 70.58823529411765,
+        "wer_diff": 111.76470588235294
+      }
+    ]
+  },
+  {
+    "file_id": "9069112706198335673.wav",
+    "code": 1957,
+    "gold": "Engambo yaziyise “lugambo lwa byabufuzi nakwesiruwaza”.",
+    "baseline": " Nga mbo ya zihise, loga mbo loabi ya abufuzi na kuesiri waza.",
+    "wer_base": 200.0,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "engambo yazihise lugambo lwa byabufuzi nakwesiriwaza",
+        "wer": 66.66666666666666,
+        "wer_diff": 133.33333333333334
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "engambo yaziyise olugambo lw'abyabufuzi nakwesiriwaza",
+        "wer": 83.33333333333334,
+        "wer_diff": 116.66666666666666
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "engambo yaziyise olugambo lwabyabufuzi nakwesiriwaza",
+        "wer": 83.33333333333334,
+        "wer_diff": 116.66666666666666
+      }
+    ]
+  },
+  {
+    "file_id": "2294290697110636595.wav",
+    "code": 1890,
+    "gold": "Ebirengelela ewala ebisinga eby’omulembe binene nnyo mu biffo ebyabaavu n’emmbeera y’obudde enungi.",
+    "baseline": " Ebi rengere da e wala, ebi singa ebi o murembe, bine nene nyo mubifo ebi abavu, nembe da yo budde e nunji.",
+    "wer_base": 183.33333333333331,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ebirengerera ewala ebisinga ebyomulembe binene nyo mu bifo ebyabaavu n'embeera y'obudde enuungi",
+        "wer": 58.333333333333336,
+        "wer_diff": 125.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ebirengerera ewala ebisinga eby'omulembe binene nyo mu bifo eby'abaavu n'embeera y'obudde enuungi",
+        "wer": 66.66666666666666,
+        "wer_diff": 116.66666666666666
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ebirengerera ewala ebisinga eby'omulembe binene nyo mu bifo ebya baavu n'embeera y'obudde enuungi",
+        "wer": 75.0,
+        "wer_diff": 108.33333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "7559822962172716481.wav",
+    "code": 1752,
+    "gold": "Ekyavudemu, ebyenyanja ebyebika bibili tebikyalabibwako, nebika ebirala tebikyali byattabu nnyo ngamuno mwemuli nobugabi.",
+    "baseline": " Echa avudemu biyevye nyanja evi evi ka viviri, evi tacha ala vivuako, nevika evi lala evi tacha alivi ata bunyo, nga muno muemuli nobu gabi.",
+    "wer_base": 192.30769230769232,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ekyavuddemu bye byenyanja ebyebika bibiri ebitakyalabibwaako n'ebika ebirala ebitakyali byatabu nnyo ngamuno mwemuli n'obugabi",
+        "wer": 69.23076923076923,
+        "wer_diff": 123.07692307692308
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ekyavuddemu bye byenyanja ebyebika bibiri ebitakyalabibwaako n'ebika ebirala ebitakyaali byattabunnyo ngamuno mu emuli n'obugabi",
+        "wer": 92.3076923076923,
+        "wer_diff": 100.0
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ekyavudemu byebyenyanja ebyebika bibiri ebitakyaala bibwaako n’ebika ebirala ebitakyaali byatabu nyo nga muno mwe mulina obugabi",
+        "wer": 107.6923076923077,
+        "wer_diff": 84.61538461538463
+      }
+    ]
+  },
+  {
+    "file_id": "970653222300264145.wav",
+    "code": 1838,
+    "gold": "Pilamiidi eyamaanyi eye Giza yeyokka kubyewunyiisa omusaanvu ekyayimiridde n’olwaleero.",
+    "baseline": " Pila midi e ya mani e ye giza ye yo kakubie wuni sa omusamvu e chai milide nuru aliru.",
+    "wer_base": 211.11111111111111,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "pilamiidi ey'amaanyi eyegiza yeyoka ku byewunyisa omusanvo ekyayimiridde n'olwaliiro",
+        "wer": 88.88888888888889,
+        "wer_diff": 122.22222222222223
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "pilamidi ey'amaanyi ey'eggiza yeyoka ku byewunyisa omusanvu ekyayimiridde n'olwaleero",
+        "wer": 88.88888888888889,
+        "wer_diff": 122.22222222222223
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "pilamiidi ey'amaanyi ey'eggiza yeyoka ku byewunyisa omusanvu ekyayimiridde n'olwaleero",
+        "wer": 88.88888888888889,
+        "wer_diff": 122.22222222222223
+      }
+    ]
+  },
+  {
+    "file_id": "13339171188898808934.wav",
+    "code": 1890,
+    "gold": "Ebirengelela ewala ebisinga eby’omulembe binene nnyo mu biffo ebyabaavu n’emmbeera y’obudde enungi.",
+    "baseline": " Ebi rengi li iwa lebi singa, ebi o mwli enbi, ebi ten enyo mbi fwe ebi aba avu, enbi la yo buden nonji.",
+    "wer_base": 191.66666666666669,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ebirengerera ewala ebisinga eby'omulembe ebidene nyo mu bifo eby'abaavu n'embeera y'obudde enungi",
+        "wer": 75.0,
+        "wer_diff": 116.66666666666667
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ebirengerera ewala ebisinga eby'omulembe ebidina enyo mu bifo eby'abaavu n'embeera y'obudde enungi",
+        "wer": 75.0,
+        "wer_diff": 116.66666666666667
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ebirengerera ewala ebisinga eby'omulembe ebidene nyo mu bifo eby'abaavu n'embeera y'obudde enungi",
+        "wer": 75.0,
+        "wer_diff": 116.66666666666667
+      }
+    ]
+  },
+  {
+    "file_id": "1993678780970244087.wav",
+    "code": 2001,
+    "gold": "Abatambuze bakutirwa n’amaanyi okwekengera akatyabaga ak'embeera y’obudde eyamaanyi ekosa ekitundu kyaabwe, nga kisobola okutataganya entekateka z'okutambula.",
+    "baseline": " Haba tambu zeba kutirua na amanyo kwe kengira akati haba gaake mbela yobu de ya amanyi eko seki tundukiawe. Nga kisogola okutata aganya enteka teka zoku tambula.",
+    "wer_base": 168.75,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "abatambuze bakuutirwa n'amaanyi okwekengera akatyabaga akembera y'obudde ey'amaanyi ekosa ekitundu kyabwe nga kisobola okutataganya enteekateeka z'okutambula",
+        "wer": 56.25,
+        "wer_diff": 112.5
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "abatambuze bakuutirwa n'amaanyi okwetengela akatyabaga ak'embeera y'obudde ey'amaanyi ekwosa ekitundu kyaabwe nga kisobola okutataaganya enteekateeka z'okutambula",
+        "wer": 68.75,
+        "wer_diff": 100.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "abatambuze bakuutirwa n'amaanyi okwekengera akatyabaga akembeera y'obudde ey'amaanyi ekwosa ekitundu kyaabwe nga kisobola okutataaganya ente ekatekaza okutambula",
+        "wer": 75.0,
+        "wer_diff": 93.75
+      }
+    ]
+  },
+  {
+    "file_id": "2806461875283552850.wav",
+    "code": 1679,
+    "gold": "Aerosmith asazizamu ebivvulu ezibadde zisigadeyo mu ku lambula.",
+    "baseline": " Eros Smith asa ziza mo epi vulu e zipa dezisi gadeyo mokula ambola.",
+    "wer_base": 162.5,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "erosmith asazizamu ebivvulu ezibadde zisigaddeyo mu kulambuula",
+        "wer": 50.0,
+        "wer_diff": 112.5
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ero smith asazizzamu ebivvulu ezibadde zisigaddeyo mu kulambuula",
+        "wer": 75.0,
+        "wer_diff": 87.5
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ero smith asazizamu ebivulu ezibadde zisigadde yo mu kulambula",
+        "wer": 87.5,
+        "wer_diff": 75.0
+      }
+    ]
+  },
+  {
+    "file_id": "16622087930062285344.wav",
+    "code": 1785,
+    "gold": "Ekizimbe kyosomesezaamu ebyokuzimba nnokukanika tekiyitibwa nkola yakusomesa naye kyeyambisibwa abantu abayita mu musoma omupya nga okukozesa akyuma kikalimagezi oba okutaandika omulimu omupya.",
+    "baseline": " Echi zimbe cheo somese zamu ebiyoku zimba noku kanika, teichi itibuankola ya kusomesa. Na eche ya ambisibuwa abantu, aba itamu soma omu pia, nga okukoze saa akuma chikari magezi, oba okutaandika omulimu omu pia.",
+    "wer_base": 136.36363636363635,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ekizimbe kyosomesezamu ebyokuzimba n'okukanika tekiyitibwa nkola yakusomesa naye kyeyambisibwa abantu abayita mu musoma omupya nga okukozesa akuuma kikalimagezi oba okutandika omulimu omupya",
+        "wer": 27.27272727272727,
+        "wer_diff": 109.09090909090908
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ekizimbe kyosomesezamu ebyokuzimba n'okukanika tekiyitibwa nkola yakusomesa naye kyeyambisibwa abantu abayita mu musoma omupya nga okukozesa akuuma kikalimagezi oba okutandika omulimu omupya",
+        "wer": 27.27272727272727,
+        "wer_diff": 109.09090909090908
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ekizimbe kyosomesezamu ebyokuzimba nokukanika tekiyitibwa nkola yakusomesa naye kyeyambisibwa abantu abayita mu musoma omupya nga okukozesa akuuma kikalimagezi oba okutandika omulimu omupya",
+        "wer": 27.27272727272727,
+        "wer_diff": 109.09090909090908
+      }
+    ]
+  },
+  {
+    "file_id": "7381884441780999511.wav",
+    "code": 1892,
+    "gold": "Kino ky’ekikiffo abangeleza kyebawamba, era bwobela ononya ekifo ky’okufunilamu obujjulizi, wano walungi okutandikilako",
+    "baseline": " Chinoche H4 abangere za chiba wamba. Hira buwabeda unonya H4 chokufu ni ramu obu juli zi, wanu warungi okutandi kila kuu.",
+    "wer_base": 161.53846153846155,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kino kyekifo abangereza kyebawamba era bwobera ononya ekifo kyokufuniramu obujjulizi wano walungi okutandikilako",
+        "wer": 53.84615384615385,
+        "wer_diff": 107.69230769230771
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kino kyekifo abangereza kyebawamba era bwobera ononya ekifo ky'okufuniramu obujjulizi wano walungi okutandikilako",
+        "wer": 53.84615384615385,
+        "wer_diff": 107.69230769230771
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "kino kyekifo abangereza kibawamba era bwobeera onoonya ekifo kyokufuniramu obujulizi wano walungi okutandikilako",
+        "wer": 61.53846153846154,
+        "wer_diff": 100.0
+      }
+    ]
+  },
+  {
+    "file_id": "9094695556764350757.wav",
+    "code": 1674,
+    "gold": "Mu bifo ebimu okufumba amazzi okumala edakiika kimala, mu bilala olina okugafumba edakiika eziwelako.",
+    "baseline": " Mwibifo ewi mu, oku fumba ama zi okumare dachi ika chimala. Mwibilala, olina oku ga fumba i dachi ika eziwera ko.",
+    "wer_base": 142.85714285714286,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mu bifo ebimu okufumba amazzi okumala eddakiika kimala mu bilala olina okugafumba eddakiika eziwerako",
+        "wer": 35.714285714285715,
+        "wer_diff": 107.14285714285714
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "mu bifo ebimu okufumba amazzi okumala eddakiika kimala mu bilala olina okugafumba eddakiika eziwerako",
+        "wer": 35.714285714285715,
+        "wer_diff": 107.14285714285714
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mu bifo ebimu okufumba amazzi okumala eddakiika kimala,mu bilala olina okugafumba eddakiika eziwerako",
+        "wer": 42.857142857142854,
+        "wer_diff": 100.0
+      }
+    ]
+  }
+]

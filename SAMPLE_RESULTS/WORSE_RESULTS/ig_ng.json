@@ -1,0 +1,263 @@
+[
+  {
+    "file_id": "16211881376291280277.wav",
+    "code": 1912,
+    "gold": "Ọtụtụ agwaetiti ndị ka obere bụ mba ndị kwụụrụ onwe ha, maọbụ nọrọ na njiko ha na France, ndị a makwaara dịka rezọt ọnụ osimiri bu ebe mkporindụ.",
+    "baseline": " Otutu awetiti ndika obe re bu mba ndi kuru unweha. Mbu obu noro na njikota hana France. Ndia makwara ndika resort. Ndika resort. Onu o shimiri bu ebe unkorindo. প্রাক্ষি প্রাক্ষি",
+    "wer_base": 96.42857142857143,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọtụtụ agwaetiti ndị ka obere bụ mba ndị kwuru onwe ha mbụ ọ bụ nọrọ na njikọta ha na frans ndị a ma kwara ndị ka rịzọọt ọnụ oshimiri bụ ebe mkpọrị ndụ na ntụtụ a na ọbụ ile onye n'ebe jiri nyefee ya na n'ebe ọ bụ onwe haụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ dị ka ụlọ",
+        "wer": 796.4285714285714,
+        "wer_diff": -700.0
+      }
+    ]
+  },
+  {
+    "file_id": "10073942088470718781.wav",
+    "code": 1690,
+    "gold": "Anyi kwere na ihe USOC dere na odimma ndi egwuregwu anyi na klob ha nakwa egwuregwu ga enweta uru n’ihu karia ma o buru na enwe mgbanwe n’ulo oru anyi kama inapu ndi mmadu asambodo ha.",
+    "baseline": " Ani ku wina ihe USOC dili na o di ma ndi ugu ugu anyi na klop. Haa na kwa ugu ugu ga iwe ja uru. Ni u kari ya moburu na uwe himwanwi nulo uru. A nyi kama inapu ndi madu asambu duha.",
+    "wer_base": 88.88888888888889,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "anyị kụrị na ihe usoc dịrị n'ọdịmma ndị egwuregwu anyị na klọb ha anagwa egwuregwu ga iweta uru n'ịbụ karịa m'ọbụrụ na enweghị mgbanwe n'ụlọ ọrụ anyị kama ịnapụ ndị mmadụ asaa mbụ tụha anyị klọb ụzọ akpọyịrị ya no eme n'ime ụlọ n'ime ụlọ n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme n'ime egwuregwu ya no eme nime ekpọatọ na ahụ kọpụ a kpọa dị n'ụlọ nọ n'ụlọ n'anyị kọtị kwa a kpọ Tụle a nụlọ nasamu tuha",
+        "wer": 397.22222222222223,
+        "wer_diff": -308.33333333333337
+      }
+    ]
+  },
+  {
+    "file_id": "9913992388836085226.wav",
+    "code": 1950,
+    "gold": "Na aka-ugwu ma gburu-gburu dikwa nso igaru di obodo ihunanya na itunanya Sintra bukwa nke emere amara-amara nye ndi mba-ozo ka akowaputara idi-ukwu ya n’uzo egbuke-egbuke site na-aka Onye-nwe Byro.",
+    "baseline": " Na aka uguma buru-buru di kwa nso igarun di obodu, ihonanya na itunanya. Sintra bukwa nka emera amara, nyendi mbozo ka hakuputara idu kuya, nuzo e buke buke sitena aka unyewe bayru.",
+    "wer_base": 86.66666666666667,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "na aka ugwu ma gburugburu dikwa nso ịgarụ dị obodo ịhụnanya na ịtụnanya sintra bụkwa nke a emere amara amara nye ndị mba ọzọ ka ha kwụpụtara ịdị ukwu ya n'ụzọ ebuke ebuke si n'ụzọ ụzọ ka adị maka ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'ụzọ n'site na aka onye nwee bairu.",
+        "wer": 343.3333333333333,
+        "wer_diff": -256.66666666666663
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "na aka ugwu ma gburugburu dịkwa nso ịgarụ dị obodo ịhụnanya na ịtụnanya sintra bụkwa nke a emere amara amara nye ndị mba ọzọ ka ha kwupụtara ịdị ukwu ya n'ụzọ ebuke ebuke sintra n'ederede ugwu ka ịgbarakite n'aka onye nwee birel",
+        "wer": 110.00000000000001,
+        "wer_diff": -23.33333333333334
+      }
+    ]
+  },
+  {
+    "file_id": "12936510931725762151.wav",
+    "code": 1690,
+    "gold": "Anyi kwere na ihe USOC dere na odimma ndi egwuregwu anyi na klob ha nakwa egwuregwu ga enweta uru n’ihu karia ma o buru na enwe mgbanwe n’ulo oru anyi kama inapu ndi mmadu asambodo ha.",
+    "baseline": " Anyi i kwerena ihe USOC dere na o di ma ndi eguregu anyi na polob na ha na kwa eguregu ga e weta uru ni hu karya ma oburu na ewe mba we nolo nu loro anyi. Kama inapun di madu asambudu ha",
+    "wer_base": 86.11111111111111,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "anyị ikwere na ihe usoc dere na ọdịmma ndị egwuregwu anyị na polob na ha nakwa egwuregwu ga-enweta uru n'ihu karịa ma ọ bụrụ na enwe mgbanwe n'ụlọ ọrụ anyị kama ịnapụ ndị mmadụ nke anọ na asatọ kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị karịa kwa ụlọ ofu anyị n'ọbeụ yaasamudu ha",
+        "wer": 308.33333333333337,
+        "wer_diff": -222.22222222222223
+      }
+    ]
+  },
+  {
+    "file_id": "9742423960127404175.wav",
+    "code": 1990,
+    "gold": "Ụmụ blọọgụ nwerekwara ike inye aka imelite ederede nwa akwụkwọ. Dị ka ụmụ akwụkwọ na-ebidokarị ahụmihe blọọgụ ha n'iji ụtọasụsụ na nsụpe na-adịghị nke ọma, ọnụnọ nke ndị nkiri na-agbanwekarị nke ahụ.",
+    "baseline": " Omo blog ome nguere kwa ra ike i nyaka imelite edere de oma apupo. Dika oma apupone bidokari ahomi he blogo hana iji otaso sona supe na dehe goma. Onono nkendi nkirina aba nye mwekari nga. Thank you for watching.",
+    "wer_base": 115.625,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ụmụ blọọgụ nwereikwara ike inye aka imelite ederede nwa akwụkwọ dịka ụmụ akwụkwọ na-ebidokari ahụmihe blọọgụ ha na-iji ụta asụsụ na nsụpe na-adịghị nke ọma ọnụnụ nke ndị nkiri na-agba nwekarị nke ahụụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ gbasịa bụrụ ụgbọrọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụlọ n'ụ",
+        "wer": 318.75,
+        "wer_diff": -203.125
+      }
+    ]
+  },
+  {
+    "file_id": "615241518948477001.wav",
+    "code": 1782,
+    "gold": "Nakwa n’etiti usoro ndị eze ọ bụla bụ otu oge ejighị n'aka mke mpaghara ndị kewara ekewa. Oge ndị a nke a kacha mara amara bụ oge nke Alaeze Atọ nke mere ruo afọ iri na isii n'etiti Usoro Ndị Eze Han na Usoro Ndị Eze Jin ndị ahụ.",
+    "baseline": " Nā kwa niti tiusurundizi, obula bu'u utu uki naka nki mpahara ndi kwekwara, ndi kiwara ekiwa. O gen dhia nke akacha mara mara buri ki nki alizi ato nke mi woi ruwa fo iwi nishi niti tiosorondizi hana. Tiosorondizi ji dhia.",
+    "wer_base": 93.87755102040816,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "makwa n'etiti usoro ndị ezi ọ bụla bụ otu oge ejirohe na-aka nke mpaghara ndị kwesịrị nwere ikebukwe ndị kiwara ekiwa oge ndị a nke akacha mara amara bụ oge nke yali ezi atụ nke mere buru afọ ya n'amasaịba ọ bụ na-aka nke anwụrụ ikpeazụa na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ndi ozo a na-esorola na ststụpụta",
+        "wer": 271.42857142857144,
+        "wer_diff": -177.55102040816325
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "nakwa n'etiti usoro ndi ezi o bula bu otu oge iji n'aka nke mpaghara ndi iwe kwekwara ndi kiwara ekewa oge ndi nke akacha mara ama a bu oge nke yali ezi atu nke meruofu ihe bụrụ afọ ndị atị nke anọ na mpaghara ndị oge dị ka ọnụ ọgọdụnke akacha mara amaara bụrụghị nke yala izi atọ nke merụrụ afọ iri na isi n'etiti usoro ndị izi ha na usoro ndị izi eji ndị ahụ",
+        "wer": 124.48979591836735,
+        "wer_diff": -30.612244897959183
+      }
+    ]
+  },
+  {
+    "file_id": "10057819627557776878.wav",
+    "code": 1795,
+    "gold": "Kemgbe 1988, ụmụ igbe ntuli aka ga-abụrịrị ngafe-ahụ-ụzọ ka ndị ntụli aka na ndị nnyota ga-agba akaebe na o nweghị envelopu nọ na ya mgbe a na-ebido ntuli aka nakwa o nweghị envelopu etinyere ewezụga nke ndị agụgwere ọnụ ma nye ikikere nke ọma.",
+    "baseline": " Kibwe 1988 umi iwe ntuli maka gabu iwi ngafea hun uzo. Ka ndi ntuliaka na ndi njotwa gabwa ake ibe na uwi hi envelope na nona ya mbe o ba nebidu ntuliaka Na kuwa wihi welo biti niri. Ewe zika uke ndiya ku kweri anu. Ma nye i kikiwe ngoma.",
+    "wer_base": 102.27272727272727,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ka ebe 1988 onwe igwe ntuliaka ga buruiri ngafe ahu uzo ka ndi ntuliaka na ndi nyotu ga agba aka ebe na onwihi envelopu no na ya mgbe o gbaa na ebido ntuliaka na kwanwihi envelopu etinyeri ereziga nke ndi egwugbe aka a ka mara ama ya na otu nke na oferta na otu nke na oferta na otu nke na oferta na otu nke na oferta na otu nke na oferta na otu nke na oferta na otu nke na oferta na otu nke na ofadata na otu nke na ofadata na otu nke na otuagịrị anọ n'ịkikere ngọma",
+        "wer": 209.0909090909091,
+        "wer_diff": -106.81818181818181
+      }
+    ]
+  },
+  {
+    "file_id": "14915484170363607423.wav",
+    "code": 1863,
+    "gold": "Nke bụ isiokwu ntụgharị uche nke ndị Tibet bụ Deyiti Yoga. Site na ichepụta chi dị iche iche, a na ehichapụta ụkpụrụ ike, kpọghee chakra ma kepụta owuweanya nke amamihe.",
+    "baseline": " Nka abu isi oku ntu hari uche, nke ndi tibiet bu denyita yoga. Siten na iche puta chidi ichi ichi. Hana e chi chapota, npu rike, po hie chakre ma ke puta, nku wanya nke amamije.",
+    "wer_base": 106.66666666666667,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "nke a bụ isi okwu ntụgharị uche nke ndị tibet bụ denyịta yoga site na ichepụta chi dị iche iche ha na-echichapụta mkpụrụ ike kpọghịchakrị ma kepụta onwunwu anya nke amamighị ike na nkụtụ yoga na n'iji ụmụ anọ na yutaa ya n'iji ụmụ anọ na yutaa ya na-echichapụta yuropu ike kpọhịchakrị makpụ nke pụta onwunwu anyị n'amaghị ike na n'amaghị ike na n'amaghị ike na n'amaghị ike na n'amaghị ike n'amaghị ike",
+        "wer": 200.0,
+        "wer_diff": -93.33333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "18434043829723967339.wav",
+    "code": 1842,
+    "gold": "Maka na nku ajọ anụ daịnosọ enweghị akụ toro nke ọma, nke a na akpọ rachis, ma na o nwere ihe ndị ọzọ nke na-enwe - dịka barbs na barbules - ndị nchọpụta ihe kwuru na ọdịka rachis ọbụ ihe mechara si n'ihe ndị ọzọ a were toputa.",
+    "baseline": " Makana nkwa aja, ano dinosaur enwe yako, tolongo omo. Nka anabo, rachiz ma, onwe re yi hendi ozo. Nke ne yi we, deka babs na babos. Nden chok pota nke kuru na o deka rachiz. Obi yi heme sha rachini yi hendi ozo. Yi hendi ozo anwe re topota.",
+    "wer_base": 102.08333333333333,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "maka na nkuaja n'anụ daịnosọọ enweghị akụ toro nke ọmụ nke a na-akpọ rachis ma o nwere ihe ndị ọzọ nke na-enwe dịka barbs na baples ndị nchọpụta nke kwuru n'ọba ihe megachapụrụ nke a na-akpọ rachis ma a na-akpọ ọwụwa anyanwụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were ịn̄ụ n'obodo a were,ịn'ọchị",
+        "wer": 179.16666666666669,
+        "wer_diff": -77.08333333333334
+      }
+    ]
+  },
+  {
+    "file_id": "2224270761014889495.wav",
+    "code": 1743,
+    "gold": "Ọtụtụ nkọwa e nyere nkwenyesiike kenkanụzụ nwere echiche izugbe abụọ: na mmepụta nkanụzụ n'onwe ya na-agbaso usoro nke gbapụrụ iche site na nkwanye nke omenala maọbụ ndọrọndọrọ ọchịchị, ya na kwa na nkanụzụ n'aka nke ya nwere \"mmekpaahụ\" ọ na-enye ọhaobodo nke dị adị, n'abụghị nke sitere na mmekọrịta.",
+    "baseline": " Watutu, nkawiniri nkwenyi siki kenkazu weye chichensu izu wapo na miputa nkazu nwia wapa sosuru nke papuichi sitina nkawani nkominala. Ma ugu ndorororor uchichi yonakwa na mkansu naka. Nuki ya wii mipaham. Oni nye oha ugu tu nukiti ya di na puhin kisitiri na mikolita.",
+    "wer_base": 91.83673469387756,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ọtụtụ nkọwa enyere nkwenye si ike nke azụ wee echiche nsu izugbo ọpụọ na mmipụta nke nsu n'ụwa ya pụọkwa sọ sụrụ nke kpapụrụ iche sitere na nke ọwa anyị nke omenala ma ọ gụndọrọ ndọrọ ọchịchị ye nakwa na nke nsu akwụkwọ nsi a na mkpụrụ ya n'ụwa anyị nsu-n'ụwa ya n'ọnwa ma ọ bụ na nsụ na-akpọ ụzọ a na-akwụkwọ ya n'ọnwa na mpụ nke iri ya na nsụ na-akwụkwọ ya n'ọnwa na mpụ nsun'aka nke ya nwere mmekpo ahụ onye nye ọha obodo nke etu ya dị n'abụghị nke sitere na mmekọrịka",
+        "wer": 153.0612244897959,
+        "wer_diff": -61.22448979591836
+      }
+    ]
+  },
+  {
+    "file_id": "6386538990631682826.wav",
+    "code": 1708,
+    "gold": "Huhne agbaala arukwaghi ma onye ga anochi ya na otu ndi oso-eze achi bu Ed Davey MP. Norman Lamb MP ka ana atu-anya ka owere oru onye ozi azumahia Davey na apu-apu.",
+    "baseline": " Huni abwala aru kwa hi. Maunye ga nochia na utundi osoizi achi do edi divi MP noman nam MP. Ka ana atuanyaka uwe yorwa onye uzi Azumahia Devi Napupu",
+    "wer_base": 87.5,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "hụmụ agbaala arụkwụ ahị ma onye nke anọchi ya na otu ndị ọsọ izi achị bụ edd dvr nọman n'emepị ka a na-atụ anyị aka ohere ọrụ abụ n'ebe ugbo ahị ma ahụ ma dị ka ụmụ anọ n'ebe ugbo ahịka a na-atụ anya ka o hiri ọrụ onye ozi ozumahịa david na akpụkpụ",
+        "wer": 134.375,
+        "wer_diff": -46.875
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "hụnyị agbala arụkwa ahị ma onye ga-anọchi ya na otu ndị ọsọ ise achị bụ ed dvd mp nọma na mp ka a na-atụ anya ka ohe oru ebe mmadụ na-arụ ọrụ ugboa ọ bụ onye ozi ozumahịa dị evi na-akpụkpụ",
+        "wer": 100.0,
+        "wer_diff": -12.5
+      }
+    ]
+  },
+  {
+    "file_id": "7267492693524143610.wav",
+    "code": 1714,
+    "gold": "E ji ụgbọelu rọkeetị zije satilaịti n'ikuku. Ndị ọka mmụta sayensị na eji igwe nyocha kpakpando afụ ụzọ n'ikuku mpụga ụwa n'ihi na igwe ụwa anyị na arọgharị ụfọdụ ọkụ anyị na ahụ.",
+    "baseline": " Eji uwe lu roketi, zije setlaiti ni kuku. Ndioka me puta sayensi na eji igwe nyucha pakpando afu. Uzo ni kuku mpoga owa. Nihi na igwe owa nye na arogairi ufo duwoko nye na aho.",
+    "wer_base": 81.81818181818183,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "eji ogbeelu roketi zijị satịlaịtị n'ikuku ndị ọka mepụta sayensị na-eji igwe nyochapakpando afọ ụzọ n'ikuku mpụga ụwa n'ihi na igwe ọtụgụ ụmụ taịnị ụzọ ọrụ na-eji ụgbọelu rọketi ụzọ n'ikuku ụwa n'iji n'igwe ọgbara ụwa n'ebe ụwa n'ebe ụwụ ụwụ n'iji n'ibe ụwụ ụwụ ụwụụwa anyị na-arọgayiri ụfọdụ ọkụ anyị na-ahụ.",
+        "wer": 127.27272727272727,
+        "wer_diff": -45.454545454545446
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "eji ogbeelu roketi zijie setilaiti n'ikuku ndi oka meputa sayensi na-eji igwe nyochaa kpakpando afo uzo n'ikuku mpuga uwa n'ihi na igwe ogbun ndi oka ihe n'ime igweịzịịzịụwa anyị na-arọgharị ụfọdụ ọkụ anyị na-ahụ",
+        "wer": 84.84848484848484,
+        "wer_diff": -3.0303030303030276
+      }
+    ]
+  },
+  {
+    "file_id": "4528431293297076929.wav",
+    "code": 1937,
+    "gold": "Mana, o gbughi oge ka atụmatụ a niile laa n'efu, mgbe ihe karịrị ndị Sọviet Yunịọn Red Amị 800,000 banyere, kepụta ogige agha ndị Belarụs na Yukren, ka ha wakpochara akụkụ ọwụwa anyanwụ Poland na nnupu isi nye Nkwekọrịta Udo Riga, Nkwekọrịta Udo Sọviet Yunịọn na Poland, na ọtụtụ nkwekọrịta ndị ọzọ, ma nke dị n'etiti mba abụọ, na nke dị n'etiti ọtụtụ mba.",
+    "baseline": " Mana, obuhi oge ka atu matu ani le naefu. Mweye kariri ndi Soviet Union, ndi army 800,000 banyere, ke puta ogige a ndi Belarus na Ukraine. Ka hao wek pochara akuko uwuwa anya un Poland na mpu isi nye kwe koreta u do Riga. Nkwe korita Udo, Soviet Union, Napoland na ototu nkwe korita Ndiyozo manke ndi netiti mba abwa na ndi netitu ototu mba.",
+    "wer_base": 84.375,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mana ọ bụghị oge ka atụmatụ anịile na efu mgbe ihe karịrị ndị soviet union ndị amị 800,000 banyere kepụta ogige a nke belarus na ukraina ka ha wekpọchara akụkọ owuwa na ntuliaka n'obere nkụja n'ụwa n'ọtụtụanya anwụ poland na mpụ isi nye nkwekọrịta ụdọ riga nkwekọrịta ụdọ sọviyetị yunịọn na poland na otutu nkwekọrịta ndị ọzọ ma nke ndị na-etiti mba abụọ na nke ndị na-etiti otu ọzọ na nke nye asatọ na n'ụlọ na n'ụlọ na itule tụpụ na itule n'ụlọ na itule n'ụlọ na itule n'ọnwa ma nke ihe bụla na nke a na-etiti ụdọ riga na otu ọzọọtụtụ mba",
+        "wer": 123.4375,
+        "wer_diff": -39.0625
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mana ọ bụghị oge ka atụmatụ anịile na-efu mgbe ihe karịrị ndị soviet union ndị amị 800,000 banyere kepụta ogige a nke belarus na ukraina ka ha wekpọchara akụkọ owuwa na ọ bụ n'agbanyeghị ihe na-efu ma ọ bụ na-efu n'etụta ọgọstụ n'etụta ọwụwaa anya anwụ poland na mpụisi nye kwekọrịta ụdọ riga nkwekọrịta ụdọ soviet union na poland na ọtụtụ nkwekọrịta ndị ọzọ ma nke ndị n'etiti mba abụọ na nke ndị n'etiti ụtụọza nke erie ahụ inyere britenụ e nwere ike nkwari akụbọọtụtụ mba",
+        "wer": 96.875,
+        "wer_diff": -12.5
+      }
+    ]
+  },
+  {
+    "file_id": "967868285229694217.wav",
+    "code": 1721,
+    "gold": "Mgbe aruchara akwa-mmiri ahu na afo 1963, ewee kwusi udu idemiri ahu nke na agbasa unyi na ahu mmiri ahu nile.",
+    "baseline": " Mba rochara akwa miri ahu na afo 1963. Ewe kusi udu ide miri ahu nke nabasa unyi na ahu miri ahu liili.",
+    "wer_base": 61.904761904761905,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "mba a rụchara akwa mmiri ahụ na afọ 1963 ewe kwụsị ụdụ ide mmiri ahụ nke na-agbasa onye na-ahụ mmiri ahụ niile",
+        "wer": 100.0,
+        "wer_diff": -38.095238095238095
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "mgbe a rụchara akwa mmiri ahụ n'afọ 1963 ewe kwụsị ụdụ ide mmiri ahụ nke na-agbasa onye na-ahụ mmiri ahụlile",
+        "wer": 95.23809523809523,
+        "wer_diff": -33.33333333333333
+      }
+    ]
+  },
+  {
+    "file_id": "6060115891278600793.wav",
+    "code": 1816,
+    "gold": "Duval, bụ onye lụgoro nwanyị ma mụta ụmụ abụọ bụgoro okenye, a hapụghịrị Mila onyere akọọrọ akụkọ nnukwu ihe nlere anya.",
+    "baseline": " Duval bu onye lugoro wanyi ma mota umu abwa bugoro okene. Ha hapuru, ha hapugiri, hapugiri mila onye re akoro, akoko nuku ihe nele anya.",
+    "wer_base": 100.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "duval bụ onye lugoro na anyị ma moto ụmụ abụọ bugoro okenye ha hapụgịrị mila onyere akụ ọrụ akụkụ nwụkwụ isi ala ezuru ezuru nwụkwụ isi ọnụ ọrụ ezuru nwụkwụ isi ala ezuruihe n'ele anya",
+        "wer": 138.0952380952381,
+        "wer_diff": -38.095238095238095
+      }
+    ]
+  }
+]

@@ -1,0 +1,407 @@
+[
+  {
+    "file_id": "1215178480164776001.wav",
+    "code": 1769,
+    "gold": "Babban Masarautar da Masarawa suka gina a ƙarni na uku KZ, Babban alwatika yana ɗayan manyan gine-ginen dala da aka gina don girmama Fir'auna da ya mutu.",
+    "baseline": " I am the father of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the children of the",
+    "wer_base": 1644.4444444444443,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "babban masarautar da misrawan suka gina a ƙarni na uku kz babban alwatika yana ɗayan manyan gine-ginen dala da aka gina don girmama fir'auna da ya mutu",
+        "wer": 25.925925925925924,
+        "wer_diff": 1618.5185185185182
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "babban masarautar da misrawa suka gina a ƙarni na uku kz babban alwatika yana daya manyan gine-ginen dala da aka gina don girmama fir'auna da ya mutu",
+        "wer": 29.629629629629626,
+        "wer_diff": 1614.8148148148146
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "babban masarautar da misrawan suka gina a ƙarni na uku kz babban alwatika yana ɗayan manyan gine-ginen dala da aka gina don girmama fir'auna daya mutu",
+        "wer": 33.33333333333333,
+        "wer_diff": 1611.111111111111
+      }
+    ]
+  },
+  {
+    "file_id": "16229306020679744048.wav",
+    "code": 1944,
+    "gold": "Wani lokaci akwai gabobin bakin ruwa da ke cunkushe da iyalai da kuma jerin kantuna. Yin ninkaya a wajen ba shi da hadari.",
+    "baseline": "- ว่า ยิน รู ขา ชิ อ โห ย ก โ ป ร บ ิ ้ ン โ ม ย โ ン ว ้า ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ร ย โ ",
+    "wer_base": 947.8260869565216,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "wani lokaci akwai gabobin makinwa da ke cunkushe da iyalai da kuma jerin kantuna yin ninka ya a wajen ba shi da haɗari",
+        "wer": 34.78260869565217,
+        "wer_diff": 913.0434782608695
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "wani lokaci akwai gabbobin makiwuwa da ke cunkushe da iyalai da kuma jerin kantuna yin ninka ya a wajen ba shi da hadari",
+        "wer": 39.130434782608695,
+        "wer_diff": 908.6956521739129
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "wani nokaci akwai gabbobin makinwa da ke jun kushe da iyalai da kuma jerin kantuna yin ninka ya a wajen ba shi da haɗari",
+        "wer": 52.17391304347826,
+        "wer_diff": 895.6521739130434
+      }
+    ]
+  },
+  {
+    "file_id": "12556525955510371506.wav",
+    "code": 1672,
+    "gold": "Yi hankali da ƙin barin masana'anta suyi zafi sosai (wanda zai iya haifar da raguwa, ko kuma a mawuyacin yanayi, zafi).",
+    "baseline": " Kwa hivyo, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa k",
+    "wer_base": 847.6190476190476,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "yin hankali da ƙin barin masana'anta sun yi zafi sosai wanda zai iya haifar da ragowa ko kuma a mawuyacin yanayi zafi",
+        "wer": 33.33333333333333,
+        "wer_diff": 814.2857142857142
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "yan hankali da kim barin masana'anta sun yi zafi sosai wanda zai iya haifar da ragowa ko kuma a mawuyacin yanayi zafi",
+        "wer": 38.095238095238095,
+        "wer_diff": 809.5238095238095
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "yin hankali da kim barin masana'anta sun yi zafi sosai wanda zai iya haifar da ragowa ko kuma a mawuyacin yanayi zafi",
+        "wer": 38.095238095238095,
+        "wer_diff": 809.5238095238095
+      }
+    ]
+  },
+  {
+    "file_id": "4242184512694514391.wav",
+    "code": 1922,
+    "gold": "Tabbas da akwai bayanai daga koyarwar addinin Kirista kan wannan al’adar, amma dai yana iya kasancewa Shekaru ne gabanin bayyanar Kiristanci.",
+    "baseline": " Kwa hivyo, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa k",
+    "wer_base": 847.6190476190476,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "tabbaz da akwai bayanai daga koyarwa addinin krista kan wannan al'ada amma dai yana iya kasancewa shekaru ne gabanin bayyana kristanci",
+        "wer": 33.33333333333333,
+        "wer_diff": 814.2857142857142
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "tabbasta akwai bayanai daga koyarwa addinin krista kan wannan al'ada amma dai yana iya kasancewa shekaru ne gabanin bayyana kristanci",
+        "wer": 38.095238095238095,
+        "wer_diff": 809.5238095238095
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "tabbas da akwai bayanai daga koyarwa a dinin krista kan wannan al'ada amma dai yana iya kasancewa shekaru ne gabanin bayyana kristanci",
+        "wer": 42.857142857142854,
+        "wer_diff": 804.7619047619047
+      }
+    ]
+  },
+  {
+    "file_id": "4371442235519091161.wav",
+    "code": 1783,
+    "gold": "Aukuwar tsananin yanayin yanki da na lokacin sun hada da guguwar iska, hadari mai dusar kankara, guguwar kankara, da guguwar ƙura.",
+    "baseline": " Kwa hivyo, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa k",
+    "wer_base": 847.6190476190476,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "aukuwar tsananin yanayin yanki da na lokaci sun hada da guguwar irska hada yi mai dusar kankara guguwar kankara da guguwar kura",
+        "wer": 38.095238095238095,
+        "wer_diff": 809.5238095238095
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "aukuwar tsananin yanayin yanki da na lokaci sun hada da guguwar iriska hada yi mai dusar kankara guguwar kankara da guguwar kura",
+        "wer": 38.095238095238095,
+        "wer_diff": 809.5238095238095
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "aukuwar tsananin yanayin yanki da na lokaci sun hada da guguwar irska hada yi mai dusar kankara guguwar kankara da guguwar kura",
+        "wer": 38.095238095238095,
+        "wer_diff": 809.5238095238095
+      }
+    ]
+  },
+  {
+    "file_id": "6275221003580066011.wav",
+    "code": 1701,
+    "gold": "Ana ganin akuya ta kasance gida ta farko kusan shekaru 10,000 da suka gabata a tsaunukan Zagros na Iran.",
+    "baseline": " ʻA ʻNɑ ʻA ʻGʻE ʻA ʻTʰʰʰʰ ʻA ʻSɪŋ ʻI ʻDʰʰʰ ʻA ʻTʰʰʰ ʻFɔʰ ʻŋ ʻŋ ʻŋ ʻŋ ʻE ʻRŋ ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ʻU ",
+    "wer_base": 531.578947368421,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "ana ganin akuya ta kasance gida ta farko kusan shekaru 10,000 da suka gabata a tsaunukan zagros na iran",
+        "wer": 15.789473684210526,
+        "wer_diff": 515.7894736842105
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "ana ganin akuya ta kasance gida ta farko kusan shekaru 10,000 da suka gabata a tsaunukan zagros na iran",
+        "wer": 15.789473684210526,
+        "wer_diff": 515.7894736842105
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "ana ganin akuya ta kasance gida ta farko kusan shekaru 10,000 da suka gabata a tsaunukan zakros na iran",
+        "wer": 15.789473684210526,
+        "wer_diff": 515.7894736842105
+      }
+    ]
+  },
+  {
+    "file_id": "325869154188092853.wav",
+    "code": 1835,
+    "gold": "Duk da cewa ba alalmun gargadin guguwa, kuma a cewar hukumar ta Jakarta geophysics, ba za a yi gargadin guguwa ba saboda girgizar ba ta cika adadin da ake bukata na lamba 6.5 ba.",
+    "baseline": " Ndiyo, kwa kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa k",
+    "wer_base": 523.5294117647059,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "duk da cewa ba alamun gargadin guguwa kuma a cewar hukumar ta jakarta geophysics ba za a yi gargadin guguwa ba saboda girgizar batta cika adadin da ake bukata na lamba 6.5 ba",
+        "wer": 23.52941176470588,
+        "wer_diff": 500.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "duk da cewa ba alamun gargadin guguwa kuma a cewar hukumar ta jakarta geophysics ba za a yi gargadin guguwa ba saboda girgizar batta cika adadin da ake bukata na lamba 6 da 5 ba",
+        "wer": 32.35294117647059,
+        "wer_diff": 491.1764705882353
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "duk da cewa ba alamun gargadin guguwa kuma a cewar hukumar ta jakarta geophysics ba za a yi gargadin guguwa ba saboda girgizar batta cika adadin da ake bukata na lamba 6 da 5 ba",
+        "wer": 32.35294117647059,
+        "wer_diff": 491.1764705882353
+      }
+    ]
+  },
+  {
+    "file_id": "9527575607764614596.wav",
+    "code": 1901,
+    "gold": "Kodayake AI yana da ƙarfin ƙarin ma'anar almara ta kimiyya, AI ya kasance wani reshe na kimiyyar kwamfuta mai matuƙar muhimmanci, da ke mu'amala da halayya, koyo da kuma shigar da fasahar ƙwaƙwalwa a cikin inji.",
+    "baseline": " Kwa hivyo, kwa kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, kwa kwa, k",
+    "wer_base": 494.44444444444446,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "kodayake har yana da karfin kar ma'anar alamara ta kimiyya had ya kasance wani reshe na kimiyya kwamfuta mai matuƙar muhimmanci da ke mu amala ta hariyar koyo da kuma shigar da fasahar kwakwalwa a cikin yinji",
+        "wer": 41.66666666666667,
+        "wer_diff": 452.77777777777777
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kota yake had yana da karfin karin ma'anar alamara ta kimiyya had ya kasance wani reshe na kimiyya kwamfuta mai matsakar muhimmanci da ke mu'amala ta hariya 4 da kuma shikar da fasahar kwakwalwa a cikin yinji",
+        "wer": 47.22222222222222,
+        "wer_diff": 447.22222222222223
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kota yake had yana da karfin karma a nar mara ta kimiyya had ya kasance wani reshe na kimiyya kwamfuta mai matsukar muhimmanci da ke mu'amala ta hariya ko da kuma shikar da fasahar kwalwa a cikin jin",
+        "wer": 52.77777777777778,
+        "wer_diff": 441.6666666666667
+      }
+    ]
+  },
+  {
+    "file_id": "6007199984720063929.wav",
+    "code": 1809,
+    "gold": "An sanya Crossties tun da wuri don su tsayar layukan. Sai dai, hankali, an gano cewa layukan za su fi dacewa idan suna da ɗori na ƙarfe a saman su.",
+    "baseline": " Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo,",
+    "wer_base": 493.33333333333337,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "an sanya krustis tunda wuri don su tsayar layukan sai dai hankali an gano cewa layukan za su fi dacewa idan su na da dori na karfe a saman su",
+        "wer": 43.333333333333336,
+        "wer_diff": 450.0
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "an sanya krusty tunda wuri don su tsayar layukan sai dai hankali an gano cewa layukan za su fi dacewa idan su na da dori na karfe a saman su",
+        "wer": 43.333333333333336,
+        "wer_diff": 450.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "an sanya krusty tunda wuri don su tsayar layukan sai dai hankali an gano cewa layukan za su fi dacewa idan su na da dorri na karfe a samansu",
+        "wer": 46.666666666666664,
+        "wer_diff": 446.6666666666667
+      }
+    ]
+  },
+  {
+    "file_id": "4745710291913939021.wav",
+    "code": 1695,
+    "gold": "Abincin dare mai sauki musamman ma lokacin bazara, shi ne na Pa amb Oli: Burodi ne da man zaitun da tumatir da kuma duk wani kayan hadin da ya samu kamar cukwui da abincin kifi da dai sauransu.",
+    "baseline": " I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you. I am very happy to be able to share my knowledge with you.",
+    "wer_base": 478.94736842105266,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "abincin dare mai sauki musamman ma lokacin bazara shi ne na fa'am oni buroni ne da man zaitun da tumatar da kuma duk wani kayan haɗin da yas mu kamar cikwai da abincin kifi da dai sauran su",
+        "wer": 34.21052631578947,
+        "wer_diff": 444.7368421052632
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "abincin dare mai sauƙi musamman maluƙcin bazara shi ne na fa'an brodi ne da man zaitun da tumatar da kuma duk wani kayan haɗin da ya samu kamar cikwai da abincin kifi da dai sauran su",
+        "wer": 36.84210526315789,
+        "wer_diff": 442.1052631578948
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "abincin dare mai sauki musamman malokacin bazara shi ne na ba'a on'oni buruni ne da man zaitun da tumatar da kuma duk wani kayan haɗin da yas mu kamar cikwai da abincin kifi da dai sauransu",
+        "wer": 36.84210526315789,
+        "wer_diff": 442.1052631578948
+      }
+    ]
+  },
+  {
+    "file_id": "11881942274765792202.wav",
+    "code": 1833,
+    "gold": "Aristotle, masanin falsafa ne, yayi tunanin cewa komai ya kunshi cakuda daya ko fiye daga abubuwa hudu. Sun kasance ƙasa, ruwa, iska, da wuta.",
+    "baseline": " Aristoteles, mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho mwisho",
+    "wer_base": 462.5,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "aristote massanin falfasa ne yayin tunanin cewa komai ya kunshi cakuda daya kofiye daga abubuwa huɗu sun kasance ƙasa ruwa iska da wuta",
+        "wer": 54.166666666666664,
+        "wer_diff": 408.3333333333333
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "aristotele massanin falfasa ne yayin tunanin cewa komai ya kunshi cakudda daya kofiye daga abubuwa huɗu sun kasance ƙasa ruwa iska da wuta",
+        "wer": 58.333333333333336,
+        "wer_diff": 404.1666666666667
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "aristotel masanin falfasa ne yayin tunanin cewa ko mai ya kunshi cakudu da ya kofiye daga abubuwa huɗu sun kasance ƙasa ruwa iska da wuta",
+        "wer": 66.66666666666666,
+        "wer_diff": 395.83333333333337
+      }
+    ]
+  },
+  {
+    "file_id": "4309240043916648043.wav",
+    "code": 1735,
+    "gold": "Masu bincike daga Jami'ar Princeton da ke Amurka da kuma Jami'ar Uppsala da ke Sweden sun ba da rahoton cewa sabon jinsin ya samo asali ne a tsararraki biyu kawai, duk da cewa an yi imani da cewa wannan aikin zai dauki lokaci mai tsawo, saboda yaduwar da ke tsakanin tsaunin Darwin finch, Geospiza fortes, da kuma bakin kakakus. finch, Geospiza conirostris.",
+    "baseline": " The United States, the United States of America, the United States of Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, Sweden, I am the father of the children of Darwin Finch, Jules Pisa, the father of the children of Bikin Kakakos Finch. Jules Pisa is my road trip.",
+    "wer_base": 408.0645161290323,
+    "models": [
+      {
+        "name": "whisper_l_multi",
+        "transcription": "masu bincike daga jami'ar princeton da ke amirka da kuma jami'ar opsala da ke sweden sun ba da rahoton cewa sabon jinsi ya samo asali ne a tsarraki biyu kawai duk da cewa an yi imani da cewa wannan aikin zai dauki lokaci mai tsawon cewasaboda yaɗuwar da ke tsakanin tsaunin darwin finge jr's piza fort da kuma bakin cc cacos finge jr's piza cornutores.",
+        "wer": 38.70967741935484,
+        "wer_diff": 369.35483870967744
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "masu bincike daga jami'ar princeton da ke amurka da kuma jami'ar oppsala da ke sweden sun ba da rahoton cewa sabon jinsi ya samo asali ne a tsarraki biyu kawai duk da cewa an yi imani da cewa wannan aikin zai dauki lokaci mai tsawo rungume da kuma shari'ar jama'ar princetonsaboda yaɗuwar da ke tsakanin tsaunin darwin finch geospiza fort da kuma bakin kakakus finch geospiza ko ni rotris",
+        "wer": 45.16129032258064,
+        "wer_diff": 362.90322580645164
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "masu bincike daga jami'ar princeton da ke amirka da kuma jami'ar obsala da ke sweden sun ba da rahoton cewa sabon jinsi ya samo asali ne a tsarraki biyu kawai duk da cewa an yi imani da cewa wannan aikin zai dauki lokaci mai tsawon jini cuvencisaboda yaɗuwar da ke tsakanin tsaunin darwin finch gillis-pizza fort da kuma bakin cacakos finch gillis-pizza ko ne rocktis da kuma gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillis-pizza ko ne rocktis da ke gillisiris-pizza ko ne rocktasar kai kai gillisiris da ke gillisiris-pizza ko ne rocktasar kai gillisiris sa",
+        "wer": 270.96774193548384,
+        "wer_diff": 137.09677419354844
+      }
+    ]
+  },
+  {
+    "file_id": "14979932269884248140.wav",
+    "code": 1961,
+    "gold": "Daya daga cikin matakan da ake amfani dashi domin nuna muhimmacin zamantakewa shine nuna kadan daga cikin hali na takaici wanda yara suka fuskanta, ta hanyar sakaci, masifa, ko cin zarafi, kuma basu zamantakewa da manya ba yayin da suke girma.",
+    "baseline": " Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo,",
+    "wer_base": 360.9756097560976,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "daya daga cikin matakin da ake amfani da shi domin nuna mahimmancin zaman takewa shine nuna kaɗan daga cikin hali na takaici wanda yara suka fuskanta ta hanyar sakaci masifa ko cin zarafi kuma ba su zaman takewa da manya ba yayin da suke girma",
+        "wer": 41.46341463414634,
+        "wer_diff": 319.5121951219512
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "daya daga cikin matakin da ake amfani da shi domin nuna mahimmancin zaman takewa shine nuna kaɗan daga cikin hali na takaici wanda yara suka fuskanta ta hanyar sakaci masifa ƙocin zarafi kuma ba su zaman takewa da manya ba yayin da suke girma",
+        "wer": 46.34146341463415,
+        "wer_diff": 314.6341463414634
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "daya daga cikin matakin da ake amfani da shi domin nuna mahimmancin zaman takewa shi ne nuna kaɗan daga cikin hali na takaici wanda yara suka fuskanta ta hanyar sakaci masifa ƙocin zarafi kuma ba su zaman takewa da manya ba yayin da suke girma",
+        "wer": 51.21951219512195,
+        "wer_diff": 309.7560975609756
+      }
+    ]
+  },
+  {
+    "file_id": "14174860523727968346.wav",
+    "code": 1811,
+    "gold": "Kwatancin 802.11n na aiki duk akan mita 2.4Ghz da 5.0Ghz.",
+    "baseline": " Attention, the rate of the view that you will hear, that you will hear in the eye, the degree of the view that you will hear, kilohertz, the VR, the degree of the hearing, kilohertz.",
+    "wer_base": 350.0,
+    "models": [
+      {
+        "name": "whisper_l_uni",
+        "transcription": "kwatancin 805.1n in na aiki duk a kan mita 2.4 kHz da 5.0 kHz",
+        "wer": 90.0,
+        "wer_diff": 260.0
+      },
+      {
+        "name": "whisper_l_plus",
+        "transcription": "kwatancin 800 da biyu da dugo daya ina aiki duk a kan mita 2.4 kHz da 5.0 kHz",
+        "wer": 140.0,
+        "wer_diff": 210.0
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "kwatancin 800 da biyu da dugo daya ina aiki duk a kan mita 2.4 kHz da 5.5 kHz",
+        "wer": 140.0,
+        "wer_diff": 210.0
+      }
+    ]
+  },
+  {
+    "file_id": "11908337297982711433.wav",
+    "code": 1968,
+    "gold": "Wasu jiragen ruwa su kan sanya Berlin, Jamus a cikin littafin bayanin. Kamar yadda ka ke gani daga taswirar da ke sama babu inda Berlin ta yi kusa da teku kuma ba a haɗa ziyarar birnin ba a farashin jirgi.",
+    "baseline": " I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process. I would like to thank the people who have supported me in this process.",
+    "wer_base": 280.0,
+    "models": [
+      {
+        "name": "whisper_l_plus",
+        "transcription": "wasu jiragen ruwa su kan sanya berlin jamus a cikin littafin bayanin kamar yadda ka ke gani daga taswirar da ke sama babu inda berlin ta yi kusa da teku kuma ba a hada ziyarar birnin ba a farashin jirgi",
+        "wer": 20.0,
+        "wer_diff": 259.99999999999994
+      },
+      {
+        "name": "whisper_l_uni",
+        "transcription": "wasu jiragen ruwa su kan sanya berlin jamus a cikin littafin bayanin kamar yadda kake gani daga taswirar da ke sama babu inda berlin ta yi kusa da teku kuma ba a hada ziyarar birnin ba a farashin jirgi",
+        "wer": 25.0,
+        "wer_diff": 254.99999999999997
+      },
+      {
+        "name": "whisper_l_multi",
+        "transcription": "wasu jiragen ruwa su kan sanya berlin jamus a cikin littafin bayanin kamar yadda kake gani daga taswirar da ke sama babu inda berlin ta yi kusa da teku kuma ba a hada ziyarar birnin ba a farashin jirgi",
+        "wer": 25.0,
+        "wer_diff": 254.99999999999997
+      }
+    ]
+  }
+]
