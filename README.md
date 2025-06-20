@@ -17,8 +17,8 @@ This repository provides a comprehensive framework for fine-tuning and evaluatin
 
 ```bash
 # Clone the repository
-git clone https://github.com/jonahdvt/mila-speech.git
-cd mila-speech
+git clone https://github.com/jonahdvt/ast-lrl-speech.git
+cd ast-lrl-speech
 
 # Install dependencies
 conda env create -f environment.yaml
